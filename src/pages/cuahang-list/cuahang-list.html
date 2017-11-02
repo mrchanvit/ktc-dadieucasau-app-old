@@ -1,0 +1,35 @@
+<!--
+  Generated template for the CuahangListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cửa hàng</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-card *ngFor="let cuahang of cuahangs" (click)="toCuahangDetail($event, monan)">
+    <ion-card-content>
+      <ion-card-title>
+        {{cuahang.name}}
+        </ion-card-title>
+      <p>
+        {{cuahang.address}}
+      </p>
+      <p>
+        {{cuahang.phone}}
+      </p>
+      <p text-right>
+        {{cuahang.distance}}m
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

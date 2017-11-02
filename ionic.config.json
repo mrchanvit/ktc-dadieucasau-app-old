@@ -1,0 +1,8 @@
+{
+  "name": "ktc-dadieucasau-app",
+  "app_id": "f1a12642",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
