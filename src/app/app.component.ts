@@ -14,7 +14,7 @@ import {MonanFavoritePage} from '../pages/monan-favorite/monan-favorite';
 import {ThitListPage} from '../pages/thit-list/thit-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs';
-import { InitDataProvider } from '../providers/init-data/init-data';
+import { InitDataProvider } from '../providers/init-data';
 
 @Component({
   templateUrl: 'app.html'
@@ -34,11 +34,7 @@ export class MyApp {
     private initDataProvider: InitDataProvider,
 
   ) {
-    this.initializeApp();
-
-    // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
-    this.initDataProvider.initData();
-    console.log("Khởi tạo dữ liệu");
+    this.initializeApp();      
     
     // set our app's pages
     this.pages = [
@@ -61,6 +57,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
+      // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
+      this.initDataProvider.initData(); 
+
     });
   }
 

@@ -28,7 +28,8 @@ import {CuahangListPage} from '../pages/cuahang-list/cuahang-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangMapPage} from '../pages/cuahang-map/cuahang-map';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
-import { InitDataProvider } from '../providers/init-data/init-data';
+import { InitDataProvider } from '../providers/init-data';
+import { Configs } from '../config';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { InitDataProvider } from '../providers/init-data/init-data';
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
+    Configs
   ]
 })
 export class AppModule {}
