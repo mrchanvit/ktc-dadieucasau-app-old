@@ -14,9 +14,7 @@ import {MonanFavoritePage} from '../pages/monan-favorite/monan-favorite';
 import {ThitListPage} from '../pages/thit-list/thit-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs';
-
-
-
+import { InitDataProvider } from '../providers/init-data/init-data';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,10 +30,16 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private initDataProvider: InitDataProvider,
+
   ) {
     this.initializeApp();
 
+    // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
+    this.initDataProvider.initData();
+    console.log("Khởi tạo dữ liệu");
+    
     // set our app's pages
     this.pages = [
       { title: 'Nổi bật', component: MainPage },
@@ -52,6 +56,7 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      console.log("initializeApp finish");
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
@@ -65,4 +70,8 @@ export class MyApp {
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
+
+  
+ 
+
 }

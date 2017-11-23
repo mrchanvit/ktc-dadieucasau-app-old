@@ -23,7 +23,9 @@ export class CuahangListPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CuahangListPage');
-    this.cuahangDataProvider.getAllCuahang().then(res=>{this.cuahangs=res});
+    this.cuahangDataProvider.getAllCuahang()
+    .then(res=>{this.cuahangs=res})
+    .catch(error =>{ console.log("Error")});
   }
 
 }

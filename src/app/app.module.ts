@@ -12,8 +12,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpModule } from '@angular/http';
 
-//Google Map
+//Ionic native
 import {GoogleMaps} from '@ionic-native/google-maps';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 //My pages
 import {MonanListPage} from '../pages/monan-list/monan-list';
@@ -27,6 +28,7 @@ import {CuahangListPage} from '../pages/cuahang-list/cuahang-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangMapPage} from '../pages/cuahang-map/cuahang-map';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
+import { InitDataProvider } from '../providers/init-data/init-data';
 
 
 @NgModule({
@@ -73,10 +75,12 @@ import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GoogleMaps,
     MonanDataProvider,
     CuahangDataProvider,
+    InitDataProvider,
   ]
 })
 export class AppModule {}
