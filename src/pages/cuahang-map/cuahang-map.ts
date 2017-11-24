@@ -1,12 +1,3 @@
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  /* CameraPosition,
-  MarkerOptions,
-  Marker */
- } from '@ionic-native/google-maps';
 import { Component } from '@angular/core';
 import { IonicPage /* ,NavController *//* , NavParams */ } from 'ionic-angular';
 
@@ -23,15 +14,15 @@ import { IonicPage /* ,NavController *//* , NavParams */ } from 'ionic-angular';
   templateUrl: 'cuahang-map.html',
 })
 export class CuahangMapPage {
-  map: GoogleMap;
+  
   mapElement: HTMLElement;
-  constructor(private googleMaps: GoogleMaps) { }
+  constructor() { }
 
   ionViewDidLoad() {
-   this.loadMap();
+   
   }
 
- loadMap() {
+ /* loadMap() {
     this.mapElement = document.getElementById('map_canvas');
 
     let mapOptions: GoogleMapOptions = {
@@ -70,6 +61,6 @@ export class CuahangMapPage {
           });
 
       });
-  }
+  } */
 
 }

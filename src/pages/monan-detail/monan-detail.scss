@@ -2,4 +2,23 @@ page-monan-detail {
     .giavi ion-icon{
         font-size: 3em;
     }
+    .tenmonan{
+        text-transform: uppercase;
+        color: map-get($colors, primary);
+    }
+    .mota{
+        color: #888;
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .tieudecon{
+        color: #bbb;
+        text-transform: uppercase;
+        letter-spacing: 0.1em
+    }
+    .soluong{
+        color: #888;
+        font-size: 80%;
+    }
 }

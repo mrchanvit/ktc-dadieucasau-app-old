@@ -1,0 +1,38 @@
+[
+    {
+        "id": "duong",
+        "name": "Đường",
+        "icon": "mi-duong",
+        "color": "primary",
+        "amount": 0
+    },
+    {
+        "id": "muoi",
+        "name": "Muối",
+        "icon": "mi-muoi",
+        "color": "primary",
+        "amount": 0
+    },
+    {
+        "id": "botngot",
+        "name": "Bộ ngọt",
+        "icon": "mi-botngot",
+        "color": "primary",
+        "amount": 0
+    },
+    {
+        "id": "caphe",
+        "name": "Cà phê",
+        "icon": "mi-caphe",
+        "color": "primary",
+        "amount": 0
+    },
+    {
+        
+        "id": "tieu",
+        "name": "Tiêu",
+        "icon": "mi-tieu",
+        "color": "primary",
+        "amount": 0
+    }
+]

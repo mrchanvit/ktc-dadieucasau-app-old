@@ -13,7 +13,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 
 //Ionic native
-import {GoogleMaps} from '@ionic-native/google-maps';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 //My pages
@@ -79,7 +78,6 @@ import { GiaviDataProvider } from '../providers/giavi-data';
     SplashScreen,
     NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GoogleMaps,
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,

@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Món ăn</ion-title>
+    <ion-title>{{monan.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -18,24 +18,24 @@
   <ion-grid padding>
     <ion-row>
       <ion-col >
-        <h1>{{monan.name}}</h1>
-        <p>{{monan.description}}</p>
+        <h1 text-center class="tenmonan">{{monan.name}}</h1>
+        <p class="mota">{{monan.description}}</p>
       </ion-col>
     </ion-row>
     <ion-row>
         <ion-col >
-          <h3>Gia vị</h3>
+          <h4 text-center class="tieudecon">Gia vị</h4>
         </ion-col>
     </ion-row> 
     <ion-row>
-        <ion-col class="giavi" col-3 *ngFor="let giavi of monan.giavis">
-          <ion-icon [name]="getGiaviIcon(giavi)" [color]="getGiaviColor(giavi)"></ion-icon>
-          <p>{{giavi.amount}}</p>
+        <ion-col text-center class="giavi" col-3 *ngFor="let giavi of monan.giavis">
+          <ion-icon text-center [name]="getGiaviIcon(giavi)" [color]="getGiaviColor(giavi)"></ion-icon>
+          <p class="soluong">{{giavi.amount}}</p>
         </ion-col>
     </ion-row> 
     <ion-row>
-        <ion-col >
-          <h3>Chế biến</h3>
+        <ion-col text-center>
+          <h4 class="tieudecon">Chế biến</h4>
         </ion-col>
     </ion-row>    
   </ion-grid>

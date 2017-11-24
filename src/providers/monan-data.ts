@@ -6,16 +6,6 @@ import { NativeStorage } from '@ionic-native/native-storage';
 
 import { Monan } from '../interfaces/monan';
 
-//Đường dẫn server dữ liệu
-const dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
-
-
-/*
-  Generated class for the MonanDataProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class MonanDataProvider {
 

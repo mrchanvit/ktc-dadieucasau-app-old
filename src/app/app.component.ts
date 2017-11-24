@@ -1,13 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
-import { MainPage } from '../pages/main/main';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 //My pages
+import { MainPage } from '../pages/main/main';
 import {MonanListPage} from '../pages/monan-list/monan-list';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {MonanFavoritePage} from '../pages/monan-favorite/monan-favorite';
@@ -15,6 +13,7 @@ import {ThitListPage} from '../pages/thit-list/thit-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs';
 import { InitDataProvider } from '../providers/init-data';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +22,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = WelcomePage;
+  rootPage:any = MainPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -32,6 +31,7 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private initDataProvider: InitDataProvider,
+    private storage: NativeStorage
 
   ) {
     this.initializeApp();      
@@ -59,7 +59,21 @@ export class MyApp {
       this.splashScreen.hide();
       
       // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
-      this.initDataProvider.initData(); 
+      
+      this.storage.getItem("isFirstLoad")
+      .then(data=>{
+
+        //Mỗi lần mở ứng dụng
+        this.initDataProvider.initData(); 
+      })
+      .catch(error=>{
+
+        //Ứng dụng chạy lần đầu
+        this.rootPage = WelcomePage;
+        this.initDataProvider.initDataFirstLoad();
+        this.storage.setItem("isFirstLoad",false);
+
+      })
 
     });
   }

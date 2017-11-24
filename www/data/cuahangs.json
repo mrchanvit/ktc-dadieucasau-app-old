@@ -1,0 +1,51 @@
+[{
+    "id": 1,
+    "name": "Cty TNHH Hưng Phát NhaTrang",
+    "province": "Khánh Hòa",
+    "address": "74A Huỳnh Thúc Kháng, Thành Phố Nha Trang",
+    "phone": "058.3515.579",
+    "distance": 0,
+    "lng": 334343434,
+    "lat": 343434343
+  },
+  {
+    "id": 2,
+    "name": "Hộ Kinh Doanh Cá Thể Khôi Tuấn",
+    "province": "Khánh Hòa",
+    "address": "116 Bạch Đằng, Thành Phố Nha Trang",
+    "phone": "058.3514.382",
+    "distance": 0,
+    "lng": 334343434,
+    "lat": 343434343
+  },
+  {
+    "id": 3,
+    "name": "CH Khánh Trân ( Trần Thị Mỹ Lệ)",
+    "province": "Khánh Hòa",
+    "address": "Số 2 Bắc Sơn, Thành Phố Nha Trang",
+    "phone": "090.5280.414",
+    "distance": 0,
+    "lng": 334343434,
+    "lat": 343434343
+  },
+  {
+    "id": 4,
+    "name": "Đại lý Hạnh Nhi",
+    "province": "Khánh Hòa",
+    "address": "25 BT06 Khu Đô Thị Phước Long A, Thành Phố Nha Trang",
+    "phone": "0169.8777.888",
+    "distance": 0,
+    "lng": 334343434,
+    "lat": 343434343
+  },
+  {
+    "id": 5,
+    "name": "Cty TNHH Lệ My",
+    "province": "Khánh Hòa",
+    "address": "673 Trần Quý Cáp, Huyện Ninh Hòa",
+    "phone": "058.3635.654",
+    "distance": 0,
+    "lng": 334343434,
+    "lat": 343434343
+  }
+]
