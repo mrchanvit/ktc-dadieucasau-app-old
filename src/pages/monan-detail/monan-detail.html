@@ -13,9 +13,43 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content *ngIf="monan" padding>
+<ion-content *ngIf="monan">
   <img src="{{monan.imageUrl}}">
-  <h2>{{monan.name}}</h2>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col >
+        <h1>{{monan.name}}</h1>
+        <p>{{monan.description}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col >
+          <h3>Gia vị</h3>
+        </ion-col>
+    </ion-row> 
+    <ion-row>
+        <ion-col class="giavi" col-3 *ngFor="let giavi of monan.giavis">
+          <ion-icon [name]="getGiaviIcon(giavi)" [color]="getGiaviColor(giavi)"></ion-icon>
+          <p>{{giavi.amount}}</p>
+        </ion-col>
+    </ion-row> 
+    <ion-row>
+        <ion-col >
+          <h3>Chế biến</h3>
+        </ion-col>
+    </ion-row>    
+  </ion-grid>
+  <ion-list >
+    
+    <ion-item text-wrap *ngFor="let step of monan.steps; let i = index">
+      {{step}}
+    </ion-item>
+  </ion-list>
+
+  
+  
   <p>{{monan.description}}</p>
   <p>{{monan.content}}</p>
+
+
 </ion-content>

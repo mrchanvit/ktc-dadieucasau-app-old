@@ -30,6 +30,7 @@ import {CuahangMapPage} from '../pages/cuahang-map/cuahang-map';
 import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
 import { InitDataProvider } from '../providers/init-data';
 import { Configs } from '../config';
+import { GiaviDataProvider } from '../providers/giavi-data';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { Configs } from '../config';
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
-    Configs
+    Configs,
+    GiaviDataProvider 
   ]
 })
 export class AppModule {}

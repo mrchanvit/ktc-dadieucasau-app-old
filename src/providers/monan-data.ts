@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { Monan } from '../interfaces/monan';
 import 'rxjs/add/operator/toPromise'
- 
+import { NativeStorage } from '@ionic-native/native-storage';
+
+import { Monan } from '../interfaces/monan';
+
 //Đường dẫn server dữ liệu
 const dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
 
@@ -16,23 +18,24 @@ const dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
 */
 @Injectable()
 export class MonanDataProvider {
-  
 
-  constructor(public http: Http) {
+  private monanInitPath = "/data/monans.json";
+
+  constructor(
+    public http: Http,
+    public storage: NativeStorage) {
     console.log('Hello MonanDataProvider Provider');
   }
 
-  getAllMonan():Promise<Monan[]> {
-    return this.http.get(`${dataServerUrl}/monan`)
-    .toPromise()
-    .then(res=>res.json() as Monan[])
-    .catch(this.handleError)
+  //Khởi tạo dữ liệu lần đầu tiên khởi động App
+  initData() {
+    return this.http.get(this.monanInitPath)
+      .map((res) => {
+        return res.json();
+      });
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
+  getAllMonan(): Promise<Monan[]> {
+    return this.storage.getItem("monans");
   }
-
-
 }
