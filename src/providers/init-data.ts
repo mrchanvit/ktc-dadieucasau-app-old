@@ -62,5 +62,9 @@ export class InitDataProvider {
     this.giaviDataProvider.initDataOnEnter();
   }
 
+  clearData(){
+    return this.storage.clear();
+  }
+
 
 }

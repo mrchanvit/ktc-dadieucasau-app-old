@@ -13,7 +13,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 @Injectable()
 export class GiaviDataProvider {
 
-  private giaviInitPath = "/assets/data/giavis.json"; 
+  private giaviInitPath = "./assets/data/giavis.json"; 
   private giavis: Giavi[] = []; 
 
   constructor(

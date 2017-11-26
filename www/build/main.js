@@ -1,13 +1,13 @@
 webpackJsonp([10],{
 
-/***/ 106:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonanDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_giavi_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_giavi_data__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,15 +65,15 @@ MonanDetailPage = __decorate([
 
 /***/ }),
 
-/***/ 107:
+/***/ 109:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonanListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_monan_data__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_monan_detail_monan_detail__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_monan_data__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_monan_detail_monan_detail__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -126,7 +126,7 @@ MonanListPage = __decorate([
 
 /***/ }),
 
-/***/ 108:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -204,7 +204,7 @@ WelcomePage = __decorate([
 
 /***/ }),
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -250,7 +250,7 @@ MonanFavoritePage = __decorate([
 
 /***/ }),
 
-/***/ 110:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,7 +296,7 @@ ThitListPage = __decorate([
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -342,14 +342,14 @@ KhuyenmaiListPage = __decorate([
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CuahangListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_cuahang_data__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_cuahang_data__ = __webpack_require__(83);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -396,7 +396,7 @@ CuahangListPage = __decorate([
 
 /***/ }),
 
-/***/ 113:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -439,15 +439,15 @@ CuahangMapPage = __decorate([
 
 /***/ }),
 
-/***/ 114:
+/***/ 116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CuahangTabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cuahang_list_cuahang_list__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cuahang_map_cuahang_map__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cuahang_list_cuahang_list__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cuahang_map_cuahang_map__ = __webpack_require__(115);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -487,7 +487,7 @@ CuahangTabsPage = __decorate([
 
 /***/ }),
 
-/***/ 123:
+/***/ 125:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -500,11 +500,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 123;
+webpackEmptyAsyncContext.id = 125;
 
 /***/ }),
 
-/***/ 165:
+/***/ 167:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -560,98 +560,8 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 165;
+webpackAsyncContext.id = 167;
 module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 209:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InitDataProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cuahang_data__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__giavi_data__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__monan_data__ = __webpack_require__(83);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var InitDataProvider = (function () {
-    function InitDataProvider(http, cuahangDataProvider, giaviDataProvider, monanDataProvider, storage) {
-        this.http = http;
-        this.cuahangDataProvider = cuahangDataProvider;
-        this.giaviDataProvider = giaviDataProvider;
-        this.monanDataProvider = monanDataProvider;
-        this.storage = storage;
-        console.log('Hello InitDataProvider Provider');
-    }
-    //Khởi tạo data
-    InitDataProvider.prototype.initDataFirstLoad = function () {
-        var _this = this;
-        console.log("Khởi tạo dữ liệu ứng dụng lần đầu");
-        //Chỉ chạy khi mới cài đặt ứng dụng lần đầu tiên
-        //++++++++++++++++++++++++++++++++++++++++++++++
-        this.storage.setItem("isFirstLoad", true);
-        // Chưa khởi tạo dữ liệu, tiến hành khởi tạo
-        // Cửa hàng
-        this.cuahangDataProvider.initData().subscribe(function (data) {
-            console.log('Load dữ liệu cửa hàng');
-            _this.storage.setItem("cuahangs", data);
-        }, function (error) {
-            console.log(error);
-        });
-        //Gia vị
-        this.giaviDataProvider.initData().subscribe(function (data) {
-            console.log('Load dữ liệu gia vi');
-            _this.storage.setItem("giavis", data).then(function () {
-                _this.giaviDataProvider.initDataOnEnter();
-            });
-        }, function (error) {
-            console.log(error);
-        });
-        //Món ăn
-        this.monanDataProvider.initData().subscribe(function (data) {
-            console.log('Load dữ liệu món ăn');
-            _this.storage.setItem("monans", data);
-        }, function (error) {
-            console.log(error);
-        });
-        //+++++++++++++++++++++++++++++++++++++++++++++
-    };
-    InitDataProvider.prototype.initData = function () {
-        //Lưu danh sách gia vị vào ram
-        this.giaviDataProvider.initDataOnEnter();
-    };
-    return InitDataProvider;
-}());
-InitDataProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_4__cuahang_data__["a" /* CuahangDataProvider */],
-        __WEBPACK_IMPORTED_MODULE_5__giavi_data__["a" /* GiaviDataProvider */],
-        __WEBPACK_IMPORTED_MODULE_6__monan_data__["a" /* MonanDataProvider */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__["a" /* NativeStorage */]])
-], InitDataProvider);
-
-//# sourceMappingURL=init-data.js.map
 
 /***/ }),
 
@@ -719,24 +629,24 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_native_storage__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_monan_list_monan_list__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_monan_data__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_cuahang_data__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_monan_detail_monan_detail__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_welcome_welcome__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_monan_favorite_monan_favorite__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_thit_list_thit_list__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cuahang_list_cuahang_list__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cuahang_map_cuahang_map__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_init_data__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_monan_list_monan_list__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_monan_data__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_cuahang_data__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_monan_detail_monan_detail__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_welcome_welcome__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_monan_favorite_monan_favorite__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_thit_list_thit_list__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_cuahang_list_cuahang_list__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cuahang_map_cuahang_map__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_init_data__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__config__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_giavi_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_giavi_data__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -851,16 +761,16 @@ AppModule = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_monan_list_monan_list__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_monan_favorite_monan_favorite__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_thit_list_thit_list__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_init_data__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_monan_list_monan_list__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_monan_favorite_monan_favorite__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_thit_list_thit_list__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_init_data__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_native_storage__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -919,6 +829,7 @@ var MyApp = (function () {
             _this.storage.getItem("isFirstLoad")
                 .then(function (data) {
                 //Mỗi lần mở ứng dụng
+                console.log('Chay BT');
                 _this.initDataProvider.initData();
             })
                 .catch(function (error) {
@@ -1033,6 +944,8 @@ var Configs = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_init_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_toast_toast_controller__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1044,6 +957,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 /**
  * Generated class for the MainPage page.
  *
@@ -1051,10 +966,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var MainPage = (function () {
-    function MainPage(navCtrl, navParams, viewCtr) {
+    function MainPage(navCtrl, navParams, viewCtr, initDataProvider, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.viewCtr = viewCtr;
+        this.initDataProvider = initDataProvider;
+        this.toastCtrl = toastCtrl;
     }
     MainPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad MainPage');
@@ -1062,14 +979,40 @@ var MainPage = (function () {
     MainPage.prototype.ionViewDidEnter = function () {
         //this.viewCtr.showBackButton(false);
     };
+    MainPage.prototype.xoaData = function () {
+        var _this = this;
+        this.initDataProvider.clearData().then(function (data) {
+            var toast = _this.toastCtrl.create({
+                message: 'Đã làm sạch dữ liệu',
+                duration: 3000,
+                position: 'top'
+            });
+            toast.onDidDismiss(function () {
+            });
+            toast.present();
+        }).catch(function (error) {
+            var toast = _this.toastCtrl.create({
+                message: 'Có lỗi',
+                duration: 3000,
+                position: 'top'
+            });
+            toast.onDidDismiss(function () {
+            });
+            toast.present();
+        });
+    };
     return MainPage;
 }());
 MainPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-main',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\main\main.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Nội dung nổi bật</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <h3 class="dadieu">Đà điểu Khatoco</h3>\n\n  <ion-icon name="mi-duong"></ion-icon>\n\n  <ion-icon name="mi-muoi"></ion-icon>\n\n  <ion-icon name="mi-botngot"></ion-icon>\n\n  <ion-icon name="mi-tieu"></ion-icon>\n\n  <ion-icon name="mi-caphe"></ion-icon>\n\n  <ion-icon large name="mi-chung"></ion-icon>\n\n  <ion-icon large name="book"></ion-icon>\n\n  <ion-icon name="add"></ion-icon>\n\n  <img src="assets/img/dadieuvui.png" class="logo" />\n\n  <p>\n\n    Thịt đà điểu là loại thịt có giá trị dinh dưỡng cao chứa nhiều vi lượng và khoáng chất nhưng lại ít mỡ. Đặc biệt thịt Đà điểu có hàm lượng cholesterol thấp nên không gây thừa cân béo phì và các bệnh tim mạch, rất phù hợp với xu hướng ẩm thực chung hiện nay.Với đặc tính lành và ngon, thịt đà điểu được nhiều người ưa chuộng để làm những món ăn có hương vị độc đáo, hấp dẫn và rất tốt cho sức khỏe. Bên cạnh đó, vị ngon của thịt đà điểu rất đặc trưng, mềm nhưng không bở, ngọt vị. Được coi là thức ăn lành và sạch nhờ không nhiễm các vi rút gây bệnh cúm gia cầm. Trong thời gian qua, không có chú đà điểu nào tại Việt Nam bị nhiễm cúm.\n\n  </p>\n\n  <p>\n\n    Hơn nữa, thịt đà điểu Khatoco nhiều năm liền là Hàng Việt Nam Chất lượng cao do người tiêu dùng bình chọn; Danh hiệu Sao Vàng Đất Việt do Hội Doanh Nghiệp Việt Nam trao tặng.\n\n  </p>\n\n  <h3>Đà điểu Khatoco</h3>\n\n  <p>\n\n    Thịt cá sấu màu trắng hồng, hàm lượng protein cao, năng lượng và chất béo thấp. Theo đông y thịt cá sấu có tác dụng tăng cường sinh lực, bồi bổ sức khỏe, chống dị ứng, hen suyễn … Thịt cá sấu dễ dàng chế biến thành các món ăn thơm ngon, độc đáo: Nướng, nấu măng, nhúng mẻ, om chuối …\n\n  </p>\n\n  <p>\n\n    <button ion-button color="primary" menuToggle>Mở menu ứng dụng</button>\n\n  </p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\main\main.html"*/,
+        selector: 'page-main',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\main\main.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Nội dung nổi bật</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <h3 class="dadieu">Đà điểu Khatoco</h3>\n\n  <ion-icon name="mi-duong"></ion-icon>\n\n  <ion-icon name="mi-muoi"></ion-icon>\n\n  <ion-icon name="mi-botngot"></ion-icon>\n\n  <ion-icon name="mi-tieu"></ion-icon>\n\n  <ion-icon name="mi-caphe"></ion-icon>\n\n  <ion-icon large name="mi-chung"></ion-icon>\n\n  <ion-icon large name="book"></ion-icon>\n\n  <ion-icon name="add"></ion-icon>\n\n  <img src="assets/img/dadieuvui.png" class="logo" />\n\n  <p>\n\n    Thịt đà điểu là loại thịt có giá trị dinh dưỡng cao chứa nhiều vi lượng và khoáng chất nhưng lại ít mỡ. Đặc biệt thịt Đà điểu có hàm lượng cholesterol thấp nên không gây thừa cân béo phì và các bệnh tim mạch, rất phù hợp với xu hướng ẩm thực chung hiện nay.Với đặc tính lành và ngon, thịt đà điểu được nhiều người ưa chuộng để làm những món ăn có hương vị độc đáo, hấp dẫn và rất tốt cho sức khỏe. Bên cạnh đó, vị ngon của thịt đà điểu rất đặc trưng, mềm nhưng không bở, ngọt vị. Được coi là thức ăn lành và sạch nhờ không nhiễm các vi rút gây bệnh cúm gia cầm. Trong thời gian qua, không có chú đà điểu nào tại Việt Nam bị nhiễm cúm.\n\n  </p>\n\n  <p>\n\n    Hơn nữa, thịt đà điểu Khatoco nhiều năm liền là Hàng Việt Nam Chất lượng cao do người tiêu dùng bình chọn; Danh hiệu Sao Vàng Đất Việt do Hội Doanh Nghiệp Việt Nam trao tặng.\n\n  </p>\n\n  <h3>Đà điểu Khatoco</h3>\n\n  <p>\n\n    Thịt cá sấu màu trắng hồng, hàm lượng protein cao, năng lượng và chất béo thấp. Theo đông y thịt cá sấu có tác dụng tăng cường sinh lực, bồi bổ sức khỏe, chống dị ứng, hen suyễn … Thịt cá sấu dễ dàng chế biến thành các món ăn thơm ngon, độc đáo: Nướng, nấu măng, nhúng mẻ, om chuối …\n\n  </p>\n\n  <p>\n\n    <button ion-button color="primary" (click)="xoaData()">Xóa data</button>\n\n  </p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\main\main.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_init_data__["a" /* InitDataProvider */],
+        __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_toast_toast_controller__["a" /* ToastController */]])
 ], MainPage);
 
 //# sourceMappingURL=main.js.map
@@ -1077,6 +1020,169 @@ MainPage = __decorate([
 /***/ }),
 
 /***/ 80:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InitDataProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cuahang_data__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__giavi_data__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__monan_data__ = __webpack_require__(85);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var InitDataProvider = (function () {
+    function InitDataProvider(http, cuahangDataProvider, giaviDataProvider, monanDataProvider, storage) {
+        this.http = http;
+        this.cuahangDataProvider = cuahangDataProvider;
+        this.giaviDataProvider = giaviDataProvider;
+        this.monanDataProvider = monanDataProvider;
+        this.storage = storage;
+        console.log('Hello InitDataProvider Provider');
+    }
+    //Khởi tạo data
+    InitDataProvider.prototype.initDataFirstLoad = function () {
+        var _this = this;
+        console.log("Khởi tạo dữ liệu ứng dụng lần đầu");
+        //Chỉ chạy khi mới cài đặt ứng dụng lần đầu tiên
+        //++++++++++++++++++++++++++++++++++++++++++++++
+        this.storage.setItem("isFirstLoad", true);
+        // Chưa khởi tạo dữ liệu, tiến hành khởi tạo
+        // Cửa hàng
+        this.cuahangDataProvider.initData().subscribe(function (data) {
+            console.log('Load dữ liệu cửa hàng');
+            _this.storage.setItem("cuahangs", data);
+        }, function (error) {
+            console.log(error);
+        });
+        //Gia vị
+        this.giaviDataProvider.initData().subscribe(function (data) {
+            console.log('Load dữ liệu gia vi');
+            _this.storage.setItem("giavis", data).then(function () {
+                _this.giaviDataProvider.initDataOnEnter();
+            });
+        }, function (error) {
+            console.log(error);
+        });
+        //Món ăn
+        this.monanDataProvider.initData().subscribe(function (data) {
+            console.log('Load dữ liệu món ăn');
+            _this.storage.setItem("monans", data);
+        }, function (error) {
+            console.log(error);
+        });
+        //+++++++++++++++++++++++++++++++++++++++++++++
+    };
+    InitDataProvider.prototype.initData = function () {
+        //Lưu danh sách gia vị vào ram
+        this.giaviDataProvider.initDataOnEnter();
+    };
+    InitDataProvider.prototype.clearData = function () {
+        return this.storage.clear();
+    };
+    return InitDataProvider;
+}());
+InitDataProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_4__cuahang_data__["a" /* CuahangDataProvider */],
+        __WEBPACK_IMPORTED_MODULE_5__giavi_data__["a" /* GiaviDataProvider */],
+        __WEBPACK_IMPORTED_MODULE_6__monan_data__["a" /* MonanDataProvider */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__["a" /* NativeStorage */]])
+], InitDataProvider);
+
+//# sourceMappingURL=init-data.js.map
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CuahangDataProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(31);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/*
+  Generated class for the CuahangDataProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var CuahangDataProvider = (function () {
+    function CuahangDataProvider(http, storage) {
+        this.http = http;
+        this.storage = storage;
+        //private dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
+        //Đường dẫn JSON khởi tạo dữ liệu
+        this.cuahangInitPath = "./assets/data/cuahangs.json";
+        console.log('Hello CuahangDataProvider Provider');
+    }
+    //Khởi tạo dữ liệu lần đầu tiên khởi động App
+    CuahangDataProvider.prototype.initData = function () {
+        return this.http.get(this.cuahangInitPath)
+            .map(function (res) {
+            return res.json();
+        });
+    };
+    /* getAllCuahang():Promise<Cuahang[]> {
+      return this.http.get(`${this.dataServerUrl}/cuahang`)
+      .toPromise()
+      .then(res=>res.json() as Cuahang[])
+      .catch(this.handleError)
+    } */
+    //Lấy giữ liệu cửa hàng từ storage
+    CuahangDataProvider.prototype.getAllCuahang = function () {
+        return this.storage.getItem("cuahangs");
+    };
+    return CuahangDataProvider;
+}());
+CuahangDataProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */]])
+], CuahangDataProvider);
+
+//# sourceMappingURL=cuahang-data.js.map
+
+/***/ }),
+
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1109,7 +1215,7 @@ var GiaviDataProvider = (function () {
     function GiaviDataProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.giaviInitPath = "/assets/data/giavis.json";
+        this.giaviInitPath = "./assets/data/giavis.json";
         this.giavis = [];
         console.log('Hello GiaviDataProvider Provider');
     }
@@ -1167,7 +1273,7 @@ GiaviDataProvider = __decorate([
 
 /***/ }),
 
-/***/ 83:
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1176,7 +1282,7 @@ GiaviDataProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1197,7 +1303,7 @@ var MonanDataProvider = (function () {
     function MonanDataProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.monanInitPath = "/assets/data/monans.json";
+        this.monanInitPath = "./assets/data/monans.json";
         console.log('Hello MonanDataProvider Provider');
     }
     //Khởi tạo dữ liệu lần đầu tiên khởi động App
@@ -1219,76 +1325,6 @@ MonanDataProvider = __decorate([
 ], MonanDataProvider);
 
 //# sourceMappingURL=monan-data.js.map
-
-/***/ }),
-
-/***/ 84:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CuahangDataProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(31);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/*
-  Generated class for the CuahangDataProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var CuahangDataProvider = (function () {
-    function CuahangDataProvider(http, storage) {
-        this.http = http;
-        this.storage = storage;
-        //private dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
-        //Đường dẫn JSON khởi tạo dữ liệu
-        this.cuahangInitPath = "/assets/data/cuahangs.json";
-        console.log('Hello CuahangDataProvider Provider');
-    }
-    //Khởi tạo dữ liệu lần đầu tiên khởi động App
-    CuahangDataProvider.prototype.initData = function () {
-        return this.http.get(this.cuahangInitPath)
-            .map(function (res) {
-            return res.json();
-        });
-    };
-    /* getAllCuahang():Promise<Cuahang[]> {
-      return this.http.get(`${this.dataServerUrl}/cuahang`)
-      .toPromise()
-      .then(res=>res.json() as Cuahang[])
-      .catch(this.handleError)
-    } */
-    //Lấy giữ liệu cửa hàng từ storage
-    CuahangDataProvider.prototype.getAllCuahang = function () {
-        return this.storage.getItem("cuahangs");
-    };
-    return CuahangDataProvider;
-}());
-CuahangDataProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */]])
-], CuahangDataProvider);
-
-//# sourceMappingURL=cuahang-data.js.map
 
 /***/ })
 

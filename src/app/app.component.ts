@@ -64,6 +64,8 @@ export class MyApp {
       .then(data=>{
 
         //Mỗi lần mở ứng dụng
+        console.log('Chay BT');
+        
         this.initDataProvider.initData(); 
       })
       .catch(error=>{

@@ -19,7 +19,7 @@ export class CuahangDataProvider {
   //private dataServerUrl = "http://59b3c01195ddb9001143e96a.mockapi.io/"
 
   //Đường dẫn JSON khởi tạo dữ liệu
-  private cuahangInitPath = "/assets/data/cuahangs.json";
+  private cuahangInitPath = "./assets/data/cuahangs.json";
 
   constructor(
     public http: Http,

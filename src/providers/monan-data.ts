@@ -9,7 +9,7 @@ import { Monan } from '../interfaces/monan';
 @Injectable()
 export class MonanDataProvider {
 
-  private monanInitPath = "/assets/data/monans.json";
+  private monanInitPath = "./assets/data/monans.json";
 
   constructor(
     public http: Http,

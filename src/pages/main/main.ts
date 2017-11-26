@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { InitDataProvider } from '../../providers/init-data';
+import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 
 
 /**
@@ -16,7 +18,12 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class MainPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtr: ViewController) {
+  constructor(
+      public navCtrl: NavController,
+      public navParams: NavParams,
+      public viewCtr: ViewController,
+      public initDataProvider: InitDataProvider,
+      private toastCtrl: ToastController) {
     
   }
 
@@ -29,6 +36,28 @@ export class MainPage {
 
   ionViewDidEnter(){
     //this.viewCtr.showBackButton(false);
+  }
+
+  xoaData(){
+    this.initDataProvider.clearData().then(data=>{
+      let toast = this.toastCtrl.create({
+        message: 'Đã làm sạch dữ liệu',
+        duration: 3000,
+        position: 'top'
+        });
+        toast.onDidDismiss(() => {      
+        });
+        toast.present();
+    }).catch(error=>{
+      let toast = this.toastCtrl.create({
+      message: 'Có lỗi',
+      duration: 3000,
+      position: 'top'
+      });
+      toast.onDidDismiss(() => {      
+      });
+      toast.present();
+    });
   }
 
 }
