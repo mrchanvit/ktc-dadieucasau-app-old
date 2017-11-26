@@ -1109,7 +1109,7 @@ var GiaviDataProvider = (function () {
     function GiaviDataProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.giaviInitPath = "/data/giavis.json";
+        this.giaviInitPath = "/assets/data/giavis.json";
         this.giavis = [];
         console.log('Hello GiaviDataProvider Provider');
     }
@@ -1196,7 +1196,7 @@ var MonanDataProvider = (function () {
     function MonanDataProvider(http, storage) {
         this.http = http;
         this.storage = storage;
-        this.monanInitPath = "/data/monans.json";
+        this.monanInitPath = "/assets/data/monans.json";
         console.log('Hello MonanDataProvider Provider');
     }
     //Khởi tạo dữ liệu lần đầu tiên khởi động App

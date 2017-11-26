@@ -3,7 +3,7 @@
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.31.45:8101" />
+    <content original-src="index.html" src="http://192.168.31.9:8100" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -80,7 +80,7 @@
     <allow-navigation href="http://192.168.31.9:8100" />
     <allow-navigation href="http://192.168.1.139:8100" />
     <allow-navigation href="http://192.168.31.45:8101" />
-    <engine name="android" spec="^6.3.0" />
+    <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-googlemaps" spec="git+https://github.com/mapsplugin/cordova-plugin-googlemaps.git#multiple_maps">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAmNksTX5DZ1GQ4AFTSFVAyhXhMk2Nj5ZM" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyD-hHFNb65X-GHGchY5x6NPUKsvQj1eFdE" />
