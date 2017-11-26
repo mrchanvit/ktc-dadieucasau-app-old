@@ -3,28 +3,28 @@
         "id": "duong",
         "name": "Đường",
         "icon": "mi-duong",
-        "color": "primary",
+        "color": "#3E50B4",
         "amount": 0
     },
     {
         "id": "muoi",
         "name": "Muối",
         "icon": "mi-muoi",
-        "color": "primary",
+        "color": "#2095F2",
         "amount": 0
     },
     {
         "id": "botngot",
         "name": "Bộ ngọt",
         "icon": "mi-botngot",
-        "color": "primary",
+        "color": "#9B26AF",
         "amount": 0
     },
     {
         "id": "caphe",
         "name": "Cà phê",
         "icon": "mi-caphe",
-        "color": "primary",
+        "color": "#6639B6",
         "amount": 0
     },
     {
@@ -32,7 +32,7 @@
         "id": "tieu",
         "name": "Tiêu",
         "icon": "mi-tieu",
-        "color": "primary",
+        "color": "#009587",
         "amount": 0
     }
 ]

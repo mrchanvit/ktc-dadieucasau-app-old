@@ -29,7 +29,7 @@
     </ion-row> 
     <ion-row>
         <ion-col text-center class="giavi" col-3 *ngFor="let giavi of monan.giavis">
-          <ion-icon text-center [name]="getGiaviIcon(giavi)" [color]="getGiaviColor(giavi)"></ion-icon>
+          <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)"></ion-icon>
           <p class="soluong">{{giavi.amount}}</p>
         </ion-col>
     </ion-row> 

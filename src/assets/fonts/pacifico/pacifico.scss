@@ -1,0 +1,7 @@
+$icomoon-font-path: $font-path !default;
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$icomoon-font-path}/pacifico/pacifico.ttf');
+}

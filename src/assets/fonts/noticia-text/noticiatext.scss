@@ -1,0 +1,31 @@
+$icomoon-font-path: $font-path !default;
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$icomoon-font-path}/noticia-text/noticiatext-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: italic;
+  font-weight: 400;
+  src: url('#{$icomoon-font-path}/noticia-text/noticiatext-italic.ttf');
+}
+
+@font-face {
+  font-family: 'Noticia Text';
+  font-style: bold;
+  font-weight: 700;
+  src: url('#{$icomoon-font-path}/noticia-text/noticiatext-bold.ttf');
+}
+
+$font-family-base: "Noticia Text", serif !default;
+body {
+  font-family: "Noticia Text" !important;
+  font-weight: 400 !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, button {
+  font-family: "Noticia Text" !important;
+}

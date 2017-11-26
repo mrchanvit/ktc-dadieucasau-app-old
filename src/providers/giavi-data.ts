@@ -50,6 +50,7 @@ export class GiaviDataProvider {
 
   public getColor(id:string){
     if(this.giavis.length>0){
+      console.log(this.giavis.find(item => item.id == id).color);      
       return this.giavis.find(item => item.id == id).color;
     }
   }
