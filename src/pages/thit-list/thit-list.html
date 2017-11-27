@@ -14,14 +14,14 @@
   <ion-toolbar color="white">    
     <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">
       <ion-segment formControlName="formLoaiThit">
-          <ion-segment-button value="all" type="submit">
-            <ion-icon name="camera" icon-left></ion-icon> Tất cả
+          <ion-segment-button value="all">
+            <ion-icon name="list-box" icon-left></ion-icon> Tất cả
           </ion-segment-button>
-          <ion-segment-button value="dadieu" type="submit">
+          <ion-segment-button value="dadieu">
             <ion-icon name="bookmark" icon-left></ion-icon> Đà điểu
           </ion-segment-button>
-          <ion-segment-button value="casau" type="submit">
-              <ion-icon name="bookmark"   icon-left></ion-icon> Cá sấu
+          <ion-segment-button value="casau">
+              <ion-icon name="bookmark" icon-left></ion-icon> Cá sấu
           </ion-segment-button>
         </ion-segment>
     </form>      
@@ -30,10 +30,9 @@
 <ion-content>
 <ion-grid>
   <ion-row>
-    <ion-col class="thit" text-center col-6 *ngFor="let thit of thits">
+    <ion-col class="thit" text-center col-6 *ngFor="let thit of thits" (click)="onToThitDetail(thit)">
         <h5 text-center class="tieude">{{thit.name}}</h5>  
-        <img [src]="thit.imageUrl"/>
-             
+        <img [src]="thit.imageUrl"/>             
     </ion-col>
   </ion-row>
 </ion-grid>

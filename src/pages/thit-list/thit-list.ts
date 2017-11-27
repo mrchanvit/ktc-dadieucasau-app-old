@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Thit } from '../../interfaces/thit';
 import { ThitDataProvider } from '../../providers/thit-data';
 import { FormBuilder,FormGroup } from '@angular/forms';
+import { ThitDetailPage } from '../thit-detail/thit-detail';
 
 
 
@@ -46,6 +47,10 @@ export class ThitListPage {
     } else {
       this.thits = this.thitDataProvider.getOnLoaiThit(selectedLoaiThit);
     }
+  }
+
+  onToThitDetail(thit:Thit){
+    this.navCtrl.push(ThitDetailPage,{thit:thit})
   }
   
 

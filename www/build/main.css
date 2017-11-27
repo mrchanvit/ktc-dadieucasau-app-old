@@ -28443,6 +28443,18 @@ page-monan-detail .buoc ion-chip span {
   color: #2C7C2F;
 }
 
+page-thit-detail .tenthit {
+  text-transform: uppercase;
+  color: #2C7C2F;
+}
+
+page-thit-detail .tieudecon {
+  color: #2C7C2F;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.1em;
+}
+
 page-thit-list .thit {
   border-width: 0.2em;
   border-color: #f1f1f1;

@@ -32,6 +32,7 @@ import { Configs } from '../config';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { ThitDataProvider } from '../providers/thit-data';
 import { FormBuilder } from '@angular/forms';
+import { ThitDetailPage } from '../pages/thit-detail/thit-detail';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { FormBuilder } from '@angular/forms';
     KhuyenmaiListPage,
     CuahangMapPage,
     CuahangTabsPage,
+    ThitDetailPage
 
   ],
   imports: [
@@ -72,6 +74,7 @@ import { FormBuilder } from '@angular/forms';
     KhuyenmaiListPage,
     CuahangMapPage,
     CuahangTabsPage,
+    ThitDetailPage
     
     
   ],

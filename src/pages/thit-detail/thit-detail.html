@@ -1,0 +1,76 @@
+<!--
+  Generated template for the ThitDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sản phẩm</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+      <h2 text-center color="primary" class="tenthit">{{thit.name}}</h2>
+      <ion-row>
+          
+          <ion-col>
+            <img src="./assets/img/cncl/01.jpg">
+          </ion-col>
+          <ion-col>
+            <img src="./assets/img/cncl/02.jpg">
+          </ion-col>
+          <ion-col>
+            <img src="./assets/img/cncl/03.jpg">
+          </ion-col>
+          <ion-col>
+            <img src="./assets/img/cncl/04.jpg">
+          </ion-col>
+          
+        </ion-row>
+    <ion-row>
+      <ion-col>
+        
+        <img src="{{thit.imageUrl}}">
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <button ion-button outline block icon-left color="secondary">
+          <ion-icon name="information-circle"></ion-icon>
+          Tìm hiểu thêm
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button outline block icon-left color="primary">
+          <ion-icon name="basket"></ion-icon>
+          Tìm cửa hàng
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list>
+    <ion-list-header>
+      <h3 class="tieudecon">Món ăn từ {{thit.name}}</h3>
+    </ion-list-header>
+    <button ion-item>
+      <ion-thumbnail item-start>
+        <img src="./assets/img/mon1.jpg">
+      </ion-thumbnail>
+      <h3 text-wrap>Cánh đà điểu nướng muốt ớt tiêu chanh xả hành</h3>
+      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>
+    </button>
+    <button ion-item>
+      <ion-thumbnail item-start>
+        <img src="./assets/img/mon2.jpg">
+      </ion-thumbnail>
+      <h3 text-wrap>Cánh đà điểu xốt cà chua</h3>
+      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>
