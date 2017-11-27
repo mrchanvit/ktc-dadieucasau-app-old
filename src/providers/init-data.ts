@@ -5,6 +5,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { CuahangDataProvider } from './cuahang-data';
 import { GiaviDataProvider } from './giavi-data';
 import { MonanDataProvider } from './monan-data';
+import { ThitDataProvider } from './thit-data';
+
 
 @Injectable()
 export class InitDataProvider {
@@ -14,7 +16,9 @@ export class InitDataProvider {
     private cuahangDataProvider: CuahangDataProvider,
     private giaviDataProvider: GiaviDataProvider,
     private monanDataProvider: MonanDataProvider,
-    private storage: NativeStorage) {
+    private thitDataProvider: ThitDataProvider,    
+    private storage: NativeStorage,
+    ) {
     console.log('Hello InitDataProvider Provider');
   }
 
@@ -39,7 +43,7 @@ export class InitDataProvider {
     this.giaviDataProvider.initData().subscribe((data) => {
       console.log('Load dữ liệu gia vi');
       this.storage.setItem("giavis", data).then(()=>{
-        this.giaviDataProvider.initDataOnEnter();
+        this.giaviDataProvider.initDataOnEnter("giavis");
       });
 
     }, (error) => {
@@ -54,12 +58,25 @@ export class InitDataProvider {
       console.log(error);
     });
 
+    //Thịt
+    this.thitDataProvider.initData().subscribe((data) => {
+      console.log('Load dữ liệu thịt');
+      this.storage.setItem("thits", data).then(()=>{
+        this.thitDataProvider.initDataOnEnter("thits");
+      });
+
+    }, (error) => {
+      console.log(error);
+    });
+
     //+++++++++++++++++++++++++++++++++++++++++++++
   }
 
   initData() {
     //Lưu danh sách gia vị vào ram
-    this.giaviDataProvider.initDataOnEnter();
+    this.giaviDataProvider.initDataOnEnter("giavis");
+    this.thitDataProvider.initDataOnEnter("thits");
+    
   }
 
   clearData(){

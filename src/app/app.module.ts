@@ -30,6 +30,8 @@ import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
 import { InitDataProvider } from '../providers/init-data';
 import { Configs } from '../config';
 import { GiaviDataProvider } from '../providers/giavi-data';
+import { ThitDataProvider } from '../providers/thit-data';
+import { FormBuilder } from '@angular/forms';
 
 
 @NgModule({
@@ -77,12 +79,14 @@ import { GiaviDataProvider } from '../providers/giavi-data';
     StatusBar,
     SplashScreen,
     NativeStorage,
+    FormBuilder,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
     Configs,
-    GiaviDataProvider 
+    GiaviDataProvider,
+    ThitDataProvider 
   ]
 })
 export class AppModule {}

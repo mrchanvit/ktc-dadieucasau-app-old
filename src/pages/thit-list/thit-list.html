@@ -9,11 +9,32 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Yêu thích</ion-title>
+    <ion-title>Sản phẩm</ion-title>    
   </ion-navbar>
+  <ion-toolbar color="white">    
+    <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">
+      <ion-segment formControlName="formLoaiThit">
+          <ion-segment-button value="all" type="submit">
+            <ion-icon name="camera" icon-left></ion-icon> Tất cả
+          </ion-segment-button>
+          <ion-segment-button value="dadieu" type="submit">
+            <ion-icon name="bookmark" icon-left></ion-icon> Đà điểu
+          </ion-segment-button>
+          <ion-segment-button value="casau" type="submit">
+              <ion-icon name="bookmark"   icon-left></ion-icon> Cá sấu
+          </ion-segment-button>
+        </ion-segment>
+    </form>      
+  </ion-toolbar>
 </ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col class="thit" text-center col-6 *ngFor="let thit of thits">
+        <h5 text-center class="tieude">{{thit.name}}</h5>  
+        <img [src]="thit.imageUrl"/>
+             
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

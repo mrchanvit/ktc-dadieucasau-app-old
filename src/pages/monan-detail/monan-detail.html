@@ -14,40 +14,55 @@
 </ion-header>
 
 <ion-content *ngIf="monan">
+
   <img src="{{monan.imageUrl}}">
   <ion-grid padding>
     <ion-row>
-      <ion-col >
+      <ion-col>
         <h1 text-center class="tenmonan">{{monan.name}}</h1>
         <p class="mota">{{monan.description}}</p>
       </ion-col>
     </ion-row>
-    <ion-row>
-        <ion-col >
-          <h4 text-center class="tieudecon">Gia vị</h4>
-        </ion-col>
-    </ion-row> 
-    <ion-row>
-        <ion-col text-center class="giavi" col-3 *ngFor="let giavi of monan.giavis">
-          <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)"></ion-icon>
-          <p class="soluong">{{giavi.amount}}</p>
-        </ion-col>
-    </ion-row> 
-    <ion-row>
-        <ion-col text-center>
-          <h4 class="tieudecon">Chế biến</h4>
-        </ion-col>
-    </ion-row>    
   </ion-grid>
-  <ion-list >
-    
-    <ion-item text-wrap *ngFor="let step of monan.steps; let i = index">
-      {{step}}
+  <ion-list>
+      <ion-list-header>
+        <h3 class="tieudecon">Nguyên liệu</h3>
+      </ion-list-header>
+      <ion-item>
+        
+      </ion-item>
+    </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <h3 class="tieudecon">Gia vị</h3>
+    </ion-list-header>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="giavi" text-center col-3 *ngFor="let giavi of monan.giavis">
+            <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)" ></ion-icon>
+            <p text-center class="giavi-amount" >{{giavi.amount}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <h3 class="tieudecon">Chế biến</h3>
+    </ion-list-header>
+       
+      <ion-item class="buoc" text-wrap *ngFor="let step of monan.steps; let i = index">
+        <ion-chip item-start><h4><span>{{i+1}}</span></h4></ion-chip>        
+        <p>{{step}}</p>        
+      </ion-item>
+    
+  </ion-list>
 
-  
-  
+
+
+
+
   <p>{{monan.description}}</p>
   <p>{{monan.content}}</p>
 

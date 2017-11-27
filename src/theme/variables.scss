@@ -16,16 +16,8 @@ $app-direction: ltr;
 @import "../assets/fonts/custom-icon/icomoon";
 //@import "../assets/fonts/noticia-text/noticiatext";
 @import "../assets/fonts/pacifico/pacifico";
-
-
-
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
+@import "../assets/fonts/font-awesome/scss/font-awesome";
+@import "../assets/fonts/font-awesome/font-awesome";
 
 
 
@@ -44,6 +36,18 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$toolbar-background: map-get($colors, secondary);
+
+
 
 
 // App iOS Variables
@@ -90,3 +94,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+

@@ -10,15 +10,41 @@ page-monan-detail {
         color: #888;
         text-align: justify;
         text-align-last: center;
+        font-style: italic;
     }
 
     .tieudecon{
-        color: #bbb;
+        color: map-get($colors, primary );
         text-transform: uppercase;
-        letter-spacing: 0.1em
+        letter-spacing: 0.1em;
+        font-size: 1.2em;
     }
-    .soluong{
-        color: #888;
-        font-size: 80%;
+
+    .giavi-amount{
+        background-color: map-get($colors, secondary );;
+        color: #fff;
+        border-radius: 0.3em;
+        //padding: 0.2em;       
+        font-size: 0.7em;
+        padding: 0.2em;
+       
+    }
+
+    .buoc ion-chip {
+        width: 3.8em;
+        height: 3.8em;        
+        border-radius: 1.9em;
+        text-align: center;
+        display: inline-block;  
+        padding-top: 0.75em;    
+        background-color: #fff;  
+        border: 0.15em map-get($colors, secondary ) solid;
+        
+    }
+
+    .buoc ion-chip span{
+        font-weight: 700;
+        font-size: 1.4em;
+        color: map-get($colors, primary);
     }
 }

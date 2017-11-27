@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name": "Bàn tay cá sấu", 
+        "imageUrl": "./assets/img/thits/ban-tay-ca-sau.png",
+        "type": "casau" 
+    },
+    {
+        "id": 2,
+        "name": "Cánh đà điểu", 
+        "imageUrl": "./assets/img/thits/canh_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 3,
+        "name": "Dạ dày đà điểu", 
+        "imageUrl": "./assets/img/thits/da_day_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 4,
+        "name": "Gân chân đà điểu", 
+        "imageUrl": "./assets/img/thits/gan_chan_da_dieu.png",
+        "type": "dadieu"
+    },
+    {
+        "id": 5,
+        "name": "Gân khác đà điểu", 
+        "imageUrl": "./assets/img/thits/gan_khac_da_dieu.png",
+        "type": "dadieu"
+    },
+    {
+        "id": 6,
+        "name": "Ngón chân đà điểu", 
+        "imageUrl": "./assets/img/thits/ngon_chan_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 7,
+        "name": "Sườn đà điểu", 
+        "imageUrl": "./assets/img/thits/suon_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 8,
+        "name": "Thịt cổ đà điểu", 
+        "imageUrl": "./assets/img/thits/thit_co_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 9,
+        "name": "Thịt đùi đà điểu tươi", 
+        "imageUrl": "./assets/img/thits/thit_dui_da_dieu_tuoi.png",
+        "type": "dadieu"
+    },
+    {
+        "id": 10,
+        "name": "Thịt đùi đà điểu", 
+        "imageUrl": "./assets/img/thits/thit_dui_da_dieu.png",
+        "type": "dadieu"
+    },
+    {
+        "id": 11,
+        "name": "Thịt fillet đà điểu tươi", 
+        "imageUrl": "./assets/img/thits/thit_fillet_da_dieu_tuoi.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 12,
+        "name": "Thịt fillet đà điểu", 
+        "imageUrl": "./assets/img/thits/thit_fillet_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 13,
+        "name": "Thịt vụn đà điểu", 
+        "imageUrl": "./assets/img/thits/thit_vun_da_dieu.png",
+        "type": "dadieu"
+    },
+    {
+        "id": 14,
+        "name": "Thịt cá sấu còn xương", 
+        "imageUrl": "./assets/img/thits/thit-ca-sau-con-xuong.png",
+        "type": "casau"
+    },
+    {
+        "id": 15,
+        "name": "Thịt cá sấu fillet", 
+        "imageUrl": "./assets/img/thits/thit-ca-sau-fillet.png",
+        "type": "casau"
+    },
+    {
+        "id": 16,
+        "name": "Tim đà điểu", 
+        "imageUrl": "./assets/img/thits/tim_da_dieu.png",
+        "type": "dadieu" 
+    },
+    {
+        "id": 17,
+        "name": "Trứng đà điểu", 
+        "imageUrl": "./assets/img/thits/trung_da_dieu.png",
+        "type": "dadieu" 
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,19 @@
 page-thit-list {
+    .thit{
+        border-width: 0.2em;
+        border-color: #f1f1f1;
+        border-style: solid;        
+        border-collapse: collapse;
+        background-color: white;
+        .tieude{
+            font-size: 1.1em;
+            color: #666;
+        }
+       
+    }
+    
+    ion-content{
+        background-color: #f1f1f1 !important;
+    }
 
 }

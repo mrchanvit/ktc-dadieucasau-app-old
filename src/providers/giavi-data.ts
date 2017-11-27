@@ -32,8 +32,8 @@ export class GiaviDataProvider {
   }
 
   //Tải danh sách gia vị vào RAM mỗi khi mở áp
-  initDataOnEnter(){
-    this.storage.getItem("giavis")
+  initDataOnEnter(key:string){
+    this.storage.getItem(key)
     .then(data=>{
       this.giavis = data;    
       console.log(data);   
