@@ -12,20 +12,31 @@
     <ion-title>Món ăn</ion-title>
   </ion-navbar>
 </ion-header>
-
-
-
-<ion-content padding>
-  <ion-card *ngFor="let monan of monans" (click)="toMonanDetail($event, monan)">
-    <img src="{{monan.imageUrl}}"/>
+<ion-content>
+  <ion-card *ngFor="let monan of monans">
+    <ion-card-header text-center (click)="toMonanDetail($event, monan)">
+      <h2 class="tieude">{{monan.name}}</h2>
+    </ion-card-header>
+    <img src="{{monan.imageUrl}}" (click)="toMonanDetail($event, monan)"/>
     <ion-card-content>
-      <ion-card-title>
-        {{monan.name}}
-        </ion-card-title>
-      <p>
+      <p text-center>
         {{monan.description}}
       </p>
     </ion-card-content>
+    <ion-row>
+        <ion-col text-left>
+          <button ion-button icon-left clear small color="tone02">
+            <ion-icon name="heart-outline" ></ion-icon>
+            <div>YÊU THÍCH</div>
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button icon-right outline small color="secondary" (click)="toMonanDetail($event, monan)">
+            CHI TIẾT
+            <ion-icon name="play"></ion-icon>            
+          </button>
+        </ion-col>
+      </ion-row>
   </ion-card>
 </ion-content>
 

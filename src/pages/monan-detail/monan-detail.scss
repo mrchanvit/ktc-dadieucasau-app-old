@@ -1,6 +1,6 @@
 page-monan-detail {
     .giavi ion-icon{
-        font-size: 3em;
+        font-size: 2.6em;
     }
     .tenmonan{
         font-family: 'Pacifico';        
@@ -17,14 +17,13 @@ page-monan-detail {
         color: map-get($colors, primary );
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .giavi-amount{
         background-color: map-get($colors, secondary );
         color: #fff;
-        border-radius: 0.3em;
-        //padding: 0.2em;       
+        border-radius: 0.3em;               
         font-size: 0.7em;
         padding: 0.2em;
        
@@ -46,5 +45,49 @@ page-monan-detail {
         font-weight: 700;
         font-size: 1.4em;
         color: map-get($colors, primary);
+    }
+
+    .thit{
+        span{
+            font-size: 0.7em;
+            color: #fff; 
+            background-color: map-get($colors, secondary );
+            padding: 0.3em;
+            border-radius: 0.3em;            
+            ion-icon{
+                color: #fff;
+                margin-left:0.1em; 
+            }
+        }
+        h2{
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+    }
+    .nguyenlieu{
+        span{
+            font-size: 0.7em;
+            color: #fff; 
+            background-color: map-get($colors, secondary );
+            padding: 0.3em;
+            border-radius: 0.3em;            
+            
+        }
+        h2{           
+            font-size: 1em;
+        }
+    }
+
+    .thuongthuc {
+        p {
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        ion-list-header {
+            margin-bottom: 0;
+        }
+        ion-label {
+            margin-top: 0;
+        }
     }
 }

@@ -18,20 +18,30 @@
   <img src="{{monan.imageUrl}}">
   <ion-grid padding>
     <ion-row>
-      <ion-col>
-        <h1 text-center class="tenmonan">{{monan.name}}</h1>
+      <ion-col text-center>
+        <h1 class="tenmonan">{{monan.name}}</h1>
         <p class="mota">{{monan.description}}</p>
+        <button ion-button icon-only clear (click)="onAddFavorites()">
+          <ion-icon name="heart-outline"></ion-icon>
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-list>
       <ion-list-header>
-        <h3 class="tieudecon">Nguyên liệu</h3>
+        <h3 class="tieudecon" item-start>Nguyên liệu</h3>
+        <ion-icon item-end name="book"></ion-icon>
       </ion-list-header>
-      <ion-item class="buoc" text-wrap *ngFor="let thit of monan.thits | thitFullDetail">
-        <ion-icon item-start name="book"></ion-icon>
-          <h4>{{thit.id}} - {{thit.amount}} -  {{thit.name}}</h4>
-      </ion-item>   
+      <button ion-item class="thit" text-wrap *ngFor="let thit of monan.thits | thitFullDetail" (click)="onToThit(thit)">        
+        <ion-icon item-start color="primary" [name]="'mi-'+thit.type+'-round'"></ion-icon>
+          <h2>{{thit.name}} </h2>          
+          <span item-end>{{thit.amount}} <ion-icon name="play"  icon-right></ion-icon></span>          
+      </button> 
+      <ion-item class="nguyenlieu" text-wrap *ngFor="let nguyenlieu of monan.nguyenlieus">
+        <ion-icon item-start color="primary" name="book"></ion-icon>
+          <h2>{{nguyenlieu.name}}</h2>
+          <span item-end>{{nguyenlieu.amount}}</span>          
+      </ion-item>     
     </ion-list>
   <ion-list>
     <ion-list-header>
@@ -40,8 +50,8 @@
     <ion-item>
       <ion-grid>
         <ion-row>
-          <ion-col class="giavi" text-center col-3 *ngFor="let giavi of monan.giavis">
-            <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)" ></ion-icon>
+          <ion-col class="giavi" text-center col-2 *ngFor="let giavi of monan.giavis | giaviFullDetail">
+            <ion-icon text-center [name]="giavi.icon" [style.color]="giavi.color" ></ion-icon>
             <p text-center class="giavi-amount" >{{giavi.amount}}</p>
           </ion-col>
         </ion-row>
@@ -57,6 +67,15 @@
         <ion-chip item-start><h4><span>{{i+1}}</span></h4></ion-chip>        
         <p>{{step}}</p>        
       </ion-item>    
+  </ion-list>
+  <ion-list class="thuongthuc">
+      <ion-list-header>
+        <h3 class="tieudecon">Thưởng thức</h3>
+      </ion-list-header>
+      <ion-item text-center>
+        <ion-icon name="quote" color="secondary"></ion-icon>
+        <p>{{monan.enjoy}}</p>
+      </ion-item>
   </ion-list>
 
 </ion-content>

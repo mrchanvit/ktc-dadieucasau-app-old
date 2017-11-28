@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Thit } from '../../interfaces/thit';
+import { ThitDataProvider } from '../../providers/thit-data';
 
 /**
  * Generated class for the ThitDetailPage page.
@@ -20,14 +21,12 @@ export class ThitDetailPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    private thitDataProvider: ThitDataProvider) {
       this.thit = this.navParams.get("thit");
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ThitDetailPage');    
+    console.log('ionViewDidLoad ThitDetailPage');   
   }
-
-
-
 }

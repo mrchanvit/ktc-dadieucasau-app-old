@@ -8,18 +8,25 @@
       "giavis":[
         {
           "id": "duong",
-          "amount": "1/4 muỗng"
+          "amount": "0.5 g"
         },
         {
           "id": "muoi",
-          "amount": "1/2 muỗng"
+          "amount": "0.5 g"
         }
       ],
       "nguyenlieus":[
-        {
-          "id": "rauthom",
+        {          
           "name": "Rau thơm",          
           "amount": "1 bó"
+        },
+        {          
+          "name": "Dưa leo",          
+          "amount": "1 bó"
+        },
+        {          
+          "name": "Cà chua",          
+          "amount": "0.5 Kg"
         }
       ],
       "thits":[
@@ -44,22 +51,25 @@
       "giavis":[
         {
           "id": "botngot",
-          "amount": "1/4 muỗng"
+          "amount": "0.5 g"
         },
         {
           "id": "muoi",
-          "amount": "1/2 muỗng"
+          "amount": "0.5 g"
         },
         {
           "id": "tieu",
-          "amount": "10g"
+          "amount": "10 g"
         }
       ],
       "nguyenlieus":[
-        {
-          "id": "giaybac",
+        {         
           "name": "Giấy bạc",          
           "amount": "1 tờ"
+        },
+        {         
+          "name": "Rau thơm",          
+          "amount": "1 bó"
         }
       ],
       "thits":[

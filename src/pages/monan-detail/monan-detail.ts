@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Monan} from '../../interfaces/monan'
 import { GiaviDataProvider } from '../../providers/giavi-data';
 import { Giavi } from '../../interfaces/giavi';
+import { Thit } from '../../interfaces/thit';
+import { ThitDetailPage } from '../thit-detail/thit-detail';
 
 /**
  * Generated class for the MonanDetailPage page.
@@ -26,27 +28,19 @@ export class MonanDetailPage {
     public giaviDataController: GiaviDataProvider    
     ) {
     this.monan = navParams.get('monan');
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MonanDetailPage');
   }
 
-  /* getGiaviDetail:Giavi(giavi:Giavi){
-    giavi.color = this.
-  } */
-  getGiaviIcon(giavi:Giavi){
-    console.log(this.giaviDataController.getIcon(giavi.id));
-    
-    return this.giaviDataController.getIcon(giavi.id);
+  //Thêm vào danh sách yêu thích
+  onAddFavorites(){
   }
-  getGiaviName(giavi:Giavi){       
-    return this.giaviDataController.getName(giavi.id);
-  }
-  getGiaviColor(giavi:Giavi){       
-    return this.giaviDataController.getColor(giavi.id);
-  }
-  
- 
 
+  //Thêm vào danh sách yêu thích
+  onToThit(thit:Thit){
+    this.navCtrl.push(ThitDetailPage,{thit:thit})
+  }
 }

@@ -9,16 +9,16 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { FormBuilder } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Configs } from '../config';
+
 
 //Ionic native
 import { NativeStorage } from '@ionic-native/native-storage';
 
 //My pages
 import {MonanListPage} from '../pages/monan-list/monan-list';
-import {MonanDataProvider } from '../providers/monan-data';
-import {CuahangDataProvider } from '../providers/cuahang-data';
 import {MonanDetailPage} from '../pages/monan-detail/monan-detail';
 import {WelcomePage} from '../pages/welcome/welcome';
 import {MonanFavoritePage} from '../pages/monan-favorite/monan-favorite';
@@ -26,14 +26,18 @@ import {ThitListPage} from '../pages/thit-list/thit-list';
 import {CuahangListPage} from '../pages/cuahang-list/cuahang-list';
 import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
 import {CuahangMapPage} from '../pages/cuahang-map/cuahang-map';
-import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs'
+import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs';
+import { ThitDetailPage } from '../pages/thit-detail/thit-detail';
+
+//My provider
 import { InitDataProvider } from '../providers/init-data';
-import { Configs } from '../config';
+import { MonanDataProvider } from '../providers/monan-data';
+import {CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { ThitDataProvider } from '../providers/thit-data';
-import { FormBuilder } from '@angular/forms';
-import { ThitDetailPage } from '../pages/thit-detail/thit-detail';
-import { ThitPipe } from '../pipes/thit';
+
+//My pipe
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
@@ -51,13 +55,14 @@ import { ThitPipe } from '../pipes/thit';
     KhuyenmaiListPage,
     CuahangMapPage,
     CuahangTabsPage,
-    ThitDetailPage,
-    ThitPipe
+    ThitDetailPage,    
+    
 
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    PipesModule,
     IonicModule.forRoot(MyApp),
 
   ],
@@ -76,8 +81,7 @@ import { ThitPipe } from '../pipes/thit';
     KhuyenmaiListPage,
     CuahangMapPage,
     CuahangTabsPage,
-    ThitDetailPage
-    
+    ThitDetailPage,   
     
   ],
   providers: [

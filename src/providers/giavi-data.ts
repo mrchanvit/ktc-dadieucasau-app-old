@@ -61,14 +61,7 @@ export class GiaviDataProvider {
     }
   }
 
-  public setDetail(giavi:Giavi){
-    if(this.giavis.length>0){
-      let giaviSaved = this.giavis.find(item => item.id == giavi.id);
-      giavi.color = giaviSaved.color;
-      giavi.icon = giaviSaved.icon;
-      giavi.name = giaviSaved.name;
-    }
+  public getDetail(id:string):Giavi{
+    return this.giavis.filter(item=>id==item.id)[0];
   }
-
-
 }
