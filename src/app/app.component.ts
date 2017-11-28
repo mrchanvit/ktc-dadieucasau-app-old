@@ -23,7 +23,7 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage:any = MainPage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string, color: string}>;
 
   constructor(
     public platform: Platform,
@@ -38,13 +38,13 @@ export class MyApp {
     
     // set our app's pages
     this.pages = [
-      { title: 'Nổi bật', component: MainPage },
-      { title: 'Yêu thích', component: MonanFavoritePage },
-      { title: 'Món ăn', component: MonanListPage },
-      { title: 'Nguyên liệu', component: ThitListPage },
-      { title: 'Cửa hàng', component: CuahangTabsPage },
-      { title: 'Khuyến mãi', component: KhuyenmaiListPage },
-      { title: 'Liên hệ', component: KhuyenmaiListPage },
+      { title: 'Nóng sốt', component: MainPage, icon: "flame" ,color: "tone01"},
+      { title: 'Yêu thích', component: MonanFavoritePage, icon: "heart",color: "tone02"  },
+      { title: 'Món ăn', component: MonanListPage, icon: "restaurant", color: "primary" },
+      { title: 'Sản phẩm', component: ThitListPage, icon: "egg", color: "secondary" },
+      { title: 'Cửa hàng', component: CuahangTabsPage, icon: "basket", color: "tone15" },
+      { title: 'Khuyến mãi', component: KhuyenmaiListPage, icon: "pricetags", color: "tone16" },
+      { title: 'Liên hệ', component: KhuyenmaiListPage, icon: "chatbubbles", color: "tone17"  },
       //+ Page Loại nguyên liệu
       
     ];

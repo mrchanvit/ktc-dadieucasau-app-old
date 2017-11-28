@@ -24,9 +24,8 @@
       ],
       "thits":[
         {
-          "id": "thitcanh",
-          "type": "dadieu",
-          "amount": "1 kg"
+          "id": 2,
+          "amount": "0.5 Kg"
         }
       ],
       "steps":[
@@ -65,9 +64,8 @@
       ],
       "thits":[
         {
-          "id": "fillet",
-          "type": "dadieu",
-          "amount": "0,5 kg"
+          "id": 12,          
+          "amount": "1 kg"
         }
       ],
       "steps":[

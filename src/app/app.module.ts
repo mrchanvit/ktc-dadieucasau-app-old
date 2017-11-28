@@ -33,6 +33,7 @@ import { GiaviDataProvider } from '../providers/giavi-data';
 import { ThitDataProvider } from '../providers/thit-data';
 import { FormBuilder } from '@angular/forms';
 import { ThitDetailPage } from '../pages/thit-detail/thit-detail';
+import { ThitPipe } from '../pipes/thit';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ThitDetailPage } from '../pages/thit-detail/thit-detail';
     KhuyenmaiListPage,
     CuahangMapPage,
     CuahangTabsPage,
-    ThitDetailPage
+    ThitDetailPage,
+    ThitPipe
 
   ],
   imports: [

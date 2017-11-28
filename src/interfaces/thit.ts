@@ -1,7 +1,8 @@
 export interface Thit {
   id: number,
-  name: string, 
-  imageUrl: string,
-  type: string // dadieu | casau
+  name?: string, 
+  imageUrl?: string,
+  type?: string // dadieu | casau
+  amount?: string 
 }
   

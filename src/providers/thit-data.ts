@@ -52,4 +52,10 @@ export class ThitDataProvider {
     }); 
   }
 
+  getThitDetail(id: number): Thit{
+    return this.thits.filter(item=>{
+      if (item.id == id) return item;
+    })[0]; 
+  }
+
 }

@@ -7,7 +7,7 @@ webpackJsonp([11],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonanDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_giavi_data__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_giavi_data__ = __webpack_require__(85);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -54,7 +54,7 @@ var MonanDetailPage = (function () {
 MonanDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-monan-detail',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\monan-detail\monan-detail.html"*/'<!--\n\n  Generated template for the MonanDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>{{monan.name}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content *ngIf="monan">\n\n\n\n  <img src="{{monan.imageUrl}}">\n\n  <ion-grid padding>\n\n    <ion-row>\n\n      <ion-col>\n\n        <h1 text-center class="tenmonan">{{monan.name}}</h1>\n\n        <p class="mota">{{monan.description}}</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  <ion-list>\n\n      <ion-list-header>\n\n        <h3 class="tieudecon">Nguyên liệu</h3>\n\n      </ion-list-header>\n\n      <ion-item>\n\n        \n\n      </ion-item>\n\n    </ion-list>\n\n  <ion-list>\n\n    <ion-list-header>\n\n      <h3 class="tieudecon">Gia vị</h3>\n\n    </ion-list-header>\n\n    <ion-item>\n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col class="giavi" text-center col-3 *ngFor="let giavi of monan.giavis">\n\n            <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)" ></ion-icon>\n\n            <p text-center class="giavi-amount" >{{giavi.amount}}</p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-list>\n\n    <ion-list-header>\n\n      <h3 class="tieudecon">Chế biến</h3>\n\n    </ion-list-header>\n\n       \n\n      <ion-item class="buoc" text-wrap *ngFor="let step of monan.steps; let i = index">\n\n        <ion-chip item-start><h4><span>{{i+1}}</span></h4></ion-chip>        \n\n        <p>{{step}}</p>        \n\n      </ion-item>\n\n    \n\n  </ion-list>\n\n\n\n\n\n\n\n\n\n\n\n  <p>{{monan.description}}</p>\n\n  <p>{{monan.content}}</p>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\monan-detail\monan-detail.html"*/,
+        selector: 'page-monan-detail',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\monan-detail\monan-detail.html"*/'<!--\n\n  Generated template for the MonanDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>{{monan.name}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content *ngIf="monan">\n\n\n\n  <img src="{{monan.imageUrl}}">\n\n  <ion-grid padding>\n\n    <ion-row>\n\n      <ion-col>\n\n        <h1 text-center class="tenmonan">{{monan.name}}</h1>\n\n        <p class="mota">{{monan.description}}</p>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  <ion-list>\n\n      <ion-list-header>\n\n        <h3 class="tieudecon">Nguyên liệu</h3>\n\n      </ion-list-header>\n\n      <ion-item class="buoc" text-wrap *ngFor="let thit of monan.thits | thitFullDetail">\n\n        <ion-icon item-start name="book"></ion-icon>\n\n          <h4>{{thit.id}} - {{thit.amount}} -  {{thit.name}}</h4>\n\n      </ion-item>   \n\n    </ion-list>\n\n  <ion-list>\n\n    <ion-list-header>\n\n      <h3 class="tieudecon">Gia vị</h3>\n\n    </ion-list-header>\n\n    <ion-item>\n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col class="giavi" text-center col-3 *ngFor="let giavi of monan.giavis">\n\n            <ion-icon text-center [name]="getGiaviIcon(giavi)" [style.color]="getGiaviColor(giavi)" ></ion-icon>\n\n            <p text-center class="giavi-amount" >{{giavi.amount}}</p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-list>\n\n    <ion-list-header>\n\n      <h3 class="tieudecon">Chế biến</h3>\n\n    </ion-list-header>       \n\n      <ion-item class="buoc" text-wrap *ngFor="let step of monan.steps; let i = index">\n\n        <ion-chip item-start><h4><span>{{i+1}}</span></h4></ion-chip>        \n\n        <p>{{step}}</p>        \n\n      </ion-item>    \n\n  </ion-list>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\monan-detail\monan-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -72,7 +72,7 @@ MonanDetailPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonanListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_monan_data__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_monan_data__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_monan_detail_monan_detail__ = __webpack_require__(109);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -133,7 +133,7 @@ MonanListPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_main_main__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_main_main__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -288,7 +288,7 @@ var ThitDetailPage = (function () {
 ThitDetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-thit-detail',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-detail\thit-detail.html"*/'<!--\n  Generated template for the ThitDetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Sản phẩm</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-grid>\n      <h2 text-center color="primary" class="tenthit">{{thit.name}}</h2>\n      <ion-row>\n          \n          <ion-col>\n            <img src="./assets/img/cncl/01.jpg">\n          </ion-col>\n          <ion-col>\n            <img src="./assets/img/cncl/02.jpg">\n          </ion-col>\n          <ion-col>\n            <img src="./assets/img/cncl/03.jpg">\n          </ion-col>\n          <ion-col>\n            <img src="./assets/img/cncl/04.jpg">\n          </ion-col>\n          \n        </ion-row>\n    <ion-row>\n      <ion-col>\n        \n        <img src="{{thit.imageUrl}}">\n      </ion-col>\n    </ion-row>\n    \n    <ion-row>\n      <ion-col>\n        <button ion-button outline block icon-left color="secondary">\n          <ion-icon name="information-circle"></ion-icon>\n          Tìm hiểu thêm\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button outline block icon-left color="primary">\n          <ion-icon name="basket"></ion-icon>\n          Tìm cửa hàng\n        </button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list>\n    <ion-list-header>\n      <h3 class="tieudecon">Món ăn từ {{thit.name}}</h3>\n    </ion-list-header>\n    <button ion-item>\n      <ion-thumbnail item-start>\n        <img src="./assets/img/mon1.jpg">\n      </ion-thumbnail>\n      <h3 text-wrap>Cánh đà điểu nướng muốt ớt tiêu chanh xả hành</h3>\n      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>\n    </button>\n    <button ion-item>\n      <ion-thumbnail item-start>\n        <img src="./assets/img/mon2.jpg">\n      </ion-thumbnail>\n      <h3 text-wrap>Cánh đà điểu xốt cà chua</h3>\n      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-detail\thit-detail.html"*/,
+        selector: 'page-thit-detail',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-detail\thit-detail.html"*/'<!--\n\n  Generated template for the ThitDetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Sản phẩm</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-grid>\n\n      <h2 text-center color="primary" class="tenthit">{{thit.name}}</h2>\n\n      <ion-row>\n\n          \n\n          <ion-col>\n\n            <img src="./assets/img/cncl/01.jpg">\n\n          </ion-col>\n\n          <ion-col>\n\n            <img src="./assets/img/cncl/02.jpg">\n\n          </ion-col>\n\n          <ion-col>\n\n            <img src="./assets/img/cncl/03.jpg">\n\n          </ion-col>\n\n          <ion-col>\n\n            <img src="./assets/img/cncl/04.jpg">\n\n          </ion-col>\n\n          \n\n        </ion-row>\n\n    <ion-row>\n\n      <ion-col>\n\n        \n\n        <img src="{{thit.imageUrl}}">\n\n      </ion-col>\n\n    </ion-row>\n\n    \n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button outline block icon-left color="secondary">\n\n          <ion-icon name="information-circle"></ion-icon>\n\n          Tìm hiểu thêm\n\n        </button>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button ion-button outline block icon-left color="primary">\n\n          <ion-icon name="basket"></ion-icon>\n\n          Tìm cửa hàng\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  <ion-list>\n\n    <ion-list-header>\n\n      <h3 class="tieudecon">Món ăn từ {{thit.name}}</h3>\n\n    </ion-list-header>\n\n    <button ion-item>\n\n      <ion-thumbnail item-start>\n\n        <img src="./assets/img/mon1.jpg">\n\n      </ion-thumbnail>\n\n      <h3 text-wrap>Cánh đà điểu nướng muốt ớt tiêu chanh xả hành</h3>\n\n      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>\n\n    </button>\n\n    <button ion-item>\n\n      <ion-thumbnail item-start>\n\n        <img src="./assets/img/mon2.jpg">\n\n      </ion-thumbnail>\n\n      <h3 text-wrap>Cánh đà điểu xốt cà chua</h3>\n\n      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>\n\n    </button>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-detail\thit-detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
@@ -305,7 +305,7 @@ ThitDetailPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThitListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_thit_data__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_thit_data__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__thit_detail_thit_detail__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -360,7 +360,7 @@ var ThitListPage = (function () {
 ThitListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-thit-list',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-list\thit-list.html"*/'<!--\n\n  Generated template for the ThitListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Sản phẩm</ion-title>    \n\n  </ion-navbar>\n\n  <ion-toolbar color="white">    \n\n    <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">\n\n      <ion-segment formControlName="formLoaiThit">\n\n          <ion-segment-button value="all">\n\n            <ion-icon name="list-box" icon-left></ion-icon> Tất cả\n\n          </ion-segment-button>\n\n          <ion-segment-button value="dadieu">\n\n            <ion-icon name="bookmark" icon-left></ion-icon> Đà điểu\n\n          </ion-segment-button>\n\n          <ion-segment-button value="casau">\n\n              <ion-icon name="bookmark" icon-left></ion-icon> Cá sấu\n\n          </ion-segment-button>\n\n        </ion-segment>\n\n    </form>      \n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col class="thit" text-center col-6 *ngFor="let thit of thits" (click)="onToThitDetail(thit)">\n\n        <h5 text-center class="tieude">{{thit.name}}</h5>  \n\n        <img [src]="thit.imageUrl"/>             \n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-list\thit-list.html"*/,
+        selector: 'page-thit-list',template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-list\thit-list.html"*/'<!--\n\n  Generated template for the ThitListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Sản phẩm</ion-title>    \n\n  </ion-navbar>\n\n  <ion-toolbar color="white">    \n\n    <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">\n\n      <ion-segment formControlName="formLoaiThit">\n\n          <ion-segment-button value="all" type="submit">\n\n            <ion-icon name="list-box" icon-left></ion-icon> Tất cả\n\n          </ion-segment-button>\n\n          <ion-segment-button value="dadieu" type="submit">\n\n            <ion-icon name="mi-dadieu-round" icon-left></ion-icon> Đà điểu\n\n          </ion-segment-button>\n\n          <ion-segment-button value="casau" type="submit">\n\n              <ion-icon name="mi-casau-round" icon-left></ion-icon> Cá sấu\n\n          </ion-segment-button>\n\n        </ion-segment>\n\n    </form>      \n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content>\n\n<ion-grid>\n\n  <ion-row>\n\n    <ion-col class="thit" text-center col-6 *ngFor="let thit of thits" (click)="onToThitDetail(thit)">\n\n        <h5 text-center class="tieude">{{thit.name}}</h5>  \n\n        <img [src]="thit.imageUrl"/>             \n\n    </ion-col>\n\n  </ion-row>\n\n</ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\pages\thit-list\thit-list.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -425,7 +425,7 @@ KhuyenmaiListPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CuahangListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_cuahang_data__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_cuahang_data__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -585,47 +585,47 @@ webpackEmptyAsyncContext.id = 127;
 
 var map = {
 	"../pages/cuahang-list/cuahang-list.module": [
-		292,
+		293,
 		10
 	],
 	"../pages/cuahang-map/cuahang-map.module": [
-		293,
+		294,
 		9
 	],
 	"../pages/cuahang-tabs/cuahang-tabs.module": [
-		294,
+		295,
 		8
 	],
 	"../pages/khuyenmai-list/khuyenmai-list.module": [
-		291,
+		292,
 		7
 	],
 	"../pages/main/main.module": [
-		284,
+		285,
 		6
 	],
 	"../pages/monan-detail/monan-detail.module": [
-		285,
+		286,
 		5
 	],
 	"../pages/monan-favorite/monan-favorite.module": [
-		288,
+		289,
 		4
 	],
 	"../pages/monan-list/monan-list.module": [
-		286,
+		287,
 		3
 	],
 	"../pages/thit-detail/thit-detail.module": [
-		289,
+		290,
 		2
 	],
 	"../pages/thit-list/thit-list.module": [
-		290,
+		291,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		287,
+		288,
 		0
 	]
 };
@@ -706,7 +706,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(210);
@@ -714,8 +714,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_native_storage__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_monan_list_monan_list__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_monan_data__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_cuahang_data__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_monan_data__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_cuahang_data__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_monan_detail_monan_detail__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_welcome_welcome__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_monan_favorite_monan_favorite__ = __webpack_require__(112);
@@ -724,12 +724,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_cuahang_map_cuahang_map__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_init_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_init_data__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__config__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_giavi_data__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_thit_data__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_giavi_data__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_thit_data__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__angular_forms__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_thit_detail_thit_detail__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pipes_thit__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -749,6 +750,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //Ionic native
 
 //My pages
+
 
 
 
@@ -787,7 +789,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_19__pages_khuyenmai_list_khuyenmai_list__["a" /* KhuyenmaiListPage */],
             __WEBPACK_IMPORTED_MODULE_20__pages_cuahang_map_cuahang_map__["a" /* CuahangMapPage */],
             __WEBPACK_IMPORTED_MODULE_21__pages_cuahang_tabs_cuahang_tabs__["a" /* CuahangTabsPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_thit_detail_thit_detail__["a" /* ThitDetailPage */]
+            __WEBPACK_IMPORTED_MODULE_27__pages_thit_detail_thit_detail__["a" /* ThitDetailPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pipes_thit__["a" /* ThitPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -854,14 +857,14 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_main_main__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_monan_list_monan_list__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_monan_favorite_monan_favorite__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_thit_list_thit_list__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_cuahang_tabs_cuahang_tabs__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_init_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_init_data__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_native_storage__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -899,13 +902,13 @@ var MyApp = (function () {
         this.initializeApp();
         // set our app's pages
         this.pages = [
-            { title: 'Nổi bật', component: __WEBPACK_IMPORTED_MODULE_4__pages_main_main__["a" /* MainPage */] },
-            { title: 'Yêu thích', component: __WEBPACK_IMPORTED_MODULE_7__pages_monan_favorite_monan_favorite__["a" /* MonanFavoritePage */] },
-            { title: 'Món ăn', component: __WEBPACK_IMPORTED_MODULE_5__pages_monan_list_monan_list__["a" /* MonanListPage */] },
-            { title: 'Nguyên liệu', component: __WEBPACK_IMPORTED_MODULE_8__pages_thit_list_thit_list__["a" /* ThitListPage */] },
-            { title: 'Cửa hàng', component: __WEBPACK_IMPORTED_MODULE_10__pages_cuahang_tabs_cuahang_tabs__["a" /* CuahangTabsPage */] },
-            { title: 'Khuyến mãi', component: __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__["a" /* KhuyenmaiListPage */] },
-            { title: 'Liên hệ', component: __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__["a" /* KhuyenmaiListPage */] },
+            { title: 'Nóng sốt', component: __WEBPACK_IMPORTED_MODULE_4__pages_main_main__["a" /* MainPage */], icon: "flame", color: "tone01" },
+            { title: 'Yêu thích', component: __WEBPACK_IMPORTED_MODULE_7__pages_monan_favorite_monan_favorite__["a" /* MonanFavoritePage */], icon: "heart", color: "tone02" },
+            { title: 'Món ăn', component: __WEBPACK_IMPORTED_MODULE_5__pages_monan_list_monan_list__["a" /* MonanListPage */], icon: "restaurant", color: "primary" },
+            { title: 'Sản phẩm', component: __WEBPACK_IMPORTED_MODULE_8__pages_thit_list_thit_list__["a" /* ThitListPage */], icon: "egg", color: "secondary" },
+            { title: 'Cửa hàng', component: __WEBPACK_IMPORTED_MODULE_10__pages_cuahang_tabs_cuahang_tabs__["a" /* CuahangTabsPage */], icon: "basket", color: "tone15" },
+            { title: 'Khuyến mãi', component: __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__["a" /* KhuyenmaiListPage */], icon: "pricetags", color: "tone16" },
+            { title: 'Liên hệ', component: __WEBPACK_IMPORTED_MODULE_9__pages_khuyenmai_list_khuyenmai_list__["a" /* KhuyenmaiListPage */], icon: "chatbubbles", color: "tone17" },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -944,7 +947,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\app\app.html"*/'<ion-menu [content]="content">\n\n\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Menu</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-list>\n\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n\n\n\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"D:\GitHub\ktc-dadieucasau-app\src\app\app.html"*/'<ion-menu [content]="content">\n\n\n\n  <ion-header>\n\n    <ion-toolbar>\n\n      <ion-title>Thực đơn</ion-title>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n\n\n    <ion-list>\n\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n\n        {{p.title}}\n\n        <ion-icon [name]="p.icon" [color]="p.color" item-left></ion-icon>\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"D:\GitHub\ktc-dadieucasau-app\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* MenuController */],
@@ -1028,14 +1031,143 @@ var Configs = (function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThitPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_thit_data__ = __webpack_require__(48);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ThitPipe = (function () {
+    function ThitPipe(thitDataProvider) {
+        this.thitDataProvider = thitDataProvider;
+    }
+    ThitPipe.prototype.transform = function (value) {
+        var _this = this;
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        return value.map(function (item) {
+            var temp_item = _this.thitDataProvider.getThitDetail(item.id);
+            temp_item.amount = item.amount;
+            return temp_item;
+        });
+    };
+    return ThitPipe;
+}());
+ThitPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Pipe */])({
+        name: 'thitFullDetail',
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_thit_data__["a" /* ThitDataProvider */]])
+], ThitPipe);
+
+//# sourceMappingURL=thit.js.map
+
+/***/ }),
+
+/***/ 48:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThitDataProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__ = __webpack_require__(29);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/*
+  Generated class for the ThitProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ThitDataProvider = (function () {
+    function ThitDataProvider(http, storage) {
+        this.http = http;
+        this.storage = storage;
+        this.thitInitPath = "./assets/data/thits.json";
+        this.thits = [];
+        console.log('Hello ThitProvider Provider');
+    }
+    //Khởi tạo dữ liệu lần đầu tiên khởi động App
+    ThitDataProvider.prototype.initData = function () {
+        return this.http.get(this.thitInitPath)
+            .map(function (res) {
+            return res.json();
+        });
+    };
+    //Tải danh sách thịt vào RAM mỗi khi mở áp
+    ThitDataProvider.prototype.initDataOnEnter = function (key) {
+        var _this = this;
+        this.storage.getItem(key)
+            .then(function (data) {
+            _this.thits = data;
+            console.log(data);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    };
+    ThitDataProvider.prototype.getAllThits = function () {
+        return this.thits;
+    };
+    ThitDataProvider.prototype.getOnLoaiThit = function (loaithit) {
+        return this.thits.filter(function (item) {
+            if (item.type == loaithit)
+                return item;
+        });
+    };
+    ThitDataProvider.prototype.getThitDetail = function (id) {
+        return this.thits.filter(function (item) {
+            if (item.id == id)
+                return item;
+        })[0];
+    };
+    return ThitDataProvider;
+}());
+ThitDataProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__["a" /* NativeStorage */]])
+], ThitDataProvider);
+
+//# sourceMappingURL=thit-data.js.map
+
+/***/ }),
+
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_init_data__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_init_data__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_components_toast_toast_controller__ = __webpack_require__(87);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1110,7 +1242,7 @@ MainPage = __decorate([
 
 /***/ }),
 
-/***/ 80:
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1120,10 +1252,10 @@ MainPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cuahang_data__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__giavi_data__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__monan_data__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__thit_data__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__cuahang_data__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__giavi_data__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__monan_data__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__thit_data__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1217,7 +1349,7 @@ InitDataProvider = __decorate([
 
 /***/ }),
 
-/***/ 83:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1287,7 +1419,7 @@ CuahangDataProvider = __decorate([
 
 /***/ }),
 
-/***/ 84:
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1378,7 +1510,7 @@ GiaviDataProvider = __decorate([
 
 /***/ }),
 
-/***/ 85:
+/***/ 86:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1430,82 +1562,6 @@ MonanDataProvider = __decorate([
 ], MonanDataProvider);
 
 //# sourceMappingURL=monan-data.js.map
-
-/***/ }),
-
-/***/ 86:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThitDataProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__ = __webpack_require__(29);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/*
-  Generated class for the ThitProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
-var ThitDataProvider = (function () {
-    function ThitDataProvider(http, storage) {
-        this.http = http;
-        this.storage = storage;
-        this.thitInitPath = "./assets/data/thits.json";
-        this.thits = [];
-        console.log('Hello ThitProvider Provider');
-    }
-    //Khởi tạo dữ liệu lần đầu tiên khởi động App
-    ThitDataProvider.prototype.initData = function () {
-        return this.http.get(this.thitInitPath)
-            .map(function (res) {
-            return res.json();
-        });
-    };
-    //Tải danh sách thịt vào RAM mỗi khi mở áp
-    ThitDataProvider.prototype.initDataOnEnter = function (key) {
-        var _this = this;
-        this.storage.getItem(key)
-            .then(function (data) {
-            _this.thits = data;
-            console.log(data);
-        }).catch(function (error) {
-            console.log(error);
-        });
-    };
-    ThitDataProvider.prototype.getAllThits = function () {
-        return this.thits;
-    };
-    ThitDataProvider.prototype.getOnLoaiThit = function (loaithit) {
-        return this.thits.filter(function (item) {
-            if (item.type == loaithit)
-                return item;
-        });
-    };
-    return ThitDataProvider;
-}());
-ThitDataProvider = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_storage__["a" /* NativeStorage */]])
-], ThitDataProvider);
-
-//# sourceMappingURL=thit-data.js.map
 
 /***/ })
 

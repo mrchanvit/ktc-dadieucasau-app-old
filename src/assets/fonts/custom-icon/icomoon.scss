@@ -38,7 +38,7 @@ $icomoon-font-path: $font-path !default;
     .ion-md-#{$arg}-outline:before  {
       //important to overwrite ionic icons with your own icons
       content: $val !important; 
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
   
@@ -50,3 +50,8 @@ $icomoon-font-path: $font-path !default;
   @include makeIcon(mi-chung, '\e903');
   @include makeIcon(mi-tieu, '\e904');
   @include makeIcon(mi-caphe, '\e905');
+  @include makeIcon(mi-chef, '\e906');
+  @include makeIcon(mi-dadieu, '\e907');
+  @include makeIcon(mi-dadieu-round, '\e908');
+  @include makeIcon(mi-casau, '\e909');
+  @include makeIcon(mi-casau-round, '\e90a');

@@ -28,9 +28,10 @@
       <ion-list-header>
         <h3 class="tieudecon">Nguyên liệu</h3>
       </ion-list-header>
-      <ion-item>
-        
-      </ion-item>
+      <ion-item class="buoc" text-wrap *ngFor="let thit of monan.thits | thitFullDetail">
+        <ion-icon item-start name="book"></ion-icon>
+          <h4>{{thit.id}} - {{thit.amount}} -  {{thit.name}}</h4>
+      </ion-item>   
     </ion-list>
   <ion-list>
     <ion-list-header>
@@ -47,24 +48,15 @@
       </ion-grid>
     </ion-item>
   </ion-list>
+
   <ion-list>
     <ion-list-header>
       <h3 class="tieudecon">Chế biến</h3>
-    </ion-list-header>
-       
+    </ion-list-header>       
       <ion-item class="buoc" text-wrap *ngFor="let step of monan.steps; let i = index">
         <ion-chip item-start><h4><span>{{i+1}}</span></h4></ion-chip>        
         <p>{{step}}</p>        
-      </ion-item>
-    
+      </ion-item>    
   </ion-list>
-
-
-
-
-
-  <p>{{monan.description}}</p>
-  <p>{{monan.content}}</p>
-
 
 </ion-content>

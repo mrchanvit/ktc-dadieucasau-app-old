@@ -14,14 +14,14 @@
   <ion-toolbar color="white">    
     <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">
       <ion-segment formControlName="formLoaiThit">
-          <ion-segment-button value="all">
+          <ion-segment-button value="all" type="submit">
             <ion-icon name="list-box" icon-left></ion-icon> Tất cả
           </ion-segment-button>
-          <ion-segment-button value="dadieu">
-            <ion-icon name="bookmark" icon-left></ion-icon> Đà điểu
+          <ion-segment-button value="dadieu" type="submit">
+            <ion-icon name="mi-dadieu-round" icon-left></ion-icon> Đà điểu
           </ion-segment-button>
-          <ion-segment-button value="casau">
-              <ion-icon name="bookmark" icon-left></ion-icon> Cá sấu
+          <ion-segment-button value="casau" type="submit">
+              <ion-icon name="mi-casau-round" icon-left></ion-icon> Cá sấu
           </ion-segment-button>
         </ion-segment>
     </form>      
