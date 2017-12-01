@@ -4,11 +4,46 @@ page-main {
         max-width: 20%;
         margin: 18px auto;
     }
-    ion-icon {
-        font-size: 30px; //Preferred size here
+
+
+    .tieude{
+        font-family: 'Pacifico';
+               
+    }
+    .con{
+        font-size: 2em;
+        color: map-get($colors , primary )
+    }
+    .con2{
+        font-size: 2em;
+        color: map-get($colors , secondary )
     }
 
-    .dadieu{
-        font-family: 'Pacifico';
+    ion-content{
+        ion-icon{
+            margin-top: 30px;            
+            font-size: 5em!important; //Preferred size here
+        }
+
+        ion-grid.grid{
+            padding: 0;
+        }
+
+        img {            
+            
+            width: auto;
+            margin: auto;
+            display: block;
+            
+            }
+        .dadieu{
+            background-color: map-get($colors , secondary );
+            color: #fff;
+        }
+
+        .casau{
+            background-color: map-get($colors , primary );
+            color: #fff;
+        }
     }
 }

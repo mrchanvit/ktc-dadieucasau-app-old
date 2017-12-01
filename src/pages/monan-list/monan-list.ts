@@ -3,13 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Monan} from '../../interfaces/monan';
 import {MonanDataProvider} from '../../providers/monan-data';
 import {MonanDetailPage} from '../../pages/monan-detail/monan-detail';
-
-/**
- * Generated class for the MonanPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -19,20 +13,34 @@ import {MonanDetailPage} from '../../pages/monan-detail/monan-detail';
 
 export class MonanListPage {
 
-  monans:Monan[]=[];
+
+  formGroupMon: FormGroup;
+  monans: Monan[] = [];
+  private isLoaded: boolean = false;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private monanDataProvider: MonanDataProvider
+    private monanDataProvider: MonanDataProvider,
+    private formBuilder: FormBuilder
   ) 
   {
-
+    this.formGroupMon = this.formBuilder.group({
+      formLoaiMon: []
+    })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MonanListPage');
-    this.monanDataProvider.getAllMonan().then(res => this.monans=res);
+    if(!this.isLoaded){
+      this.monanDataProvider.getAllMonan().then(()=>{
+        this.monans = this.monanDataProvider.monans;
+        this.isLoaded =true; 
+      })
+    } else {
+      this.monans = this.monanDataProvider.monans;
+    }
+    
   }
 
   toMonanDetail(event, monan) {
@@ -40,4 +48,11 @@ export class MonanListPage {
       monan: monan
     });
   }
+
+  onChangeMon(loai: string){
+    let selectedType = this.formGroupMon.value.formLoaiMon;
+    console.log(selectedType);    
+    this.monans = this.monanDataProvider.getMonansByThit(selectedType).slice();
+  }
+
 }

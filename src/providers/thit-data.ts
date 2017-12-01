@@ -15,6 +15,7 @@ export class ThitDataProvider {
 
   private thitInitPath = "./assets/data/thits.json";
   private thits: Thit[] = [];
+  
 
   constructor(
     public http: Http,    
@@ -57,7 +58,4 @@ export class ThitDataProvider {
       if (item.id == id) return item;
     })[0]; 
   }
-
-  
-
 }

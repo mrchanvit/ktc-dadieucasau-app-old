@@ -11,6 +11,21 @@
     </button>
     <ion-title>Món ăn</ion-title>
   </ion-navbar>
+  <ion-toolbar class="filter">    
+    <form [formGroup]="formGroupMon" (click)="onChangeMon()">
+      <ion-segment formControlName="formLoaiMon">
+          <ion-segment-button value="all">
+            <ion-icon name="egg" type="submit" icon-left></ion-icon> Tất cả
+          </ion-segment-button>
+          <ion-segment-button value="dadieu">
+            <ion-icon name="mi-dadieu-round" type="submit"  icon-left></ion-icon> Đà điểu
+          </ion-segment-button>
+          <ion-segment-button value="casau">
+              <ion-icon name="mi-casau-round" type="submit"  icon-left></ion-icon> Cá sấu
+          </ion-segment-button>
+        </ion-segment>
+    </form>      
+  </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-card *ngFor="let monan of monans">

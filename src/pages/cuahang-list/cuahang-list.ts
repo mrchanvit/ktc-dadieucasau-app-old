@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Cuahang} from '../../interfaces/cuahang';
-import {CuahangDataProvider} from '../../providers/cuahang-data'
-
-/**
- * Generated class for the CuahangListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {CuahangDataProvider} from '../../providers/cuahang-data';
+import { CallNumber } from '@ionic-native/call-number';
 
 @IonicPage()
 @Component({
@@ -18,7 +12,9 @@ import {CuahangDataProvider} from '../../providers/cuahang-data'
 export class CuahangListPage {
   cuahangs:Cuahang[]=[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private cuahangDataProvider: CuahangDataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private cuahangDataProvider: CuahangDataProvider,
+    private callNumber: CallNumber) {
   }
 
   ionViewDidLoad() {
@@ -26,6 +22,12 @@ export class CuahangListPage {
     this.cuahangDataProvider.getAllCuahang()
     .then(res=>{this.cuahangs=res})
     .catch(error =>{ console.log("Error")});
+  }
+
+  onCallNumber(number: string){
+    this.callNumber.callNumber(number, true)
+    .then(() => console.log('Launched dialer!'))
+    .catch(() => console.log('Error launching dialer'));
   }
 
 }

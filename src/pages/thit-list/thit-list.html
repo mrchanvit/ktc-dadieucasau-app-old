@@ -11,11 +11,11 @@
     </button>
     <ion-title>Sản phẩm</ion-title>    
   </ion-navbar>
-  <ion-toolbar color="white">    
+  <ion-toolbar class="filter" >    
     <form [formGroup]="formGroupLoaiThit" (click)="onChangeLoaiThit()">
       <ion-segment formControlName="formLoaiThit">
           <ion-segment-button value="all" type="submit">
-            <ion-icon name="list-box" icon-left></ion-icon> Tất cả
+            <ion-icon name="egg" icon-left></ion-icon> Tất cả
           </ion-segment-button>
           <ion-segment-button value="dadieu" type="submit">
             <ion-icon name="mi-dadieu-round" icon-left></ion-icon> Đà điểu

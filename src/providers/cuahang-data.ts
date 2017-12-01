@@ -35,24 +35,9 @@ export class CuahangDataProvider {
       });
   }
 
-  /* getAllCuahang():Promise<Cuahang[]> {
-    return this.http.get(`${this.dataServerUrl}/cuahang`)
-    .toPromise()
-    .then(res=>res.json() as Cuahang[])
-    .catch(this.handleError)
-  } */
-
   //Lấy giữ liệu cửa hàng từ storage
   getAllCuahang(): Promise<Cuahang[]> {
     return this.storage.getItem("cuahangs");
   }
-
-
-
-  /*  private handleError(error: any): Promise<any> {
-     console.error('An error occurred', error); // for demo purposes only
-     return Promise.reject(error.message || error);
-   } */
-
 
 }

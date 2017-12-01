@@ -30,7 +30,7 @@
   <ion-list>
       <ion-list-header>
         <h3 class="tieudecon" item-start>Nguyên liệu</h3>
-        <ion-icon item-end name="book"></ion-icon>
+        <ion-icon item-end name="mi-can" color="mygrey"></ion-icon>
       </ion-list-header>
       <button ion-item class="thit" text-wrap *ngFor="let thit of monan.thits | thitFullDetail" (click)="onToThit(thit)">        
         <ion-icon item-start color="primary" [name]="'mi-'+thit.type+'-round'"></ion-icon>
@@ -38,7 +38,7 @@
           <span item-end>{{thit.amount}} <ion-icon name="play"  icon-right></ion-icon></span>          
       </button> 
       <ion-item class="nguyenlieu" text-wrap *ngFor="let nguyenlieu of monan.nguyenlieus">
-        <ion-icon item-start color="primary" name="book"></ion-icon>
+        <ion-icon item-start color="primary" name="mi-nguyenlieu"></ion-icon>
           <h2>{{nguyenlieu.name}}</h2>
           <span item-end>{{nguyenlieu.amount}}</span>          
       </ion-item>     
@@ -73,9 +73,8 @@
         <h3 class="tieudecon">Thưởng thức</h3>
       </ion-list-header>
       <ion-item text-center>
-        <ion-icon name="quote" color="secondary"></ion-icon>
-        <p>{{monan.enjoy}}</p>
+        <ion-icon name="mi-thuongthuc" color="secondary"></ion-icon>
+        <p text-wrap>{{monan.enjoy}}</p>
       </ion-item>
   </ion-list>
-
 </ion-content>

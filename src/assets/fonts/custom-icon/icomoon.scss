@@ -55,3 +55,6 @@ $icomoon-font-path: $font-path !default;
   @include makeIcon(mi-dadieu-round, '\e908');
   @include makeIcon(mi-casau, '\e909');
   @include makeIcon(mi-casau-round, '\e90a');
+  @include makeIcon(mi-thuongthuc, '\e90b');
+  @include makeIcon(mi-nguyenlieu, '\e90c');
+  @include makeIcon(mi-can, '\e90d');

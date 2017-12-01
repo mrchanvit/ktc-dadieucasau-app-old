@@ -8,30 +8,65 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <img src="./assets/img/dadieuvui.png" class="logo" />
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center color="primary">
+          <h1 class="tieude">Món ngon</h1>
+          <h3>Đà điểu - Cá sấu Khatoco</h3>  
+      </ion-col>
+    </ion-row>
 
-  <h3 class="dadieu">Đà điểu Khatoco</h3>
-  <ion-icon name="mi-duong"></ion-icon>
-  <ion-icon name="mi-muoi"></ion-icon>
-  <ion-icon name="mi-botngot"></ion-icon>
-  <ion-icon name="mi-tieu"></ion-icon>
-  <ion-icon name="mi-caphe"></ion-icon>
-  <ion-icon large name="mi-chung"></ion-icon>
-  <ion-icon large name="book"></ion-icon>
-  <ion-icon name="add"></ion-icon>
-  <i primary class="fa fa-heart fa-lg"></i>
-  <img src="assets/img/dadieuvui.png" class="logo" />
-  <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
-  <p>
-    Thịt đà điểu là loại thịt có giá trị dinh dưỡng cao chứa nhiều vi lượng và khoáng chất nhưng lại ít mỡ. Đặc biệt thịt Đà điểu có hàm lượng cholesterol thấp nên không gây thừa cân béo phì và các bệnh tim mạch, rất phù hợp với xu hướng ẩm thực chung hiện nay.Với đặc tính lành và ngon, thịt đà điểu được nhiều người ưa chuộng để làm những món ăn có hương vị độc đáo, hấp dẫn và rất tốt cho sức khỏe. Bên cạnh đó, vị ngon của thịt đà điểu rất đặc trưng, mềm nhưng không bở, ngọt vị. Được coi là thức ăn lành và sạch nhờ không nhiễm các vi rút gây bệnh cúm gia cầm. Trong thời gian qua, không có chú đà điểu nào tại Việt Nam bị nhiễm cúm.
-  </p>
-  <p>
-    Hơn nữa, thịt đà điểu Khatoco nhiều năm liền là Hàng Việt Nam Chất lượng cao do người tiêu dùng bình chọn; Danh hiệu Sao Vàng Đất Việt do Hội Doanh Nghiệp Việt Nam trao tặng.
-  </p>
-  <h3>Đà điểu Khatoco</h3>
-  <p>
-    Thịt cá sấu màu trắng hồng, hàm lượng protein cao, năng lượng và chất béo thấp. Theo đông y thịt cá sấu có tác dụng tăng cường sinh lực, bồi bổ sức khỏe, chống dị ứng, hen suyễn … Thịt cá sấu dễ dàng chế biến thành các món ăn thơm ngon, độc đáo: Nướng, nấu măng, nhúng mẻ, om chuối …
-  </p>
+    <ion-row class="dadieu">
+      <ion-col text-center>
+        <ion-icon name="mi-dadieu-round"></ion-icon>        
+        <h2 class="tieude">Lợi ích thịt đà điểu</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="dadieu">
+      <ion-col col-6>
+        <ul>
+          <li>Nhiều vi lượng
+              và khoáng chất</li>
+            <li>Ít mỡ, colesterol thấp</li>
+            <li>Không nhiễm
+                virus cúm gia cầm</li>
+        </ul>
+      </ion-col>
+      <ion-col col-6>
+          <h5>TỐT CHO</h5>
+          <h4 class="tieude con">Sức khỏe</h4>
+      </ion-col>
+    </ion-row>
+    <ion-row class="casau">
+        <ion-col text-center>
+          <ion-icon class="miicon" name="mi-casau-round"></ion-icon>        
+          <h2 class="tieude">Lợi ích thịt cá sấu</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row class="casau">
+        <ion-col col-6>
+          <ul>
+            <li>Hàm lượng protein cao</li>
+              <li>Năng lượng
+                  và chất béo thấp</li>
+              <li>Tăng cường sinh lực,
+                  chống dị ứng, hen suyễn</li>
+          </ul>
+        </ion-col>
+        <ion-col col-6>
+            <h5>TỐT CHO</h5>
+            <h4 class="tieude con2">Sức khỏe</h4>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+  
+  
+  
+  
   <p>
     <button ion-button color="primary" (click)="xoaData()">Xóa data</button>
   </p>

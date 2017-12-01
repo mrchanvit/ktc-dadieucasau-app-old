@@ -15,21 +15,37 @@
 
 
 
-<ion-content padding>
-  <ion-card *ngFor="let cuahang of cuahangs" (click)="toCuahangDetail($event, monan)">
+<ion-content>
+  <ion-card *ngFor="let cuahang of cuahangs">
     <ion-card-content>
-      <ion-card-title>
-        {{cuahang.name}}
-        </ion-card-title>
-      <p>
-        {{cuahang.address}}
-      </p>
-      <p>
-        {{cuahang.phone}}
-      </p>
-      <p text-right>
-        {{cuahang.distance}}m
-      </p>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h1 class="header">{{cuahang.name}}</h1>
+            <h3 text-wrap class="info_item">
+              <ion-icon name="map" ion-left color="secondary"></ion-icon>
+              {{cuahang.address}}, {{cuahang.province}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <button ion-button icon-left outline (click)="onCallNumber(cuahang.phone)">
+              <ion-icon name="call" color="secondary"></ion-icon>
+              {{cuahang.phone}}
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button class="location" ion-button icon-left clear>
+              <ion-icon name="compass"></ion-icon>
+                Xem vị trí
+            </button>
+            <!-- <p text-right class="distance">
+              <ion-icon name="compass" small></ion-icon>
+              {{cuahang.distance}}m
+            </p> -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
 </ion-content>

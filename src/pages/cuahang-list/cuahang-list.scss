@@ -1,3 +1,20 @@
 page-cuahang-list {
-
+    ion-content {
+        background-color: #ddd !important;
+        .header{        
+            font-size: 1.6em;           
+            font-weight: 700;
+            color: map-get($colors , primary )
+        }
+        .distance{
+            color: map-get($colors , mygrey )
+        }
+        .info_item{
+            font-size: 1em;
+        }
+        .location{
+            color: map-get($colors , mygrey )
+        }
+    }
+    
 }
