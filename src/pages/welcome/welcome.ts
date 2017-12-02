@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import {MainPage} from '../../pages/main/main'
-
-/**
- * Generated class for the WelcomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -48,8 +40,8 @@ export class WelcomePage {
   }
 
   toApp():void {
-    this.navCtrl.push(MainPage).then(()=>{
-      this.navCtrl.setRoot(MainPage);
+    this.navCtrl.push("MainPage").then(()=>{
+      this.navCtrl.setRoot("MainPage");
     });
     
   }

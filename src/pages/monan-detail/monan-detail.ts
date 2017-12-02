@@ -4,7 +4,8 @@ import {Monan} from '../../interfaces/monan'
 import { GiaviDataProvider } from '../../providers/giavi-data';
 import { Giavi } from '../../interfaces/giavi';
 import { Thit } from '../../interfaces/thit';
-import { ThitDetailPage } from '../thit-detail/thit-detail';
+
+
 
 /**
  * Generated class for the MonanDetailPage page.
@@ -41,6 +42,6 @@ export class MonanDetailPage {
 
   //Thêm vào danh sách yêu thích
   onToThit(thit:Thit){
-    this.navCtrl.push(ThitDetailPage,{thit:thit})
+    this.navCtrl.push("ThitDetailPage",{thit:thit})
   }
 }

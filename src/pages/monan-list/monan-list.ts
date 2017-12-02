@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Monan} from '../../interfaces/monan';
 import {MonanDataProvider} from '../../providers/monan-data';
-import {MonanDetailPage} from '../../pages/monan-detail/monan-detail';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @IonicPage()
@@ -13,10 +12,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 export class MonanListPage {
 
-
   formGroupMon: FormGroup;
-  monans: Monan[] = [];
+  monans: Monan[] = [];  
   private isLoaded: boolean = false;
+  viewModeMini: boolean = false; // TRUE dạng list thu nhỉ| FALSE dạng full
 
   constructor(
     public navCtrl: NavController,
@@ -44,7 +43,7 @@ export class MonanListPage {
   }
 
   toMonanDetail(event, monan) {
-    this.navCtrl.push(MonanDetailPage, {
+    this.navCtrl.push("MonanDetailPage", {
       monan: monan
     });
   }
@@ -54,5 +53,19 @@ export class MonanListPage {
     console.log(selectedType);    
     this.monans = this.monanDataProvider.getMonansByThit(selectedType).slice();
   }
+
+  onChangeView(){
+    this.viewModeMini = !this.viewModeMini;    
+  }
+  
+  onInput($event){
+    console.log($event);
+    
+  }
+
+  onCancel($event){
+    console.log($event);
+  }
+
 
 }

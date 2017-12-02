@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage /* ,NavController *//* , NavParams */ } from 'ionic-angular';
-
-/**
- * Generated class for the CuahangMapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  //CameraPosition,
+  //MarkerOptions,
+  //Marker
+ } from '@ionic-native/google-maps';
 
 @IonicPage()
 @Component({
@@ -16,13 +18,14 @@ import { IonicPage /* ,NavController *//* , NavParams */ } from 'ionic-angular';
 export class CuahangMapPage {
   
   mapElement: HTMLElement;
-  constructor() { }
+  map: GoogleMap;
+  constructor(private googleMaps: GoogleMaps) { }
 
   ionViewDidLoad() {
-   
+    this.loadMap();
   }
-
- /* loadMap() {
+  
+  loadMap() {
     this.mapElement = document.getElementById('map_canvas');
 
     let mapOptions: GoogleMapOptions = {
@@ -61,6 +64,6 @@ export class CuahangMapPage {
           });
 
       });
-  } */
+  } 
 
 }

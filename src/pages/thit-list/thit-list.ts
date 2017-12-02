@@ -3,16 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Thit } from '../../interfaces/thit';
 import { ThitDataProvider } from '../../providers/thit-data';
 import { FormBuilder,FormGroup } from '@angular/forms';
-import { ThitDetailPage } from '../thit-detail/thit-detail';
-
-
-
-/**
- * Generated class for the ThitListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -50,7 +40,7 @@ export class ThitListPage {
   }
 
   onToThitDetail(thit:Thit){
-    this.navCtrl.push(ThitDetailPage,{thit:thit})
+    this.navCtrl.push("ThitDetailPage",{thit:thit})
   }
   
 

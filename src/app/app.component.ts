@@ -3,15 +3,6 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-
-//My pages
-import { MainPage } from '../pages/main/main';
-import {MonanListPage} from '../pages/monan-list/monan-list';
-import {WelcomePage} from '../pages/welcome/welcome';
-import {MonanFavoritePage} from '../pages/monan-favorite/monan-favorite';
-import {ThitListPage} from '../pages/thit-list/thit-list';
-import {KhuyenmaiListPage} from '../pages/khuyenmai-list/khuyenmai-list';
-import {CuahangTabsPage} from '../pages/cuahang-tabs/cuahang-tabs';
 import { InitDataProvider } from '../providers/init-data';
 import { NativeStorage } from '@ionic-native/native-storage';
 
@@ -22,7 +13,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage:any = MainPage;
+  rootPage:any = "MainPage";
   pages: Array<{title: string, component: any, icon: string, color: string}>;
 
   constructor(
@@ -38,13 +29,13 @@ export class MyApp {
     
     // set our app's pages
     this.pages = [
-      { title: 'Nóng sốt', component: MainPage, icon: "flame" ,color: "tone01"},
-      { title: 'Yêu thích', component: MonanFavoritePage, icon: "heart",color: "tone02"  },
-      { title: 'Món ăn', component: MonanListPage, icon: "restaurant", color: "primary" },
-      { title: 'Sản phẩm', component: ThitListPage, icon: "egg", color: "secondary" },
-      { title: 'Cửa hàng', component: CuahangTabsPage, icon: "basket", color: "tone15" },
-      { title: 'Khuyến mãi', component: KhuyenmaiListPage, icon: "pricetags", color: "tone16" },
-      { title: 'Liên hệ', component: KhuyenmaiListPage, icon: "chatbubbles", color: "tone17"  },
+      { title: 'Nóng sốt', component: "MainPage", icon: "flame" ,color: "tone01"},
+      { title: 'Yêu thích', component: "MonanFavoritePage", icon: "heart",color: "tone02"  },
+      { title: 'Món ăn', component: "MonanListPage", icon: "restaurant", color: "primary" },
+      { title: 'Sản phẩm', component: "ThitListPage", icon: "egg", color: "secondary" },
+      { title: 'Cửa hàng', component: "CuahangTabsPage", icon: "basket", color: "tone15" },
+      { title: 'Khuyến mãi', component: "KhuyenmaiListPage", icon: "pricetags", color: "tone16" },
+      { title: 'Liên hệ', component: "KhuyenmaiListPage", icon: "chatbubbles", color: "tone17"  },
       //+ Page Loại nguyên liệu
       
     ];
@@ -71,7 +62,7 @@ export class MyApp {
       .catch(error=>{
 
         //Ứng dụng chạy lần đầu
-        this.rootPage = WelcomePage;
+        this.rootPage = "WelcomePage";
         this.initDataProvider.initDataFirstLoad();
         this.storage.setItem("isFirstLoad",false);
 
