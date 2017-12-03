@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-toolbar>
-    <button ion-button menuToggle start>
+    <button ion-button menuToggle start >
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Món ăn</ion-title>
@@ -19,19 +19,21 @@
       </button>   
     </ion-buttons>
     <ion-buttons end>
-      <button ion-button menuToggle end>
+      <button ion-button (click)="onOpenSearch()" [style.color]="searchMonColor" end>
         <ion-icon name="ios-search"></ion-icon>
       </button>
     </ion-buttons>  
   </ion-toolbar>
-  <ion-toolbar>    
-    <ion-searchbar
+  <ion-toolbar *ngIf="isOpenSearch">    
+    <ion-searchbar      
       [(ngModel)]="searchMon"
-      [showCancelButton]="shouldShowCancel"      
-      animated="true"  
-      placeholder="Tìm kiếm"
+      [showCancelButton]="true"
+      cancelButtonText="Đóng"      
+      placeholder="Tìm kiếm"      
       (ionInput)="onInput($event)"
-      (ionCancel)="onCancel($event)">
+      (ionCancel)="onCancel($event)"
+      (ionClear)="onClear($event)"
+      (search)="onSearch($event)"  >
     </ion-searchbar>
   </ion-toolbar>
   <ion-toolbar class="filter">    
@@ -50,31 +52,12 @@
     </form>      
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-card *ngFor="let monan of monans">
-    <ion-card-header text-center (click)="toMonanDetail($event, monan)">
-      <h2 class="tieude">{{monan.name}}</h2>
-    </ion-card-header>
-    <img src="{{monan.imageUrl}}" (click)="toMonanDetail($event, monan)"/>
-    <ion-card-content>
-      <p text-center>
-        {{monan.description}}
-      </p>
-    </ion-card-content>
-    <ion-row>
-        <ion-col text-left>
-          <button ion-button icon-left clear small color="tone02">
-            <ion-icon name="heart-outline" ></ion-icon>
-            <div>YÊU THÍCH</div>
-          </button>
-        </ion-col>
-        <ion-col text-right>
-          <button ion-button icon-right outline small color="secondary" (click)="toMonanDetail($event, monan)">
-            CHI TIẾT
-            <ion-icon name="play"></ion-icon>            
-          </button>
-        </ion-col>
-      </ion-row>
-  </ion-card>
+<ion-content> 
+  <div *ngIf="!viewModeMini">
+    <monan-full-box  *ngFor="let monan of monans" [monan]="monan"></monan-full-box>
+  </div>
+  <ion-list *ngIf="viewModeMini">
+    <monan-list-box *ngFor="let monan of monans" [monan]="monan"></monan-list-box>
+  </ion-list>
 </ion-content>
 

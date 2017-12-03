@@ -43,7 +43,50 @@
       "enjoy": "Chấm với tương ớt rất ngon"
     },
     {
-      "id": "1",
+      "id": "2",
+      "createdAt": 1504952488,
+      "name": "Cá sấu tay cầm",
+      "imageUrl": "./assets/img/mon3.jpg",
+      "description": "Ngon dã mang",
+      "giavis":[
+        {
+          "id": "botngot",
+          "amount": "0.5 g"
+        },
+        {
+          "id": "muoi",
+          "amount": "0.5 g"
+        },
+        {
+          "id": "tieu",
+          "amount": "10 g"
+        }
+      ],
+      "nguyenlieus":[
+        {         
+          "name": "Giấy bạc",          
+          "amount": "1 tờ"
+        },
+        {         
+          "name": "Rau thơm",          
+          "amount": "1 bó"
+        }
+      ],
+      "thits":[
+        {
+          "id": 14,          
+          "amount": "1 kg"
+        }
+      ],
+      "steps":[
+        "Thịt thái mỏng ướp với tất cả các loại gia vị cho đều, trải miếng giấy bạc ra cho thịt đã ướp vào, gói lại cho vuông vức, các mí giấy bạc phải kín để nước ướp không chảy ra.",
+        "Nướng trở đều 2 mặt trên lửa khoảng 6 phút là được.",
+        "Khi dùng cho gói giấy bạc lên đĩa, dùng kéo cắt chéo hai đường trên mặt của giấy bạc và mở ra."
+      ],
+      "enjoy": "Ta có thể xếp giấy bạc thành một túi lớn bằng cuốn vở có hở một đầu, sau đó cho thịt đã ướp vào rồi mới xếp mí. Chấm xì dầu ớt."
+    },
+    {
+      "id": "3",
       "createdAt": 1504952488,
       "name": "Đà điểu nướng giấy bạc",
       "imageUrl": "./assets/img/mon2.jpg",
@@ -84,5 +127,5 @@
         "Khi dùng cho gói giấy bạc lên đĩa, dùng kéo cắt chéo hai đường trên mặt của giấy bạc và mở ra."
       ],
       "enjoy": "Ta có thể xếp giấy bạc thành một túi lớn bằng cuốn vở có hở một đầu, sau đó cho thịt đã ướp vào rồi mới xếp mí. Chấm xì dầu ớt."
-    } 
+    }  
 ]

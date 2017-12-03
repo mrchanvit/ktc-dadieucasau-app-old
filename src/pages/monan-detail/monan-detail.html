@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{monan.name}}</ion-title>
+    <ion-title>Món ăn</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -21,8 +21,11 @@
       <ion-col text-center>
         <h1 class="tenmonan">{{monan.name}}</h1>
         <p class="mota">{{monan.description}}</p>
-        <button ion-button icon-only clear (click)="onAddFavorites()">
+        <button color="tone02" *ngIf="!monan.favorite" ion-button icon-only clear (click)="onOffFavorites()">
           <ion-icon name="heart-outline"></ion-icon>
+        </button>
+        <button color="tone02" *ngIf="monan.favorite" ion-button icon-only clear (click)="onOffFavorites()">
+          <ion-icon name="heart"></ion-icon>
         </button>
       </ion-col>
     </ion-row>

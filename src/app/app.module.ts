@@ -14,6 +14,7 @@ import { Configs } from '../config';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { Keyboard } from '@ionic-native/keyboard';
 
 
 
@@ -23,8 +24,7 @@ import { MonanDataProvider } from '../providers/monan-data';
 import { CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { ThitDataProvider } from '../providers/thit-data';
-
-
+import { StatusProvider } from '../providers/status';
 
 @NgModule({
   declarations: [
@@ -47,13 +47,15 @@ import { ThitDataProvider } from '../providers/thit-data';
     CallNumber,
     FormBuilder,
     GoogleMaps,
+    Keyboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
     Configs,
     GiaviDataProvider,
-    ThitDataProvider 
+    ThitDataProvider,
+    StatusProvider 
   ]
 })
 export class AppModule {}

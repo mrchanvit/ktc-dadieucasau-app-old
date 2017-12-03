@@ -1,0 +1,12 @@
+monan-list-box {
+    .tieude{
+        font-weight: 700;
+        color: map-get($colors , primary );
+        font-size: 1em;
+    }
+
+    .mota{
+        font-size: 0.8em;
+        color: map-get($colors , mygrey );
+    }
+}

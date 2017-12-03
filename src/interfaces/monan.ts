@@ -12,6 +12,7 @@ export interface Monan {
     thits: Thit[],
     steps: string [],
     description: string, 
-    enjoy?: string
+    enjoy?: string,
+    favorite?: boolean
   }
   

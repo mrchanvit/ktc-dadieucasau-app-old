@@ -35,11 +35,8 @@ export class GiaviDataProvider {
   initDataOnEnter(key:string){
     this.storage.getItem(key)
     .then(data=>{
-      this.giavis = data;    
-      console.log(data);   
-    }).catch(error=>{
-      console.log(error);      
-    });
+      this.giavis = data;
+    }).catch(()=>{});
   }
 
   public getIcon(id:string){

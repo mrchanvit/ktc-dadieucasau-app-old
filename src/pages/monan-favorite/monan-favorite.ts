@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the MonanFavoritePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, Loading } from 'ionic-angular';
+import { Monan } from '../../interfaces/monan';
+import { MonanDataProvider } from '../../providers/monan-data';
+import { Menu } from 'ionic-angular/components/app/menu-interface';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MonanFavoritePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  monans: Monan[] = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private monanDataProvider: MonanDataProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MonanFavoritePage');
+  ionViewDidEnter() {
+    this.monanDataProvider.getFavorites().then(data=>{
+      this.monans = data;
+      let loading: Loading = this.navParams.get('loading');
+      if(loading) {
+        loading.dismiss();
+        setTimeout(() => {
+          let menu: Menu = this.navParams.get('menu');
+          menu.close();
+        }, 400);        
+      }      
+    })
+    .catch();
   }
 
 }

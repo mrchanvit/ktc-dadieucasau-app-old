@@ -1,0 +1,29 @@
+<ion-card>
+  <ion-card-header text-center (click)="toMonanDetail($event, monan)">
+    <h2 class="tieude">{{monan.name}}</h2>
+  </ion-card-header>
+  <img src="{{monan.imageUrl}}" (click)="toMonanDetail($event, monan)" />
+  <ion-card-content>
+    <p text-center>
+      {{monan.description}}
+    </p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col text-left>     
+      <button color="tone02" *ngIf="!monan.favorite" small ion-button icon-left clear (click)="onOffFavorites()">
+        <ion-icon name="heart-outline"></ion-icon>
+        <div>YÊU THÍCH</div>
+      </button>
+      <button color="tone02" *ngIf="monan.favorite" small ion-button icon-left clear (click)="onOffFavorites()">
+        <ion-icon name="heart"></ion-icon>
+        <div>YÊU THÍCH</div>
+      </button>
+    </ion-col>
+    <ion-col text-right>
+      <button ion-button icon-right outline small color="secondary" (click)="toMonanDetail($event, monan)">
+        CHI TIẾT
+        <ion-icon name="play"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>

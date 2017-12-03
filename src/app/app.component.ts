@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { InitDataProvider } from '../providers/init-data';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,8 +14,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage:any = "MainPage";
-  pages: Array<{title: string, component: any, icon: string, color: string}>;
+  rootPage: any = "MainPage";
+  pages: Array<{ title: string, component: any, icon: string, color: string, isShowLoading:boolean }>;
 
   constructor(
     public platform: Platform,
@@ -22,22 +23,23 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     private initDataProvider: InitDataProvider,
-    private storage: NativeStorage
+    private storage: NativeStorage,
+    private loadingCtrl: LoadingController
 
   ) {
-    this.initializeApp();      
-    
+    this.initializeApp();
+
     // set our app's pages
     this.pages = [
-      { title: 'Nóng sốt', component: "MainPage", icon: "flame" ,color: "tone01"},
-      { title: 'Yêu thích', component: "MonanFavoritePage", icon: "heart",color: "tone02"  },
-      { title: 'Món ăn', component: "MonanListPage", icon: "restaurant", color: "primary" },
-      { title: 'Sản phẩm', component: "ThitListPage", icon: "egg", color: "secondary" },
-      { title: 'Cửa hàng', component: "CuahangTabsPage", icon: "basket", color: "tone15" },
-      { title: 'Khuyến mãi', component: "KhuyenmaiListPage", icon: "pricetags", color: "tone16" },
-      { title: 'Liên hệ', component: "KhuyenmaiListPage", icon: "chatbubbles", color: "tone17"  },
+      { title: 'Nóng sốt', component: "MainPage", icon: "flame", color: "tone01", isShowLoading: false},
+      { title: 'Yêu thích', component: "MonanFavoritePage", icon: "heart", color: "tone02", isShowLoading: true},
+      { title: 'Món ăn', component: "MonanListPage", icon: "restaurant", color: "primary", isShowLoading: true},
+      { title: 'Sản phẩm', component: "ThitListPage", icon: "egg", color: "secondary", isShowLoading: false},
+      { title: 'Cửa hàng', component: "CuahangTabsPage", icon: "basket", color: "tone15", isShowLoading: false},
+      { title: 'Khuyến mãi', component: "KhuyenmaiListPage", icon: "pricetags", color: "tone16", isShowLoading: false},
+      { title: 'Liên hệ', component: "KhuyenmaiListPage", icon: "chatbubbles", color: "tone17", isShowLoading: false},
       //+ Page Loại nguyên liệu
-      
+
     ];
   }
 
@@ -48,37 +50,45 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      
+
       // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
-      
+
       this.storage.getItem("isFirstLoad")
-      .then(data=>{
+        .then(data => {
 
-        //Mỗi lần mở ứng dụng
-        console.log('Chay BT');
-        
-        this.initDataProvider.initData(); 
-      })
-      .catch(error=>{
+          //Mỗi lần mở ứng dụng
+          console.log('Chay BT');
 
-        //Ứng dụng chạy lần đầu
-        this.rootPage = "WelcomePage";
-        this.initDataProvider.initDataFirstLoad();
-        this.storage.setItem("isFirstLoad",false);
+          this.initDataProvider.initData();
+        })
+        .catch(error => {
 
-      })
+          //Ứng dụng chạy lần đầu
+          this.rootPage = "WelcomePage";
+          this.initDataProvider.initDataFirstLoad();
+          this.storage.setItem("isFirstLoad", false);
+
+        })
 
     });
   }
 
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+  openPage(page) {    
+    
+    if(page.isShowLoading){
+      let loading = this.loadingCtrl.create({
+        content: 'Vui lòng chờ ...'
+      });
+      loading.present();  
+      this.nav.setRoot(page.component, { loading: loading, menu: this.menu });
+    } else {
+      this.nav.setRoot(page.component);
+      this.menu.close(); 
+    }
+    
   }
 
-  
- 
+
+
 
 }

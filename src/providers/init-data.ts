@@ -76,6 +76,8 @@ export class InitDataProvider {
     //Lưu danh sách gia vị vào ram
     this.giaviDataProvider.initDataOnEnter("giavis");
     this.thitDataProvider.initDataOnEnter("thits");
+    this.monanDataProvider.initDataFavoriteOnEnter();
+
     
   }
 

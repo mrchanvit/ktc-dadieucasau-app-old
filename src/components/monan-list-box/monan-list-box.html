@@ -1,0 +1,10 @@
+<button ion-item (click)="toMonanDetail($event, monan)">
+  <ion-thumbnail item-start>
+    <img src="{{monan.imageUrl}}">
+  </ion-thumbnail>
+  <h3 text-wrap class="tieude">{{monan.name}}</h3>
+  <p class="mota">
+    {{monan.description}}
+  </p>
+  <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>
+</button>
