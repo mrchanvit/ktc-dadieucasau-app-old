@@ -3,8 +3,9 @@ export interface Cuahang {
     name: string, 
     province: string,
     address: string, 
-    phone: string, 
-    distance: number,
+    phone?: string, 
+    distance?: number,
+    type:string,
     lat: number,
     lng:number
   }

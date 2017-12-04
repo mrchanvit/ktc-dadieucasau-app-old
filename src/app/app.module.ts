@@ -15,6 +15,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Keyboard } from '@ionic-native/keyboard';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 
@@ -48,6 +49,7 @@ import { StatusProvider } from '../providers/status';
     FormBuilder,
     GoogleMaps,
     Keyboard,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ThitDataProvider,
     MonanDataProvider,

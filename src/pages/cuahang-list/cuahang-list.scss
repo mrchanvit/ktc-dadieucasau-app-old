@@ -2,7 +2,7 @@ page-cuahang-list {
     ion-content {
         background-color: #ddd !important;
         .header{        
-            font-size: 1.6em;           
+            font-size: 1.3em;           
             font-weight: 700;
             color: map-get($colors , primary )
         }
@@ -14,6 +14,16 @@ page-cuahang-list {
         }
         .location{
             color: map-get($colors , mygrey )
+        }
+        ion-card-content.cuahang{
+            background-color: rgb(236, 255, 231);
+        }
+        ion-card-content.sieuthi{
+            background-color: rgb(255, 253, 230);
+        }
+
+        .topstamp{
+            color: #999
         }
     }
     
