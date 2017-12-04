@@ -12,7 +12,7 @@ import { StatusProvider } from './status';
 export class MonanDataProvider {
 
   private monanInitPath = "./assets/data/monans.json"; 
-  public monans:Monan[]=[];
+  private monans:Monan[]=[];
   private favorites: number[] = [];
   
 
@@ -107,5 +107,18 @@ export class MonanDataProvider {
       return Promise.all(this.monans.filter(item=>item.favorite))
     }
   }
+
+  //Lấy món ăn có thể chế biến theo thịt ID
+  getMonansCanCook(thitId:number):Promise<Monan[]>{    
+    return this.getAllMonan()
+    .then(data=>{          
+      return data.filter((monan:Monan)=>{
+        let result = monan.thits.findIndex(ele=>thitId==ele.id)
+        if(result > -1 ) return monan        
+      })
+    }) 
+  } 
+
+  
 
 }

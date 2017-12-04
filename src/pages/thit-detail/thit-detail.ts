@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Thit } from '../../interfaces/thit';
-
-/**
- * Generated class for the ThitDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Monan } from '../../interfaces/monan';
+import { MonanDataProvider } from '../../providers/monan-data';
 
 @IonicPage()
 @Component({
@@ -17,14 +12,26 @@ import { Thit } from '../../interfaces/thit';
 export class ThitDetailPage {
   
   public thit:Thit;
+  public monansCanCook: Monan[] = [];
+  
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    private monanDataProvider: MonanDataProvider) {
       this.thit = this.navParams.get("thit");
+     
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ThitDetailPage');   
-  }
+   ionViewDidLoad() {
+    if(this.thit) {
+      this.monanDataProvider.getMonansCanCook(this.thit.id)
+      .then(data=>{                 
+        this.monansCanCook = data
+      })
+    }
+    
+  } 
+
+  
 }

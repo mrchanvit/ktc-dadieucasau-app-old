@@ -9,4 +9,12 @@ page-thit-detail {
         letter-spacing: 0.05em;
         font-size: 1.1em;
     }
+    .chipchip{
+        background-color: map-get($colors , mygrey);
+        color: #fff;
+        padding: 4px 8px; 
+        border-radius: 5px;
+        font-size: 0.8em;
+        font-weight: 700;
+    }
 }

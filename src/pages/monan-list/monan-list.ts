@@ -43,8 +43,8 @@ export class MonanListPage {
   }
 
   ionViewDidLoad() {
-    this.monanDataProvider.getAllMonan().then(() => {
-      this.monans = this.monanDataProvider.monans;
+    this.monanDataProvider.getAllMonan().then((data) => {
+      this.monans = data;
       let loading: Loading = this.navParams.get('loading');
       if(loading) {
         loading.dismiss();
@@ -86,7 +86,10 @@ export class MonanListPage {
       this.content.resize(); 
       this.searchMon = "";
       this.searchMonColor = "white";     
-      this.monans = this.monanDataProvider.monans;  
+      this.monanDataProvider.getAllMonan()
+      .then((data)=>{
+        this.monans = data;
+      });  
     }
     
   }  

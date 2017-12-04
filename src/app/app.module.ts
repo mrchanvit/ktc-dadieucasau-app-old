@@ -20,10 +20,10 @@ import { Keyboard } from '@ionic-native/keyboard';
 
 //My provider
 import { InitDataProvider } from '../providers/init-data';
+import { ThitDataProvider } from '../providers/thit-data';
 import { MonanDataProvider } from '../providers/monan-data';
 import { CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
-import { ThitDataProvider } from '../providers/thit-data';
 import { StatusProvider } from '../providers/status';
 
 @NgModule({
@@ -49,12 +49,12 @@ import { StatusProvider } from '../providers/status';
     GoogleMaps,
     Keyboard,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ThitDataProvider,
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
     Configs,
-    GiaviDataProvider,
-    ThitDataProvider,
+    GiaviDataProvider,    
     StatusProvider 
   ]
 })

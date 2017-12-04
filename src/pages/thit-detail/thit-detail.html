@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content *ngIf="thit">
   <ion-grid>
       <h2 text-center color="primary" class="tenthit">{{thit.name}}</h2>
       <ion-row>          
@@ -53,22 +53,12 @@
     </ion-row>
   </ion-grid>
   <ion-list>
-    <ion-list-header>
-      <h3 class="tieudecon">Món ăn từ {{thit.name}}</h3>
+    <ion-list-header >
+      <h3 class="tieudecon">
+        Món ăn từ {{thit.name}}              
+      </h3>
+      <span item-end class="chipchip">{{monansCanCook.length}}</span>
     </ion-list-header>
-    <button ion-item>
-      <ion-thumbnail item-start>
-        <img src="./assets/img/mon1.jpg">
-      </ion-thumbnail>
-      <h3 text-wrap>Cánh đà điểu nướng muốt ớt tiêu chanh xả hành</h3>
-      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>
-    </button>
-    <button ion-item>
-      <ion-thumbnail item-start>
-        <img src="./assets/img/mon2.jpg">
-      </ion-thumbnail>
-      <h3 text-wrap>Cánh đà điểu xốt cà chua</h3>
-      <ion-icon name="arrow-dropright" color="secondary" item-right></ion-icon>
-    </button>
+    <monan-list-box *ngFor="let monan of monansCanCook" [monan]="monan"></monan-list-box>  
   </ion-list>
 </ion-content>

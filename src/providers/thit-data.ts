@@ -4,12 +4,7 @@ import 'rxjs/add/operator/map';
 import { Thit } from '../interfaces/thit';
 import { NativeStorage } from '@ionic-native/native-storage';
 
-/*
-  Generated class for the ThitProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ThitDataProvider {
 
@@ -19,7 +14,7 @@ export class ThitDataProvider {
 
   constructor(
     public http: Http,    
-    private storage: NativeStorage
+    private storage: NativeStorage    
   ) {
     console.log('Hello ThitProvider Provider');
   }
@@ -58,4 +53,5 @@ export class ThitDataProvider {
       if (item.id == id) return item;
     })[0]; 
   }
+ 
 }
