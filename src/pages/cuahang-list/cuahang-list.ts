@@ -6,6 +6,8 @@ import { CallNumber } from '@ionic-native/call-number';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Platform } from 'ionic-angular';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { ModalController } from 'ionic-angular/components/modal/modal-controller';
+import { ProvinceRadioPage } from '../province-radio/province-radio';
 
 
 @IonicPage()
@@ -21,7 +23,8 @@ export class CuahangListPage {
     private callNumber: CallNumber,
     public platform: Platform,
     private geolocation: Geolocation,
-    private alertCtrl: AlertController) {
+    private alertCtrl: AlertController,
+    private modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -65,7 +68,7 @@ export class CuahangListPage {
         message: 'Không thể định vị vị trí của bạn!',
         buttons: [
           {
-            text: 'Ok',
+            text: 'Ok ',
             handler: () => {            
           }
           }
@@ -74,5 +77,10 @@ export class CuahangListPage {
       alert.present();
     });
   }
+
+  presentProvinceModal() {
+    let profileModal = this.modalCtrl.create('ProvinceRadioPage');
+    profileModal.present();
+  } 
 
 }
