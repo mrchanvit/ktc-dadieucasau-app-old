@@ -6,31 +6,33 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ProvinceRadio</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Chọn tỉnh/thành phố</ion-title>
+    <ion-buttons right *ngIf="isShowOkey">
+        <button ion-button icon-only (click)="onOkey()">
+          <ion-icon name="checkmark-circle"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
 
 </ion-header>
-
-
 <ion-content padding>
-  <ion-list radio-group>
+  <ion-list radio-group [(ngModel)]="formProvince">
     <ion-list-header>
-      Nơi bạn cần tìm?
+      NƠI BẠN CẦN TÌM?
     </ion-list-header>  
-    <ion-item>
-      <ion-label>Khánh Hòa</ion-label>
-      <ion-radio checked="true" value="go"></ion-radio>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Hồ Chí Minh</ion-label>
-      <ion-radio value="rust"></ion-radio>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Hà Nội</ion-label>
-      <ion-radio value="python" disabled="true"></ion-radio>
-    </ion-item>
+    <ion-item >
+      <ion-label>TOÀN BỘ</ion-label>
+      <ion-radio [value]="all" (click)="onChange()"></ion-radio>
+    </ion-item> 
+    <ion-item *ngFor="let province of provinces" >
+        <ion-label>{{province.name}}</ion-label>
+        <ion-radio [value]="province.slug" (click)="onChange()"></ion-radio>
+      </ion-item>    
   </ion-list>
 </ion-content>

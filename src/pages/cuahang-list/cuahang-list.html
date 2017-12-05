@@ -1,20 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  <ion-toolbar>    
+    <ion-buttons class="locate" left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Cửa hàng</ion-title>
-  </ion-navbar>
-  <ion-toolbar class="filter">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-6>
-          <button ion-button outline (click)="presentProvinceModal()">
-                KHÁNH HÒA
-              </button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>    
+    <ion-buttons class="locate" right>
+        <button ion-button icon-only (click)="locate()">
+          <ion-icon name="locate"></ion-icon>        
+        </button> 
+      </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="filter" text-center>       
+      <button ion-button icon-left clear  color="primary" (click)="presentProvinceModal()">
+        <ion-icon name="pin"></ion-icon>
+        <span *ngIf="province">{{province.name}}</span>
+        <span *ngIf="!province">Toàn bộ</span>            
+      </button>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -28,13 +31,13 @@
               <span>CỬA HÀNG</span>
             </div>
             <div class="topstamp" *ngIf="cuahang.type == 'sieuthi'">
-              <ion-icon  name="cart"></ion-icon>
+              <ion-icon name="cart"></ion-icon>
               <span>SIÊU THỊ</span>
             </div>
-            <h1 class="header">              
+            <h1 class="header">
               {{cuahang.name}}
             </h1>
-            <h3 text-wrap class="info_item">              
+            <h3 text-wrap class="info_item">
               {{cuahang.address}}, {{cuahang.province}}</h3>
           </ion-col>
         </ion-row>
@@ -48,7 +51,7 @@
           <ion-col col-6>
             <button class="location" ion-button icon-left clear (click)="openExMap(cuahang)">
               <ion-icon name="compass"></ion-icon>
-                Xem vị trí
+              Xem vị trí
             </button>
           </ion-col>
         </ion-row>

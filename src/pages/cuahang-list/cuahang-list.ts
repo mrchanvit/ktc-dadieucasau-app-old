@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { Cuahang } from '../../interfaces/cuahang';
 import { CuahangDataProvider } from '../../providers/cuahang-data';
 import { CallNumber } from '@ionic-native/call-number';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Platform } from 'ionic-angular';
-import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { ModalController } from 'ionic-angular/components/modal/modal-controller';
-import { ProvinceRadioPage } from '../province-radio/province-radio';
+import { Province } from '../../interfaces/province';
+import { ToastController } from 'ionic-angular/components/toast/toast-controller';
+import { LocationProvider } from '../../providers/location';
 
 
 @IonicPage()
@@ -16,21 +17,51 @@ import { ProvinceRadioPage } from '../province-radio/province-radio';
   templateUrl: 'cuahang-list.html',
 })
 export class CuahangListPage {
-  cuahangs: Cuahang[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  cuahangs: Cuahang[] = [];  
+  province: Province;
+  
+  @ViewChild(Content) content: Content; 
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,    
     private cuahangDataProvider: CuahangDataProvider,
     private callNumber: CallNumber,
     public platform: Platform,
     private geolocation: Geolocation,
-    private alertCtrl: AlertController,
-    private modalCtrl: ModalController) {
+    private toastCtrl: ToastController,
+    private modalCtrl: ModalController,
+    private locationProv: LocationProvider
+    ) {
   }
 
-  ionViewDidLoad() {
-    this.cuahangDataProvider.getAllCuahang()
-      .then(res => { this.cuahangs = res })
-      .catch(error => { console.log("Error") });
+  ionViewDidEnter() {
+    this.locationProv.loadProvince().then(data=>{
+      if(data.province) {  
+        this.province = data.province;
+        this.cuahangDataProvider.getCuaHangByProvince(this.province.name)
+        .then(res => { 
+          this.cuahangs = res;
+          this.content.resize();        
+        })
+        .catch(error => {});
+      } else {
+        this.cuahangDataProvider.getAllCuahang()
+        .then(res => { 
+          this.cuahangs = res;
+          this.content.resize(); 
+        })
+        .catch(error => {});            
+      }
+    })
+    .catch(error=>{
+      this.cuahangDataProvider.getAllCuahang()
+      .then(res => { 
+        this.cuahangs = res;
+        this.content.resize();      
+      })
+      .catch(error => {});      
+    })   
   }
 
   onCallNumber(number: string) {
@@ -39,17 +70,25 @@ export class CuahangListPage {
       .catch(() => console.log('Error launching dialer'));
   }
 
+  locate(){
+    this.geolocation.getCurrentPosition().then((position) => {  
+      console.log(position);
+
+    }).catch((error) => {
+      let toast = this.toastCtrl.create({
+        message: 'Không thể xác định vị trí!',
+        duration: 3000,
+        position: 'bottom'
+      });
+      toast.onDidDismiss(() => {        
+      });
+      toast.present();
+    });
+  }
+
   openExMap(cuahang: Cuahang) {
-    //Lấy vị trí của mềnh
-    /* let position = {
-      coords: {
-        longitude: 12.284815,
-        latitude: 109.203389
-      }
-    }; */
 
     this.geolocation.getCurrentPosition().then((position) => {
-
       // ios
       if (this.platform.is('ios')) {
         window.open('maps://?q=' + cuahang.name + '&saddr=' + position.coords.latitude + ',' + position.coords.longitude + '&daddr=' + cuahang.lat + ',' + cuahang.lng, '_system');
@@ -61,26 +100,30 @@ export class CuahangListPage {
       console.log(position);
 
     }).catch((error) => {
-      // Import the AlertController from ionic package 
-      // Consume it in the constructor as 'alertCtrl' 
-      let alert = this.alertCtrl.create({
-        title: 'Vị trí của bạn',
-        message: 'Không thể định vị vị trí của bạn!',
-        buttons: [
-          {
-            text: 'Ok ',
-            handler: () => {            
-          }
-          }
-        ]
+      let toast = this.toastCtrl.create({
+        message: 'Không thể xác định vị trí!',
+        duration: 3000,
+        position: 'bottom'
       });
-      alert.present();
+      toast.onDidDismiss(() => {        
+      });
+      toast.present();
     });
   }
 
+  // Hiện modal chọn tỉnh
   presentProvinceModal() {
-    let profileModal = this.modalCtrl.create('ProvinceRadioPage');
-    profileModal.present();
-  } 
+    let provinceModal = this.modalCtrl.create('ProvinceRadioPage', { province: this.province });
+    provinceModal.onDidDismiss(data => {
+      if (data) {  
+        this.province = data;
+        this.locationProv.saveProvince(this.province);
+        this.ionViewDidEnter();
+      } else {
+        this.ionViewDidEnter();
+      }
+    });
+    provinceModal.present();
+  }
 
 }

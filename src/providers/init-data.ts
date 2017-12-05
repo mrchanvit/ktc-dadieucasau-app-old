@@ -25,48 +25,38 @@ export class InitDataProvider {
   //Khởi tạo data
   public initDataFirstLoad() {
 
-    console.log("Khởi tạo dữ liệu ứng dụng lần đầu");
     //Chỉ chạy khi mới cài đặt ứng dụng lần đầu tiên
     //++++++++++++++++++++++++++++++++++++++++++++++
 
     this.storage.setItem("isFirstLoad", true);
     // Chưa khởi tạo dữ liệu, tiến hành khởi tạo
     // Cửa hàng
-    this.cuahangDataProvider.initData().subscribe((data) => {
-      console.log('Load dữ liệu cửa hàng');
+    this.cuahangDataProvider.initData().subscribe((data) => {      
       this.storage.setItem("cuahangs", data);
-    }, (error) => {
-      console.log(error);
+    }, (error) => {      
     });
 
     //Gia vị
-    this.giaviDataProvider.initData().subscribe((data) => {
-      console.log('Load dữ liệu gia vi');
+    this.giaviDataProvider.initData().subscribe((data) => {      
       this.storage.setItem("giavis", data).then(()=>{
         this.giaviDataProvider.initDataOnEnter("giavis");
       });
-
     }, (error) => {
-      console.log(error);
+      
     });
 
     //Món ăn
-    this.monanDataProvider.initData().subscribe((data) => {
-      console.log('Load dữ liệu món ăn');
+    this.monanDataProvider.initData().subscribe((data) => {      
       this.storage.setItem("monans", data);
-    }, (error) => {
-      console.log(error);
+    }, (error) => {      
     });
 
     //Thịt
-    this.thitDataProvider.initData().subscribe((data) => {
-      console.log('Load dữ liệu thịt');
+    this.thitDataProvider.initData().subscribe((data) => {      
       this.storage.setItem("thits", data).then(()=>{
         this.thitDataProvider.initDataOnEnter("thits");
       });
-
-    }, (error) => {
-      console.log(error);
+    }, (error) => {      
     });
 
     //+++++++++++++++++++++++++++++++++++++++++++++

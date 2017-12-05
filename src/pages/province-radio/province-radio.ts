@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ModalController } from 'ionic-angular/components/modal/modal-controller';
-
-/**
- * Generated class for the ProvinceRadioPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Province } from '../../interfaces/province';
+import { LocationProvider } from '../../providers/location';
 
 @IonicPage()
 @Component({
@@ -16,11 +10,45 @@ import { ModalController } from 'ionic-angular/components/modal/modal-controller
 })
 export class ProvinceRadioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  provinces: Province[];
+  private formProvince: any;  
+  selectedProvince: Province;
+  isShowOkey: boolean = false;
+
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private locationProv: LocationProvider,
+    public viewCtrl: ViewController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProvinceRadioPage');
+  ionViewDidLoad() {    
+    this.locationProv.getAllProvinces().subscribe(data=>{
+      this.provinces = data;
+      this.selectedProvince = this.navParams.get('province');         
+      if(this.selectedProvince) {
+        this.formProvince = this.selectedProvince.slug;
+        this.isShowOkey = true;
+      }
+    })    
+  }
+
+  onClose(){
+    this.viewCtrl.dismiss();
+  }
+  onOkey(){     
+    if(this.formProvince != 'all'){
+      this.selectedProvince = this.locationProv.getProvinceBySlug(this.formProvince)
+      this.viewCtrl.dismiss(this.selectedProvince);
+    } else {
+      this.viewCtrl.dismiss();
+    }
+    
+  }
+
+  onChange(){    
+    this.isShowOkey = true;
   }
 
  

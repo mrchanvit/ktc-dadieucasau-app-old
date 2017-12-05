@@ -26,6 +26,7 @@ import { MonanDataProvider } from '../providers/monan-data';
 import { CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { StatusProvider } from '../providers/status';
+import { LocationProvider } from '../providers/location';
 
 @NgModule({
   declarations: [
@@ -50,14 +51,16 @@ import { StatusProvider } from '../providers/status';
     GoogleMaps,
     Keyboard,
     Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ErrorHandler, useClass: IonicErrorHandler},    
     ThitDataProvider,
     MonanDataProvider,
     CuahangDataProvider,
     InitDataProvider,
     Configs,
     GiaviDataProvider,    
-    StatusProvider 
+    StatusProvider,
+    LocationProvider,
+     
   ]
 })
 export class AppModule {}

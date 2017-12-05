@@ -40,4 +40,10 @@ export class CuahangDataProvider {
     return this.storage.getItem("cuahangs");
   }
 
+  getCuaHangByProvince(provinceName: string){
+    return this.storage.getItem("cuahangs").then((data:Cuahang[])=>{
+      return data.filter(item=>item.province == provinceName)
+    });
+  }
+
 }
