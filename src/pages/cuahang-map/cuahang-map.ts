@@ -9,6 +9,9 @@ import {
   //MarkerOptions,
   //Marker
  } from '@ionic-native/google-maps';
+import { Cuahang } from '../../interfaces/cuahang';
+import { Province } from '../../interfaces/province';
+import { NavParams } from 'ionic-angular/navigation/nav-params';
 
 @IonicPage()
 @Component({
@@ -19,9 +22,24 @@ export class CuahangMapPage {
   
   mapElement: HTMLElement;
   map: GoogleMap;
-  constructor(private googleMaps: GoogleMaps) { }
+  public cuahangs: Cuahang[]= [];
+  public province: Province;
+
+
+  constructor(
+    private googleMaps: GoogleMaps,
+    private navParams: NavParams
+  ) { }
 
   ionViewDidLoad() {
+    let data: {
+      province: Province,
+      cuahangs:Cuahang
+    } = this.navParams.get("mapData");
+    if(data){
+      this.province = this.province;
+      this.cuahangs = this.cuahangs;
+    }    
     this.loadMap();
   }
   
@@ -39,31 +57,38 @@ export class CuahangMapPage {
       }
     };
 
-    this.map = this.googleMaps.create(this.mapElement, mapOptions);
+    this.map = this.googleMaps.create(this.mapElement, mapOptions);   
 
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY)
-      .then(() => {
-        console.log('Map is ready!');
+    .then(() => {
+      //Map sẵn sàng
+      this.createCuahang(this.cuahangs);
+      
+    });
+  }
+  
+  createCuahang(cuahangs:Cuahang[]){   
 
-        // Now you can use all methods safely.
-        this.map.addMarker({
-            title: 'Ionic',
-            icon: 'blue',
-            animation: 'DROP',
-            position: {
-              lat: 43.0741904,
-              lng: -89.3809802
-            }
-          })
-          .then(marker => {
-            marker.on(GoogleMapsEvent.MARKER_CLICK)
-              .subscribe(() => {
-                alert('clicked');
-              });
+    cuahangs.forEach(cuahang=>{
+      this.map.addMarker({
+        title: cuahang.name,
+        icon: 'blue',
+        animation: 'DROP',
+        position: {
+          lat: cuahang.lat,
+          lng: cuahang.lng
+        }
+      })
+      .then(marker => {
+        marker.on(GoogleMapsEvent.MARKER_CLICK)
+          .subscribe(() => {
+            alert('clicked');
           });
-
       });
-  } 
+    }) 
+
+  }
+
 
 }
