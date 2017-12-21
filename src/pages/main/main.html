@@ -3,22 +3,74 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Nội dung nổi bật</ion-title>
+    <ion-title>Nóng sốt</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-  <img src="./assets/img/dadieuvui.png" class="logo" />
-  
   <ion-grid>
+    <!-- <ion-row>
+      <ion-slides class="intro">        
+        <ion-slide class="intro01">
+          
+          <div><ion-icon name="pricetag" icon-left></ion-icon><p>Đạt chuẩn an toàn thực phẩm ISO 22000:2005</p></div>
+        </ion-slide>        
+        <ion-slide class="intro02">
+            
+          <div><ion-icon name="pricetags" icon-left></ion-icon><p>Hàm lượng Cholesterol thấp</p></div>
+        </ion-slide>        
+        <ion-slide class="intro03">         
+          <div><ion-icon name="bookmark" icon-left></ion-icon><p>Dễ chế biến</p></div>
+        </ion-slide>        
+      </ion-slides>
+    </ion-row> -->
     <ion-row>
-      <ion-col text-center color="primary">
-          <h1 class="tieude">Món ngon</h1>
-          <h3>Đà điểu - Cá sấu Khatoco</h3>  
+      <ion-col>
+        <ion-slides class="intro">        
+          <ion-slide class="intro01">
+            <div>
+              <ion-item no-lines>
+                <ion-icon name="pricetag" item-left></ion-icon>
+                <p item-end text-center>Đạt chuẩn an toàn thực phẩm ISO 22000:2005</p>            
+              </ion-item>
+            </div>            
+          </ion-slide>
+          <ion-slide class="intro02">
+            <div>
+              <ion-item no-lines>            
+                <ion-icon name="pricetags" item-left></ion-icon>
+                <p item-end text-center>Hàm lượng Cholesterol thấp</p>            
+              </ion-item>
+            </div>            
+          </ion-slide>
+            <ion-slide class="intro03">
+              <div>
+                <ion-item no-lines>            
+                  <ion-icon name="bookmark" item-left></ion-icon>
+                  <p item-end text-center>Dễ chế biến</p>            
+                </ion-item>
+              </div>              
+            </ion-slide>
+        </ion-slides>
+        
+
+        
       </ion-col>
     </ion-row>
 
+    <ion-row>
+      <ion-col >
+        <img src="./assets/img/dadieuvui.png" class="logo" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center color="primary">
+          <h1 class="tieude">Món ngon</h1>
+          <h3>Đà điểu - Cá sấu</h3>
+          <h3>KHATOCO</h3>
+      </ion-col>
+    </ion-row>    
     <ion-row class="dadieu">
       <ion-col text-center>
         <ion-icon name="mi-dadieu-round"></ion-icon>        

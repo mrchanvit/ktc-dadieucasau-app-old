@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { InitDataProvider } from '../../providers/init-data';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
+import { MonanDataProvider } from '../../providers/monan-data';
 
 
 /**
@@ -23,19 +24,24 @@ export class MainPage {
       public navParams: NavParams,
       public viewCtr: ViewController,
       public initDataProvider: InitDataProvider,
-      private toastCtrl: ToastController) {
+      private toastCtrl: ToastController,
+      private monansDataProvider: MonanDataProvider) {
     
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
-    
-    
-
   }
 
   ionViewDidEnter(){
     //this.viewCtr.showBackButton(false);
+    this.monansDataProvider.getMonansRamdom(2)
+    .then(data=>{
+      console.log(data);      
+    })
+    .catch(error=>{
+      console.log("Co loi");      
+    })    
   }
 
   xoaData(){

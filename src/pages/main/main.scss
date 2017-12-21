@@ -1,7 +1,6 @@
 page-main {
     .logo{
-        max-height: 30%;
-        max-width: 20%;
+        max-height: 130px;        
         margin: 18px auto;
     }
 
@@ -19,11 +18,7 @@ page-main {
         color: map-get($colors , secondary )
     }
 
-    ion-content{
-        ion-icon{
-            margin-top: 30px;            
-            font-size: 5em!important; //Preferred size here
-        }
+    ion-content{        
 
         ion-grid.grid{
             padding: 0;
@@ -39,11 +34,63 @@ page-main {
         .dadieu{
             background-color: map-get($colors , secondary );
             color: #fff;
+            ion-icon{
+                margin-top: 30px;            
+                font-size: 5em!important; //Preferred size here
+            }
         }
 
         .casau{
             background-color: map-get($colors , primary );
             color: #fff;
+            ion-icon{
+                margin-top: 30px;            
+                font-size: 5em!important; //Preferred size here
+            }
         }
+
+        .intro{            
+            ion-slide>div{
+                border: 1px solid;
+                border-radius: 5px;
+                margin: 5px;                
+                ion-item{
+                    background-color: transparent;
+                }
+                ion-icon{
+                    font-size: 1.6em;                                  
+                }
+                p{ 
+                    font-size: 0.9em; 
+                    margin:5px;                   
+                }
+            }
+            .intro01{
+                p, ion-icon{
+                    color: map-get($colors , tone09);
+                }                
+                div {
+                    border-color: map-get($colors , tone09);
+                } 
+                
+            }
+            .intro02{
+                p, ion-icon{
+                    color: map-get($colors , tone08);
+                }
+                div {
+                    border-color: map-get($colors , tone08);
+                }   
+                                
+            }
+            .intro03{
+                p, ion-icon{
+                    color: map-get($colors , tone07);
+                }   
+                div {
+                    border-color: map-get($colors , tone07);
+                }            
+            }
+        } 
     }
 }

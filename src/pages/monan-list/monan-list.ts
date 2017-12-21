@@ -37,9 +37,7 @@ export class MonanListPage {
   {
     this.formGroupMon = this.formBuilder.group({
       formLoaiMon: ['all']
-    })
-    console.log(this.formGroupMon.value);
-    
+    })    
   }
 
   ionViewDidLoad() {

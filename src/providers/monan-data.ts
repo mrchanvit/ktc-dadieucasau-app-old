@@ -66,8 +66,8 @@ export class MonanDataProvider {
       return Promise.all(this.monans)    
     }         
   }
-
-  //Lọc danh sách món ăn
+  
+  //Lọc danh sách món ăn theo loại thịt
   getMonansByThit(type:string): Monan[]{
     if (type == 'all') return this.monans;
     return this.monans.filter(item=>{
@@ -119,6 +119,27 @@ export class MonanDataProvider {
     }) 
   } 
 
-  
-
+  //Lấy món ăn ngẫu nhiên
+  getMonansRamdom(soluong: number):Promise<Monan[]>{      
+    return this.getAllMonan()
+    .then(data=>{
+      if(data.length >= soluong){
+        let i = 0;
+        let seleted_ramdom : number[] = [];
+        let monans_ramdom: Monan[] = [];
+        while (i < soluong) {
+          var ramdom_monan = Math.floor(Math.random() * data.length);
+          if(seleted_ramdom.findIndex(item=>item==ramdom_monan)==-1){
+            monans_ramdom.push(data[ramdom_monan]);
+            seleted_ramdom.push(ramdom_monan);
+            i++;
+          }
+        }
+        return monans_ramdom;
+      }        
+      //Số lượng món ăn cần lấy nhiều hơn số lượng trong thư viện
+      return []
+    })
+    .catch()
+  }
 }
