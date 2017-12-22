@@ -6,6 +6,7 @@ import { CuahangDataProvider } from './cuahang-data';
 import { GiaviDataProvider } from './giavi-data';
 import { MonanDataProvider } from './monan-data';
 import { ThitDataProvider } from './thit-data';
+import { Monan } from '../interfaces/monan';
 
 
 @Injectable()
@@ -17,7 +18,7 @@ export class InitDataProvider {
     private giaviDataProvider: GiaviDataProvider,
     private monanDataProvider: MonanDataProvider,
     private thitDataProvider: ThitDataProvider,    
-    private storage: NativeStorage,
+    private storage: NativeStorage
     ) {
     console.log('Hello InitDataProvider Provider');
   }
@@ -62,13 +63,20 @@ export class InitDataProvider {
     //+++++++++++++++++++++++++++++++++++++++++++++
   }
 
-  initData() {
+  initData():Promise<Monan[]> {
     //Lưu danh sách gia vị vào ram
     this.giaviDataProvider.initDataOnEnter("giavis");
+    //Lưu danh sách sản phẩm
     this.thitDataProvider.initDataOnEnter("thits");
-    this.monanDataProvider.initDataFavoriteOnEnter();
-
-    
+    //Lưu danh sách thịt
+    return this.monanDataProvider.initDataFavoriteOnEnter()
+    .then(()=>{  
+      console.log("Lấy món ăn");    
+      return this.monanDataProvider.getAllMonan();
+    })
+    .catch(()=>{
+      console.log("Lỗi khi lấy món ăn yêu thích!");      
+    });    
   }
 
   clearData(){

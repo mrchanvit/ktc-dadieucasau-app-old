@@ -95,6 +95,9 @@
     <allow-navigation href="http://192.168.1.123:8100" />
     <allow-navigation href="http://192.168.31.10:8100" />
     <allow-navigation href="http://192.168.31.10:8101" />
+    <allow-navigation href="http://172.16.11.1:8100" />
+    <allow-navigation href="http://192.168.1.122:8100" />
+    <allow-navigation href="http://192.168.1.121:8100" />
     <engine name="android" spec="^6.4.0" />
     <plugin name="cordova-plugin-console" spec="^1.1.0" />
     <plugin name="cordova-plugin-device" spec="^1.1.7" />
@@ -112,6 +115,4 @@
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
-    <allow-navigation href="http://172.16.11.1:8100" />
-    <allow-navigation href="http://192.168.1.122:8100" />
 </widget>

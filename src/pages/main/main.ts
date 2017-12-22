@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, ViewController, Slides } from 'ionic-angular';
 import { InitDataProvider } from '../../providers/init-data';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 import { MonanDataProvider } from '../../providers/monan-data';
+import { Monan } from '../../interfaces/monan';
+import { StatusProvider } from '../../providers/status';
 
 
 /**
@@ -19,29 +21,33 @@ import { MonanDataProvider } from '../../providers/monan-data';
 })
 export class MainPage {
 
+  monansRamdom: Monan[] = []
+
   constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
       public viewCtr: ViewController,
       public initDataProvider: InitDataProvider,
       private toastCtrl: ToastController,
-      private monansDataProvider: MonanDataProvider) {
+      private monansDataProvider: MonanDataProvider,
+      private statusProvider: StatusProvider) {
     
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
-  }
+  @ViewChild(Slides) slides: Slides;
 
   ionViewDidEnter(){
     //this.viewCtr.showBackButton(false);
-    this.monansDataProvider.getMonansRamdom(2)
-    .then(data=>{
-      console.log(data);      
-    })
-    .catch(error=>{
-      console.log("Co loi");      
-    })    
+    this.monansRamdom = this.monansDataProvider.getMonansRamdom(2);   
+    console.log("Thử lấy");
+    //console.log(this.monansDataProvider.getMonansRamdom(2));
+    
+    console.log(this.statusProvider.monans_is_loaded);
+    
+       
+    this.slides.autoplay = 3000; 
+    this.slides.loop = true;      
+    this.slides.startAutoplay();
   }
 
   xoaData(){
@@ -64,6 +70,22 @@ export class MainPage {
       });
       toast.present();
     });
+  }
+
+  onToMonanDetail(monan:Monan){
+    this.navCtrl.push("MonanDetailPage",{monan:monan});
+  }
+
+  onToMonansPage(){
+    this.navCtrl.setRoot("MonanListPage");
+  }
+
+  onToThitsPage(){
+    this.navCtrl.setRoot("ThitListPage");
+  }
+
+  onToNewsPage(){
+
   }
 
 }

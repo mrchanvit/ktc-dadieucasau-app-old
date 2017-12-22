@@ -6,121 +6,168 @@
     <ion-title>Nóng sốt</ion-title>
   </ion-navbar>
 </ion-header>
-
-
 <ion-content>
   <ion-grid>
-    <!-- <ion-row>
-      <ion-slides class="intro">        
-        <ion-slide class="intro01">
-          
-          <div><ion-icon name="pricetag" icon-left></ion-icon><p>Đạt chuẩn an toàn thực phẩm ISO 22000:2005</p></div>
-        </ion-slide>        
-        <ion-slide class="intro02">
-            
-          <div><ion-icon name="pricetags" icon-left></ion-icon><p>Hàm lượng Cholesterol thấp</p></div>
-        </ion-slide>        
-        <ion-slide class="intro03">         
-          <div><ion-icon name="bookmark" icon-left></ion-icon><p>Dễ chế biến</p></div>
-        </ion-slide>        
-      </ion-slides>
-    </ion-row> -->
     <ion-row>
       <ion-col>
-        <ion-slides class="intro">        
-          <ion-slide class="intro01">
+        <ion-slides class="intro">
+        <ion-slide class="intro00">
             <div>
               <ion-item no-lines>
                 <ion-icon name="pricetag" item-left></ion-icon>
-                <p item-end text-center>Đạt chuẩn an toàn thực phẩm ISO 22000:2005</p>            
+                <p item-end text-center>Thịt đà điểu - cá sấu Khatoco</p>
               </ion-item>
-            </div>            
+            </div>
+          </ion-slide>
+          <ion-slide class="intro01">
+            <div>
+              <ion-item no-lines>
+                <ion-icon name="mi-iso" item-left></ion-icon>
+                <p item-end text-center>Đạt chuẩn an toàn thực phẩm ISO 22000:2005</p>
+              </ion-item>
+            </div>
           </ion-slide>
           <ion-slide class="intro02">
             <div>
-              <ion-item no-lines>            
-                <ion-icon name="pricetags" item-left></ion-icon>
-                <p item-end text-center>Hàm lượng Cholesterol thấp</p>            
+              <ion-item no-lines>
+                <ion-icon name="mi-totsuckhoe" item-left></ion-icon>
+                <p item-end text-center>Hàm lượng Cholesterol thấp</p>
               </ion-item>
-            </div>            
+            </div>
           </ion-slide>
-            <ion-slide class="intro03">
-              <div>
-                <ion-item no-lines>            
-                  <ion-icon name="bookmark" item-left></ion-icon>
-                  <p item-end text-center>Dễ chế biến</p>            
-                </ion-item>
-              </div>              
-            </ion-slide>
+          <ion-slide class="intro03">
+            <div>
+              <ion-item no-lines>
+                <ion-icon name="mi-chef" item-left></ion-icon>
+                <p item-end text-center>Dễ chế biến</p>
+              </ion-item>
+            </div>
+          </ion-slide>
         </ion-slides>
-        
-
-        
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col >
+      <ion-col>
         <img src="./assets/img/dadieuvui.png" class="logo" />
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col text-center color="primary">
-          <h1 class="tieude">Món ngon</h1>
-          <h3>Đà điểu - Cá sấu</h3>
-          <h3>KHATOCO</h3>
+      <ion-col text-center color="primary" class="toptieude">
+        <h1 class="tieude">Món ngon</h1>
+        <h3>Đà điểu - Cá sấu Khatoco</h3>
       </ion-col>
-    </ion-row>    
+    </ion-row>
+    <ion-row class="card-background-page">
+      <ion-col *ngFor="let monan of monansRamdom">
+        <ion-card (click)="onToMonanDetail(monan)">
+          <img [src]="monan.imageUrl" />
+          <div class="card-title">{{monan.name}}</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button outline round (click)="onToMonansPage()">DANH SÁCH MÓN ĂN</button>
+      </ion-col>
+    </ion-row>
     <ion-row class="dadieu">
       <ion-col text-center>
-        <ion-icon name="mi-dadieu-round"></ion-icon>        
+        <ion-icon name="mi-dadieu-round"></ion-icon>
         <h2 class="tieude">Lợi ích thịt đà điểu</h2>
       </ion-col>
     </ion-row>
     <ion-row class="dadieu">
       <ion-col col-6>
         <ul>
-          <li>Nhiều vi lượng
-              và khoáng chất</li>
-            <li>Ít mỡ, colesterol thấp</li>
-            <li>Không nhiễm
-                virus cúm gia cầm</li>
+          <li>Nhiều vi lượng và khoáng chất</li>
+          <li>Ít mỡ, colesterol thấp</li>
+          <li>Không nhiễm virus cúm gia cầm</li>
         </ul>
       </ion-col>
       <ion-col col-6>
-          <h5>TỐT CHO</h5>
-          <h4 class="tieude con">Sức khỏe</h4>
+        <h5>TỐT CHO</h5>
+        <h4 class="tieude con">Sức khỏe</h4>
       </ion-col>
     </ion-row>
     <ion-row class="casau">
-        <ion-col text-center>
-          <ion-icon class="miicon" name="mi-casau-round"></ion-icon>        
-          <h2 class="tieude">Lợi ích thịt cá sấu</h2>
+      <ion-col text-center>
+        <ion-icon class="miicon" name="mi-casau-round"></ion-icon>
+        <h2 class="tieude">Lợi ích thịt cá sấu</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row class="casau">
+      <ion-col col-6 text-right>
+        <h5>TỐT CHO</h5>
+        <h4 class="tieude con2">Sức khỏe</h4>
+      </ion-col>
+      <ion-col col-6 text-left>
+        <ul>
+          <li>Hàm lượng protein cao</li>
+          <li>Năng lượng và chất béo thấp</li>
+          <li>Tăng cường sinh lực, chống dị ứng, hen suyễn</li>
+        </ul>
+      </ion-col>      
+    </ion-row>
+    <ion-row class="khatoco">
+      <ion-col text-center>        
+        <h2 class="tieude">Thịt đà điểu cá sấu Khatoco</h2>                
+      </ion-col>      
+    </ion-row>
+    <ion-row class="khatoco">
+      <ion-col col-8 offset-2 text-center>
+        <div class="list">
+            <ion-icon name="mi-topmot" color="tone01"></ion-icon>
+            <p>Top 1 Việt Nam về sản phẩm thịt đà điểu - cá sấu</p>
+            <ion-icon name="mi-quytrinh" color="tone07"></ion-icon>
+            <p>Qui trình chăn nuôi, giết mổ khoa học và khép kín</p>
+            <ion-icon name="mi-iso" color="primary"></ion-icon>
+            <p>An toàn thực phẩm Tiêu chuẩn quốc tế ISO 22000:2005</p>            
+        </div>
+      </ion-col>
+    </ion-row>    
+    <ion-row class="hinhanh">
+      <ion-col>
+        <img src="./assets/img/ktc4.jpg">          
+      </ion-col>
+      <ion-col>
+        <img src="./assets/img/ktc2.jpg">          
+      </ion-col>
+    </ion-row>  
+    <ion-row class="hinhanh">
+      <ion-col>
+        <img src="./assets/img/ktc3.jpg">          
+      </ion-col>
+      <ion-col>
+        <img src="./assets/img/ktc1.jpg">          
+      </ion-col>
+    </ion-row> 
+    <ion-row>          
+        <ion-col>
+          <img src="./assets/img/cncl/01.jpg">
         </ion-col>
-      </ion-row>
-      <ion-row class="casau">
-        <ion-col col-6>
-          <ul>
-            <li>Hàm lượng protein cao</li>
-              <li>Năng lượng
-                  và chất béo thấp</li>
-              <li>Tăng cường sinh lực,
-                  chống dị ứng, hen suyễn</li>
-          </ul>
+        <ion-col>
+          <img src="./assets/img/cncl/02.jpg">
         </ion-col>
-        <ion-col col-6>
-            <h5>TỐT CHO</h5>
-            <h4 class="tieude con2">Sức khỏe</h4>
+        <ion-col>
+          <img src="./assets/img/cncl/03.jpg">
         </ion-col>
-      </ion-row>
+        <ion-col>
+          <img src="./assets/img/cncl/04.jpg">
+        </ion-col>          
+      </ion-row> 
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button outline round block (click)="onToThitsPage()">SẢN PHẨM</button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button outline round block color="tone01" icon-left (click)="onToNewsPage()">
+          <ion-icon name="mi-khampha"></ion-icon>
+          KHÁM PHÁ</button>
+      </ion-col>
+    </ion-row> 
   </ion-grid>
-
-  
-  
-  
-  
-  <p>
+  <!-- <p>
     <button ion-button color="primary" (click)="xoaData()">Xóa data</button>
-  </p>
-
+  </p> -->
 </ion-content>

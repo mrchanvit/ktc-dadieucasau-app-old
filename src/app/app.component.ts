@@ -14,7 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = "MainPage";
+  rootPage: any ;
   pages: Array<{ title: string, component: any, icon: string, color: string, isShowLoading:boolean }>;
 
   constructor(
@@ -36,8 +36,8 @@ export class MyApp {
       { title: 'Món ăn', component: "MonanListPage", icon: "restaurant", color: "primary", isShowLoading: true},
       { title: 'Sản phẩm', component: "ThitListPage", icon: "egg", color: "secondary", isShowLoading: false},
       { title: 'Cửa hàng', component: "CuahangTabsPage", icon: "basket", color: "tone15", isShowLoading: false},
-      { title: 'Khuyến mãi', component: "KhuyenmaiListPage", icon: "pricetags", color: "tone16", isShowLoading: false},
-      { title: 'Liên hệ', component: "KhuyenmaiListPage", icon: "chatbubbles", color: "tone17", isShowLoading: false},
+      { title: 'Khám phá', component: "BaivietListPage", icon: "mi-khampha", color: "tone16", isShowLoading: false},
+      { title: 'Liên hệ', component: "BaivietListPage", icon: "chatbubbles", color: "tone17", isShowLoading: false},
       //+ Page Loại nguyên liệu
 
     ];
@@ -46,28 +46,25 @@ export class MyApp {
   initializeApp() {
     this.platform.ready().then(() => {
       console.log("initializeApp finish");
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      
 
       // Khởi tạo dữ liệu lần đầu tiên tải ứng dụng
-
       this.storage.getItem("isFirstLoad")
         .then(data => {
-
           //Mỗi lần mở ứng dụng
           console.log('Chay BT');
-
-          this.initDataProvider.initData();
+          this.initDataProvider.initData().then(()=>{
+            console.log("Xong");
+            this.rootPage = "MainPage";
+            this.statusBar.styleDefault();
+            this.splashScreen.hide();
+          });
         })
         .catch(error => {
-
           //Ứng dụng chạy lần đầu
           this.rootPage = "WelcomePage";
           this.initDataProvider.initDataFirstLoad();
           this.storage.setItem("isFirstLoad", false);
-
         })
 
     });

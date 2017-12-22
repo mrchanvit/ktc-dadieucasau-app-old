@@ -58,3 +58,8 @@ $icomoon-font-path: $font-path !default;
   @include makeIcon(mi-thuongthuc, '\e90b');
   @include makeIcon(mi-nguyenlieu, '\e90c');
   @include makeIcon(mi-can, '\e90d');
+  @include makeIcon(mi-quytrinh, '\e90e');
+  @include makeIcon(mi-topmot, '\e90f');
+  @include makeIcon(mi-totsuckhoe, '\e910');
+  @include makeIcon(mi-iso, '\e911');
+  @include makeIcon(mi-khampha, '\e912');

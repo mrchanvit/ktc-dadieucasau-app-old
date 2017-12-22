@@ -1,96 +1,155 @@
 page-main {
-    .logo{
-        max-height: 130px;        
-        margin: 18px auto;
+  .logo {
+    max-height: 130px;
+    margin: 3px auto;
+  }
+  .toptieude {
+    h1 {
+      font-size: 2.1em;
+      margin: 0 0 12px 0;
+      color: map-get($colors, secondary)
     }
-
-
-    .tieude{
-        font-family: 'Pacifico';
-               
+    h3 {
+      margin: 3px;
+      color: map-get($colors, primary);
+      text-transform: uppercase;
     }
-    .con{
-        font-size: 2em;
-        color: map-get($colors , primary )
+  }
+  .tieude {
+    font-family: 'Pacifico';
+  }
+  .con {
+    font-size: 1.8em;
+    color: map-get($colors, primary);
+    margin-top:0px;
+  }
+  .con2 {
+    font-size: 1.8em;
+    color: map-get($colors, secondary);
+    margin-top:0px;
+  }
+  ion-content {
+    .card-background-page {
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+      .card-title {
+        position: absolute;
+        bottom: 5%;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 1em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }      
     }
-    .con2{
-        font-size: 2em;
-        color: map-get($colors , secondary )
+    ion-grid.grid {
+      padding: 0;
     }
-
-    ion-content{        
-
-        ion-grid.grid{
-            padding: 0;
+    img {
+      width: auto;
+      margin: auto;
+      display: block;
+    }
+    .dadieu {
+      background-color: map-get($colors, secondary);
+      color: #fff;
+      ion-icon {
+        margin-top: 30px;
+        font-size: 5em!important; //Preferred size here
+      }
+      ul{
+        text-align: right;
+        list-style-position: inside;        
+      }
+      h5{
+          margin-bottom: 3px;
+      }
+    }
+    .casau {
+      background-color: map-get($colors, primary);
+      color: #fff;
+      ion-icon {
+        margin-top: 30px;
+        font-size: 5em!important; //Preferred size here
+      }
+      ul{
+        text-align: left;        
+        padding-left: 10px;
+        list-style-position: inside;   
+        
+      }
+      h5{
+        margin-bottom: 3px;
+      }
+    }
+    .khatoco{
+        .tieude{
+            color: map-get($colors, primary);
         }
-
-        img {            
-            
-            width: auto;
-            margin: auto;
-            display: block;
-            
-            }
-        .dadieu{
-            background-color: map-get($colors , secondary );
-            color: #fff;
-            ion-icon{
-                margin-top: 30px;            
-                font-size: 5em!important; //Preferred size here
-            }
+        p{
+            font-size: 1em;
+            margin-top: 3px;
+            margin-bottom: 20px;
         }
-
-        .casau{
-            background-color: map-get($colors , primary );
-            color: #fff;
-            ion-icon{
-                margin-top: 30px;            
-                font-size: 5em!important; //Preferred size here
-            }
+        .list ion-icon{
+            font-size: 3.6em;
         }
-
-        .intro{            
-            ion-slide>div{
-                border: 1px solid;
-                border-radius: 5px;
-                margin: 5px;                
-                ion-item{
-                    background-color: transparent;
-                }
-                ion-icon{
-                    font-size: 1.6em;                                  
-                }
-                p{ 
-                    font-size: 0.9em; 
-                    margin:5px;                   
-                }
-            }
-            .intro01{
-                p, ion-icon{
-                    color: map-get($colors , tone09);
-                }                
-                div {
-                    border-color: map-get($colors , tone09);
-                } 
-                
-            }
-            .intro02{
-                p, ion-icon{
-                    color: map-get($colors , tone08);
-                }
-                div {
-                    border-color: map-get($colors , tone08);
-                }   
-                                
-            }
-            .intro03{
-                p, ion-icon{
-                    color: map-get($colors , tone07);
-                }   
-                div {
-                    border-color: map-get($colors , tone07);
-                }            
-            }
-        } 
     }
+    .intro {
+      ion-slide>div {
+        border: 1px solid;
+        border-radius: 5px;
+        margin: 5px;
+        ion-item {
+          background-color: transparent;
+        }
+        ion-icon {
+          font-size: 1.6em;
+        }
+        p {
+          font-size: 1em;
+          margin: 5px;
+        }
+      }
+      .intro00 {
+        p,
+        ion-icon {
+          color: map-get($colors, tone09);
+        }
+        div {
+          border-color: map-get($colors, tone09);
+        }
+      }
+      .intro01 {
+        p,
+        ion-icon {
+          color: map-get($colors, tone09);
+        }
+        div {
+          border-color: map-get($colors, tone09);
+        }
+      }
+      .intro02 {
+        p,
+        ion-icon {
+          color: map-get($colors, tone08);
+        }
+        div {
+          border-color: map-get($colors, tone08);
+        }
+      }
+      .intro03 {
+        p,
+        ion-icon {
+          color: map-get($colors, tone07);
+        }
+        div {
+          border-color: map-get($colors, tone07);
+        }
+      }
+    }
+  }
 }

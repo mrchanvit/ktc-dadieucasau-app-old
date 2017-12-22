@@ -13,7 +13,7 @@ export class MonanDataProvider {
 
   private monanInitPath = "./assets/data/monans.json"; 
   private monans:Monan[]=[];
-  private favorites: number[] = [];
+  private favorites: number[] = [];  
   
 
   constructor(
@@ -36,8 +36,8 @@ export class MonanDataProvider {
       });
   }
 
-  initDataFavoriteOnEnter(){    
-      this.storage.getItem("favoriteMonans")
+  initDataFavoriteOnEnter():Promise<void>{    
+      return this.storage.getItem("favoriteMonans")
       .then(data=>{
         this.favorites = data;
       }).catch((error)=>{
@@ -60,6 +60,8 @@ export class MonanDataProvider {
         })            
         this.statusProvider.monans_is_loaded = true;
         this.monans = data_result; 
+        console.log("Lấy món ăn xong");
+        
         return data_result;
       }) 
     } else {     
@@ -119,27 +121,21 @@ export class MonanDataProvider {
     }) 
   } 
 
-  //Lấy món ăn ngẫu nhiên
-  getMonansRamdom(soluong: number):Promise<Monan[]>{      
-    return this.getAllMonan()
-    .then(data=>{
-      if(data.length >= soluong){
-        let i = 0;
-        let seleted_ramdom : number[] = [];
-        let monans_ramdom: Monan[] = [];
-        while (i < soluong) {
-          var ramdom_monan = Math.floor(Math.random() * data.length);
-          if(seleted_ramdom.findIndex(item=>item==ramdom_monan)==-1){
-            monans_ramdom.push(data[ramdom_monan]);
-            seleted_ramdom.push(ramdom_monan);
-            i++;
-          }
+  //Lấy món ăn ngẫu nhiên | chỉ thực thi khi đã có ds món ăn
+  getMonansRamdom(soluong: number): Monan[] {
+    if(this.monans.length>0){
+      let i = 0;
+      let seleted_ramdom: number[] = [];
+      let monans_ramdom: Monan[] = [];
+      while (i < soluong) {
+        var ramdom_monan = Math.floor(Math.random() * this.monans.length);
+        if (seleted_ramdom.findIndex(item => item == ramdom_monan) == -1) {
+          monans_ramdom.push(this.monans[ramdom_monan]);
+          seleted_ramdom.push(ramdom_monan);
+          i++;
         }
-        return monans_ramdom;
-      }        
-      //Số lượng món ăn cần lấy nhiều hơn số lượng trong thư viện
-      return []
-    })
-    .catch()
+      }   
+      return monans_ramdom;
+    } else return []  
   }
 }
