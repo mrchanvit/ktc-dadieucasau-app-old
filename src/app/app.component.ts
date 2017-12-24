@@ -37,7 +37,7 @@ export class MyApp {
       { title: 'Sản phẩm', component: "ThitListPage", icon: "egg", color: "secondary", isShowLoading: false},
       { title: 'Cửa hàng', component: "CuahangTabsPage", icon: "basket", color: "tone15", isShowLoading: false},
       { title: 'Khám phá', component: "BaivietListPage", icon: "mi-khampha", color: "tone16", isShowLoading: false},
-      { title: 'Liên hệ', component: "BaivietListPage", icon: "chatbubbles", color: "tone17", isShowLoading: false},
+      { title: 'Liên hệ', component: "ContactPage", icon: "chatbubbles", color: "tone17", isShowLoading: false},
       //+ Page Loại nguyên liệu
 
     ];

@@ -1,0 +1,28 @@
+page-contact {
+    .title{
+        p{
+            color: map-get($colors , primary);
+        }
+        h1{
+            color: map-get($colors , secondary);
+            font-weight: 700;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+    }
+    .dienthoai{
+        ion-icon{
+            color: map-get($colors , tone01);
+        }
+    }
+    .fax{
+        ion-icon{
+            color: map-get($colors , tone03);
+        }
+    }
+    .email{
+        ion-icon{
+            color: map-get($colors , tone04);
+        }
+    }
+}

@@ -16,6 +16,10 @@ import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Geolocation } from '@ionic-native/geolocation';
+import { BrowserTab } from '@ionic-native/browser-tab';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Device } from '@ionic-native/device';
+import { AppAvailability } from '@ionic-native/app-availability';
 
 
 
@@ -27,6 +31,7 @@ import { CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { StatusProvider } from '../providers/status';
 import { LocationProvider } from '../providers/location';
+
 
 @NgModule({
   declarations: [
@@ -51,6 +56,10 @@ import { LocationProvider } from '../providers/location';
     GoogleMaps,
     Keyboard,
     Geolocation,
+    BrowserTab,
+    InAppBrowser,
+    Device,
+    AppAvailability,
     {provide: ErrorHandler, useClass: IonicErrorHandler},    
     ThitDataProvider,
     MonanDataProvider,

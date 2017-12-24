@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-buttons class="locate" left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Liên hệ</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list >
+    <ion-item text-wrap class="title">
+      <p>CÔNG TY TNHH THƯƠNG MẠI KHATOCO</p>
+      <h1>
+        Phòng kinh doanh<br> Đà điểu – Cá sấu
+      </h1>
+    </ion-item>
+    <button ion-item class="diachi" text-wrap>
+        <ion-icon name="pin" color="tone09" item-start></ion-icon>
+          07 Võ Thị Sáu, phường Vĩnh Nguyên, Nha Trang, Khánh Hòa, Việt Nam 
+      </button>
+    <button ion-item class="dienthoai" (click)="onCallNumber('02583882369')">
+      <ion-icon name="call" item-start></ion-icon>
+        0258.3882369
+      <ion-badge item-end color="secondary">GỌI NGAY</ion-badge>
+    </button>
+    <button ion-item class="fax">
+      <ion-icon name="print" item-start></ion-icon>
+      Fax: 0258.3882369
+    </button>
+    <button ion-item class="email">
+      <ion-icon name="mail" item-start></ion-icon>
+      dadieukhatoco@khatoco.com
+    </button>
+    <button ion-item (click)="openFacebook('100004244479200')"> 
+      <ion-icon name="chatbubbles" color="tone05" item-start></ion-icon>
+        <p>Facebook Page</p>
+        Món ăn Đà điểu - Cá sấu
+        <ion-icon name="play" small item-end color="secondary"></ion-icon>
+    </button>
+    <button ion-item (click)="onEnterUrl('http://thuongmai.khatoco.com/')"> 
+      <ion-icon name="at" color="tone06" item-start></ion-icon>
+        <p>Website:</p>
+        thuongmai.khatoco.com
+      <ion-icon name="play" class="icon" small item-end color="secondary"></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>
