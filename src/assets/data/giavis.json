@@ -34,5 +34,53 @@
         "icon": "mi-tieu",
         "color": "#009587",
         "amount": 0
+    },
+    {
+        
+        "id": "hatnem",
+        "name": "Hạt nêm",
+        "icon": "mi-hatnem",
+        "color": "#2196f3",
+        "amount": 0
+    },
+    {
+        
+        "id": "duongphen",
+        "name": "Đường phèn",
+        "icon": "mi-duongphen",
+        "color": "#398e3c",
+        "amount": 0
+    },
+    {
+        
+        "id": "tuongot",
+        "name": "Tương ớt",
+        "icon": "mi-tuongot",
+        "color": "#9c27af",
+        "amount": 0
+    },
+    {
+        
+        "id": "nuocmam",
+        "name": "Nước mắm",
+        "icon": "mi-nuocmam",
+        "color": "#02796b",
+        "amount": 0
+    },
+    {
+        
+        "id": "xidau",
+        "name": "Xì dầu",
+        "icon": "mi-xidau",
+        "color": "#4051b5",
+        "amount": 0
+    },
+    {
+        
+        "id": "sate",
+        "name": "Sa tế",
+        "icon": "mi-sate",
+        "color": "#0388d1",
+        "amount": 0
     }
 ]

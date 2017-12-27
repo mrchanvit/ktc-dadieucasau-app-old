@@ -1,131 +1,1335 @@
 [
-    {
-      "id": "1",
-      "createdAt": 1504952488,
-      "name": "Cánh đà điểu chiên mắm",
-      "imageUrl": "./assets/img/mon1.jpg",
-      "description": " Tim bổ dọc, rửa bằng rượu gừng để tẩy mùi, rửa sạch lại bằng nước, lóc bỏ phần mỡ, thái mỏng.",
-      "giavis":[
-        {
-          "id": "duong",
-          "amount": "0.5 g"
-        },
-        {
-          "id": "muoi",
-          "amount": "0.5 g"
-        }
-      ],
-      "nguyenlieus":[
-        {          
-          "name": "Rau thơm",          
-          "amount": "1 bó"
-        },
-        {          
-          "name": "Dưa leo",          
-          "amount": "1 bó"
-        },
-        {          
-          "name": "Cà chua",          
-          "amount": "0.5 Kg"
-        }
-      ],
-      "thits":[
-        {
-          "id": 2,
-          "amount": "0.5 Kg"
-        }
-      ],
-      "steps":[
-        "Cánh đà điểu làm sạch, cắt miếng vừa ăn (lóc thịt bỏ khúc xương lớn đầu cánh), ướp rượu và nước dứa khoảng 5 phút.",
-        "Rửa thịt lại nước lạnh, tiếp tục ướp mắm, bột ngọt, tiêu khoảng 5 phút.",
-        "Chảo nhiều dầu để nóng, chiên thịt chín vàng rồi vớt ra. Sau đó phi bơ vàng, sốc đều thịt đã chiên với đường, bơ, hành tây thái mỏng."
-      ],
-      "enjoy": "Chấm với tương ớt rất ngon"
-    },
-    {
-      "id": "2",
-      "createdAt": 1504952488,
-      "name": "Cá sấu tay cầm",
-      "imageUrl": "./assets/img/mon3.jpg",
-      "description": "Ngon dã mang",
-      "giavis":[
-        {
-          "id": "botngot",
-          "amount": "0.5 g"
-        },
-        {
-          "id": "muoi",
-          "amount": "0.5 g"
-        },
-        {
-          "id": "tieu",
-          "amount": "10 g"
-        }
-      ],
-      "nguyenlieus":[
-        {         
-          "name": "Giấy bạc",          
-          "amount": "1 tờ"
-        },
-        {         
-          "name": "Rau thơm",          
-          "amount": "1 bó"
-        }
-      ],
-      "thits":[
-        {
-          "id": 14,          
-          "amount": "1 kg"
-        }
-      ],
-      "steps":[
-        "Thịt thái mỏng ướp với tất cả các loại gia vị cho đều, trải miếng giấy bạc ra cho thịt đã ướp vào, gói lại cho vuông vức, các mí giấy bạc phải kín để nước ướp không chảy ra.",
-        "Nướng trở đều 2 mặt trên lửa khoảng 6 phút là được.",
-        "Khi dùng cho gói giấy bạc lên đĩa, dùng kéo cắt chéo hai đường trên mặt của giấy bạc và mở ra."
-      ],
-      "enjoy": "Ta có thể xếp giấy bạc thành một túi lớn bằng cuốn vở có hở một đầu, sau đó cho thịt đã ướp vào rồi mới xếp mí. Chấm xì dầu ớt."
-    },
-    {
-      "id": "3",
-      "createdAt": 1504952488,
-      "name": "Đà điểu nướng giấy bạc",
-      "imageUrl": "./assets/img/mon2.jpg",
-      "description": " Hương vị rất dân giã, phù hợp với những buổi tụ hợp bạn bè, gia đình.",
-      "giavis":[
-        {
-          "id": "botngot",
-          "amount": "0.5 g"
-        },
-        {
-          "id": "muoi",
-          "amount": "0.5 g"
-        },
-        {
-          "id": "tieu",
-          "amount": "10 g"
-        }
-      ],
-      "nguyenlieus":[
-        {         
-          "name": "Giấy bạc",          
-          "amount": "1 tờ"
-        },
-        {         
-          "name": "Rau thơm",          
-          "amount": "1 bó"
-        }
-      ],
-      "thits":[
-        {
-          "id": 12,          
-          "amount": "1 kg"
-        }
-      ],
-      "steps":[
-        "Thịt thái mỏng ướp với tất cả các loại gia vị cho đều, trải miếng giấy bạc ra cho thịt đã ướp vào, gói lại cho vuông vức, các mí giấy bạc phải kín để nước ướp không chảy ra.",
-        "Nướng trở đều 2 mặt trên lửa khoảng 6 phút là được.",
-        "Khi dùng cho gói giấy bạc lên đĩa, dùng kéo cắt chéo hai đường trên mặt của giấy bạc và mở ra."
-      ],
-      "enjoy": "Ta có thể xếp giấy bạc thành một túi lớn bằng cuốn vở có hở một đầu, sau đó cho thịt đã ướp vào rồi mới xếp mí. Chấm xì dầu ớt."
-    }  
+  {
+    "id": "1",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/001.jpg",
+    "name": "Gỏi dạ dày đà điểu",
+    "description": " Món khai vị độc đáo và tuyệt hảo từ dạ dày đà điểu sẽ làm cho bữa ăn của bạn thêm ngon miệng hơn.",
+    "thits": [
+      {
+        "id": 3,
+        "amount": "0.5 Kg"
+      },
+      {
+        "id": 16,
+        "amount": "0.5 Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Dưa chuột",
+        "amount": "100g"
+      },
+      {
+        "name": "Hành tây",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Dừa",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Mè trắng (hoặc đậu phộng)",
+        "amount": "50g"
+      },
+      {
+        "name": "Gừng",
+        "amount": "10g"
+      },
+      {
+        "name": "Cà rốt",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Xả",
+        "amount": "20g"
+      },
+      {
+        "name": "Tỏi ớt băm nhuyễn",
+        "amount": "20g"
+      },
+      {
+        "name": "Chanh",
+        "amount": "4 quả"
+      },
+      {
+        "name": "Rau thơm, rau răm, ngò",
+        "amount": "vừa đủ"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "muoi",
+        "amount": "2g"
+      },
+      {
+        "id": "duong",
+        "amount": "2g"
+      },
+      {
+        "id": "botngot",
+        "amount": "2g"
+      },
+      {
+        "id": "tieu",
+        "amount": "2g"
+      },
+      {
+        "id": "nuocmam",
+        "amount": "10ml"
+      }
+    ],
+    "steps": [
+      "Dạ dày đà điểu làm sạch với muối, khử mùi bằng rượu gừng, rửa sạch bằng nước lạnh",
+      "Luộc dạ dày khoảng 30 phút, vớt ra ngâm nước chín pha dấm bỏ vào một vài viên nước đá cho dạ dày giòn (Ngâm cho ngập dạ dày để không bị thâm)",
+      "Khi dạ dày nguội thái mỏng ướp gia vị đã chuẩn bị khoảng 10 phút",
+      "Cà rốt, dưa leo, hành tây cắt sợi trộn gia vị cho thấm, tiếp tục cho dạ dày vào trộn đều",
+      "Thêm nước chanh vào, nêm sao cho có vị chua ngọt là được. Rau thơm, rau răm rửa sạch, cắt nhỏ, mè trắng trộn vào với gỏi."
+    ],
+    "enjoy": "Thích hợp làm món khai vị. Dùng chung với bánh phồng tôm."
+  },
+  {
+    "id": "2",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/002.jpg",
+    "name": "Đà điểu nướng giấy bạc",
+    "description": "Món ăn dân dã tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "0.5 Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": " Xà lách",
+        "amount": "1 cây"
+      },
+      {
+        "name": "Cà chua",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Dưa leo",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Giấy bạc",
+        "amount": "1 miếng"
+      },
+      {
+        "name": "Hành, tỏi băm nhuyễn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "nuocmam",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      },
+      {
+        "id": "tuongot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng bản lớn, ướp gia vị, để thấm khoảng 5 phút",
+      "Xà lách, dưa leo, cà chua rửa sạch thái lát mỏng làm đĩa rau ăn kèm",
+      "Cho thịt vào giấy bạc gói thành hình vuông, nướng khoảng 7 phút là được."
+    ],
+    "enjoy": "Xếp nguyên gói giấy bạc ra đĩa, ăn kèm rau và nước tương."
+  },
+  {
+    "id": "3",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/003.jpg",
+    "name": "Súp gân chân đà điểu",
+    "description": "Món ăn  từ đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 4,
+        "amount": "0.5 Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Xương ống đà điểu",
+        "amount": "1Kg"
+      },
+      {
+        "name": "Đậu xanh bóc vỏ",
+        "amount": "100g"
+      },
+      {
+        "name": "Kỷ tử",
+        "amount": "50g"
+      },
+      {
+        "name": "Ngò rí",
+        "amount": "Vừa đủ"
+      },
+      {
+        "name": "Hành, tỏi băm nhuyễn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Bột năng",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1/2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "duongphen",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "muoi",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Gân luộc mềm cắt hạt lựu",
+      "Xương ống hầm 2h lấy 1 lít nước dùng",
+      "Đậu xanh ngâm mềm",
+      "Cho gân, đậu xanh, kỷ tử vào nấu với nước dùng khoảng 20 phút",
+      "Đến khi đậu xanh nở thành hoa, cho dầu ăn, với bột năng vừa sánh nhẹ nêm lại cho vừa ăn là được."
+    ],
+    "enjoy": "Chúc bạn ngon miệng!"
+  },
+  {
+    "id": "4",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/004.jpg",
+    "name": "Đà điểu nấu nấm",
+    "description": "Món ăn  từ đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "0.5 Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Nấm rơm",
+        "amount": "200g"
+      },
+      {
+        "name": "Nấm đông cô",
+        "amount": "50g"
+      },
+      {
+        "name": "Cà rốt",
+        "amount": "2 củ"
+      },
+      {
+        "name": "Tỏi",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Nước dừa",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "2 m.súp"
+      },
+      {
+        "name": "Bột năng",
+        "amount": "1 m.súp"
+      },      
+      {
+        "name": "Tương cà",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "duong",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "hatnem",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái vuông 3x3x3 cm",
+      "Nấm rơm thái bỏ gốc rửa sạch",
+      "Nấm đông cô ngâm nước thái đôi",
+      "Cà rốt gọt vỏ thái khúc",
+      "Ướp thịt với gia vị để khoảng 10 phút",
+      "Phi tỏi với tương cà, xào săn thịt, tiếp đến cho nước dừa và cà rốt, nấm đông cô vào nấu khoảng 30 phút, cho nấm rơm vào nấu 5 phút nữa hòa bột năng vào vừa sánh."
+    ],
+    "enjoy": "Trình bày ra thố, ăn kèm bánh mì, nước tương."
+  },
+  {
+    "id": "6",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/006.jpg",
+    "name": "Cánh đà điểu chiên mắm",
+    "description": "Món ăn từ đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "0.5 Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Hành tây",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Ớt chuông (xanh, đỏ, vàng)",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Rượu trắng",
+        "amount": "2 m.cafe"
+      },
+      {
+        "name": "Tỏ băm nhuyễn",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1/2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "xidau",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      },
+      {
+        "id": "tuongot",
+        "amount": "1 m.súp"
+      }
+    ],
+    "steps": [
+      "Thịt thái vuông 2x2x2cm,ướp gia vị hỗn hợp (không ướp dầu ăn và tỏi)",
+      "Thịt thái vuông 2x2x2cm,ướp gia vị hỗn hợp (không ướp dầu ăn và tỏi)",
+      "Hành tây, ớt chuông thái miếng vuông",
+      "Phi tỏi vàng, xào thịt với lửa lớn khoảng 2 phút, tiếp đến cho hành tây và ớt chuông vào, tiếp tục xào khoảng 1 phút rồi nêm lại vừa ăn."
+    ],
+    "enjoy": "Trình bày ra đĩa, ăn kèm nước chấm xì dầu hoặc tương ớt với sốt mayonnaise."
+  },
+  {
+    "id": "7",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/007.jpg",
+    "name": "Đà điển chiên giòn",
+    "description": "Món ăn từ  đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "250g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Bột chiên giòn",
+        "amount": "150g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 lít"
+      },
+      {
+        "name": "Mayonnaise",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Trứng gà",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Dưa leo",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Cà chua",
+        "amount": "1 quả"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "xidau",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "tuongot",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Trứng và bột quậy chung vừa sệt không loãng quá. Thịt thái quân chì 1x1x3 cm, ướp tiêu, xì dầu, bột ngọt để 5 phút",
+      "Đun dầu cho sôi, nhúng thịt vào bột cho vào chiên ở lửa vừa. Thịt vàng và nổi lên là vớt ra được",
+      "Cà chua, dưa leo thái múi cau xếp xung quanh đĩa. Thịt để ráo cho vào chính giữa."
+    ],
+    "enjoy": "Dùng kèm cà chua, dưa leo chấm sốt mayonnaise trộn tương ớt."
+  },
+  {
+    "id": "9",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/009.jpg",
+    "name": "Cổ đà điển om sấu",
+    "description": "Món ăn từ  đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 8,
+        "amount": "0.5Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Sấu xanh (gọt vỏ chẻ đôi)",
+        "amount": "200g"
+      },
+      {
+        "name": "Khôi môn gọt vỏ cắt vuông",
+        "amount": "200g"
+      },
+      {
+        "name": "Hành củ (băm nhuyễn)",
+        "amount": "30g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Rau muốn, rau nhút, rau cải",
+        "amount": "vừa đủ"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "duong",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "hatnem",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Cổ rửa sạch cắt khúc vừa ăn. Ướp gia vị trong khoảng 15 phút",
+      "Phi dầu tỏi xào thịt cho săn",
+      "Cho nước dùng vào vừa ngập mặt thịt nấu khoảng 30 phút",
+      "Cho sấu với khoai môn vào nấu 15",
+      "Nêm gia vị cho vừa ăn"
+    ],
+    "enjoy": "Ăn với bún, nước chấm mắm nhỉ"
+  },
+  {
+    "id": "11",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/011.jpg",
+    "name": "Đà điểu xào hành",
+    "description": "Món ăn từ  đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "250g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Hành tỏi xay nhỏ",
+        "amount": "10g"
+      },
+      {
+        "name": "Hành tây",
+        "amount": "100g"
+      },
+      {
+        "name": "Cà chua",
+        "amount": "100g"
+      },
+      {
+        "name": "Cần tây",
+        "amount": "50g"
+      },
+      {
+        "name": "Ớt",
+        "amount": "vừa đủ"
+      },
+      {
+        "name": "Bột năng pha nước lọc",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Dầu hào",
+        "amount": "1/2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "xidau",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt đà điểu thái lát mỏng, ướp chung với hành tỏi, bột ngọt, xì dầu. Hành tây, cà chua thái múi cau, cần tây cắt khúc",
+      "Bắc chảo, lửa lớn cho dầu ăn vào phi hành tỏi vừa thơm cho thịt vào đảo đều cho săn lại bỏ tiếp hành tây + cà chua vào đảo tiếp",
+      "Đến khi hành, cà vừa chín tới cho rau cần vào, nêm lại bằng dầu hào cho vừa ăn, bỏ ít nước bột năng để miếng thịt hơi bóng."
+    ],
+    "enjoy": "Dùng nóng với cơm hoặc bún chấm xì dầu."
+  },
+  {
+    "id": "13",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/013.jpg",
+    "name": "Đà điểu cuốn cải xanh  ",
+    "description": "Món ăn từ  đà điểu tuyệt vời.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "250g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Cải xanh",
+        "amount": "300g"
+      },
+      {
+        "name": "Súp dầu hào",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Súp dầu ăn",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "xidau",
+        "amount": "1 m.súp"
+      }
+    ],
+    "steps": [
+      "Thịt đà điểu thái quân chì 1x1x3 cm, ướp dầu hào bột ngọt, cho vào xào vừa chín tới cho ra đĩa",
+      "Cải cắt khúc",
+      "Pha xì dầu + dầu hào trộn đều (nếu ăn cay thêm ít ớt băm nhuyễn)."
+    ],
+    "enjoy": "Dùng lá cải cuốn thịt chấm với nước chấm đã pha."
+  },
+  {
+    "id": "14",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/014.jpg",
+    "name": "Đà điểu tái chanh",
+    "description": "Món ngon từ đà điểu",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "500g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Cà rốt",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Cần tây",
+        "amount": "1 cây"
+      },
+      {
+        "name": "Hành tây",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Rau ngổ + mùi tàu",
+        "amount": "1 bó nhỏ"
+      },
+      {
+        "name": "Hành khô phi vàng",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Tỏi, ớt băm nhuyễn",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "name": "Nước chanh",
+        "amount": "2 m.súp"
+      },
+      {
+        "name": "Giấm",
+        "amount": "1/2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "nuocmam",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "duong",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái lát mỏng ướp 1/2 gia vị và 1 muỗng súp nước cốt chanh và giấm, khoảng 10 phút vắt bỏ nước",
+      "Cà rốt thái sợi, hành tây thái mỏng ngâm với nước, 1 muỗng cà phê muối, 1 muỗng cà phê đường và chút giấm trong khoảng 10 phút cho thấm, vắt khô",
+      "Cần tây chẻ cọng thái khúc",
+      "Phần gia vị với chanh còn lại hòa chung thành nước gia vị hỗn hợp vừa chua ngọt, tiếp đến cho thịt vào trộn tái với phụ liệu."
+    ],
+    "enjoy": "Trình bày cà rốt, hành tây, rau cần ra đĩa, cho thịt lên trên và tiếp đến là rau ngổ + mùi tàu và hành phi. Ăn kèm bánh phồng tôm."
+  },
+  {
+    "id": "15",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/015.jpg",
+    "name": "Đà điểu xào sả ớt",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "250g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Tỏi, sả, ớt băm nhuyễn",
+        "amount": "100g"
+      },
+      {
+        "name": "Hành tây",
+        "amount": "1 củ"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "nuocmam",
+        "amount": "1 m.súp"
+      }
+    ],
+    "steps": [
+      "Thịt thái lát mỏng, hành tây thái múi cau",
+      "Cho dầu ăn vào chảo đã nóng, phi tỏi + sả + ớt rồi bỏ thịt vào đảo đều",
+      "Thịt vừa săn nêm mắm, đường, bột ngọt cho vừa khẩu vị rồi bỏ hành tây vào đảo đều đến khi hành vừa chín là thịt cũng đã được."
+    ],
+    "enjoy": "Dùng với cơm hoặc bánh mì"
+  },
+  {
+    "id": "16",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/016.jpg",
+    "name": "Đà điểu nướng mè",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "250g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Hành tỏi băm nhuyễn",
+        "amount": "10g"
+      },
+      {
+        "name": "Rựu trắng",
+        "amount": "30g"
+      },
+      {
+        "name": "Bột cà ri",
+        "amount": "2g"
+      },
+      {
+        "name": "Ngũ vị hương",
+        "amount": "2g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Mè trắng",
+        "amount": "2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "duong",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "sate",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "tuongot",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "xidau",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Đà điểu thái lát mỏng bản lớn, ướp với toàn bộ gia vị cho đề",
+      "Nướng trên vỉ cho vừa vàng là được (không khô quá)."
+    ],
+    "enjoy": "Dùng kèm xì dầu ớt hoặc tương ớt."
+  },
+  {
+    "id": "17",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/017.jpg",
+    "name": "Sườn đà điểu sốt chua ngọt",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 7,
+        "amount": "0.5Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Dầu ăn",
+        "amount": "vừa đủ"
+      },
+      {
+        "name": "Tỏ",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Bột cà ri",
+        "amount": "1 m.cafe"
+      },
+      {
+        "name": "Bột bắp",
+        "amount": "2 m.súp"
+      },
+      {
+        "name": "Chanh",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Thơm (băm nhuyễn)",
+        "amount": "1 miếng"
+      },
+      {
+        "name": "Dưa leo",
+        "amount": "1 quả"
+      },
+      {
+        "name": "Cà chua",
+        "amount": "1 quả"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "nuocmam",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "1/3 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "1/2 m.súp"
+      }
+    ],
+    "steps": [
+      " Chuẩn bị, chế biến: - sườn luộc chín cắt miếng vừa ăn, ướp gia vị, lăn với bột bắp chiên qua dầu cho vàng, vướt ra cho ráo",
+      "phi dầu tỏi cho vàng tiếp thơm băm nhuyễn, nước chanh, đường, một ít nước mắm cho vị chua ngọt hài hòa",
+      "Cho sườn đã chiên vào xào nhẹ là được."
+    ],
+    "enjoy": "Trang trí ra điã cùng dưa cà nước chấm mắm chua ngọt."
+  },
+  {
+    "id": "18",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/018.jpg",
+    "name": "Đà điểu xào lá lốt",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 13,
+        "amount": "0.5Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Lá lốt",
+        "amount": "100g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Tỏi băm nhuyễn",
+        "amount": "1 củ"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "tuongot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "xidau",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng ướp cùng với gia vị vào để cho thấm khoảng 5 phút.Lá lốt cắt nhỏ",
+      "Để chảo lên lửa cho nóng, phi dầu tỏi cho vàng, bỏ thịt vào xào nhanh tay khoảng 2 phút",
+      "Cho lá lốt vào xào vừa chín tới là được."
+    ],
+    "enjoy": "Dùng kèm xì dầu ớt."
+  },
+  {
+    "id": "19",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/019.jpg",
+    "name": "Đà điểu nướng Tứ Xuyên",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 12,
+        "amount": "1Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Giấy bạc",
+        "amount": "1 miếng"
+      },
+      {
+        "name": "Nấm linh chi",
+        "amount": "200g"
+      },
+      {
+        "name": "Đậu khuôn (thái miếng mỏng)",
+        "amount": "1 miếng"
+      },
+      {
+        "name": "Đậu botipo",
+        "amount": "50g"
+      },
+      {
+        "name": "Cà rốt thái hoa",
+        "amount": "100g"
+      },
+      {
+        "name": "Mù tạc vàng",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "name": "Tỏi băm nhuyễn",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "nuocmam",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "4 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "4 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng",
+      "Ướp thịt, đậu khuôn, cà rốt, đậu botipo, nấm cùng với gia vị hỗn hợp vào để cho thấm khoảng 5 phút",
+      " Cho thịt vào giấy bạc rồi xếp hình vuông, nướng vừa lửa khoảng 7 phút là được."
+    ],
+    "enjoy": "Dùng kèm xì dầu ớt."
+  },
+  {
+    "id": "20",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/020.jpg",
+    "name": "Đà điểu xào khế",
+    "description": "Món ngon từ đà điểu.",
+    "thits": [
+      {
+        "id": 10,
+        "amount": "1Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Lá é quế",
+        "amount": "200g"
+      },
+      {
+        "name": "Khế xanh",
+        "amount": "5 quả"
+      },
+      {
+        "name": "Tỏi băm nhuyễn",
+        "amount": "2 củ"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "tuongot",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "xidau",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "4 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "4 m.cafe"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng, ướp cùng với gia vị cho thấm khoảng 5 phút",
+      "Lá é quế thái đôi, khế thái ngang dày vừa ăn",
+      "Phi dầu tỏi cho vàng, bỏ thị vào xào nhanh tay khoảng 2 phút, cho khế vào xào vừa chín tới tiếp đến cho é quế vào xào nhẹ là được."
+    ],
+    "enjoy": "Dùng kèm xì dầu ớt."
+  },
+  {
+    "id": "85",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/085.jpg",
+    "name": "Cá sấu xào sả",
+    "description": "Món ngon từ cá sấu",
+    "thits": [
+      {
+        "id": "15",
+        "amount": "300g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Sả",
+        "amount": "2 củ"
+      },
+      {
+        "name": "Ớt",
+        "amount": "2 quả"
+      },
+      {
+        "name": "Tỏi",
+        "amount": "vừa đủ"
+      },
+      {
+        "name": "Cà ri",
+        "amount": "1/4 m.cafe"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "nuocmam",
+        "amount": "1/3 m.sup "
+      },
+      {
+        "id": "botngot",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/4 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng ướp gi vị.",
+      "Phi dầu tỏi cho vàng, cho sả, ớt vào trước, tiếp đến cho thịt vào xào khoảng 5 phú là được."
+    ],
+    "enjoy": "Cách dùng: Dùng kèm rau ngổ ( rau om ), dưa leo. Chấm nước tương"
+  },
+  {
+    "id": "86",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/086.jpg",
+    "name": "Cá sấu lã vọng",
+    "description": "Món ngon từ cá sấu",
+    "thits": [
+      {
+        "id": "15",
+        "amount": "300g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Sả",
+        "amount": "1 củ"
+      },
+      {
+        "name": "riềng",
+        "amount": "50g"
+      },
+      {
+        "name": "Nghệ",
+        "amount": "1 củ"
+      },
+      {
+        "name": " Cải xanh",
+        "amount": "vừa đủ"
+      },
+      {
+        "name": "Rau thì là thái nhỏ",
+        "amount": "20g"
+      },
+      {
+        "name": "Mắm tôm",
+        "amount": " 2 m.cafe"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "2 m.súp"
+      },
+      {
+        "name": "Mẻ",
+        "amount": "1 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "botngot",
+        "amount": "2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Cá sấu thái quân cờ",
+      "Riềng, sả, 1/2 củ nghệ, xoay nhuyễn vắt lấy nước",
+      "1/2 củ nghệ còn lại thái lát, trộn với rau thì là, nước nghệ, riềng, sả, ướp với cá, rồi chiên cá qua dầu."
+    ],
+    "enjoy": "Cá cuộn với lá cải xanh, chấm mắm đậu phụng hoặc môm"
+  },
+  {
+    "id": "84",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/084.jpg",
+    "name": "Cá sấu sốt thái",
+    "description": "Món ngon từ cá sấu",
+    "thits": [
+      {
+        "id": "14",
+        "amount": "300g"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Ớt",
+        "amount": "2 quả"
+      },
+      {
+        "name": "Tỏi",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Bột thái",
+        "amount": "2 m.súp"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "duong",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "nuocmam",
+        "amount": "1/4 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/4 m.cafe"
+      },
+      {
+        "id": "tuongot",
+        "amount": "2 m.súp"
+      }
+    ],
+    "steps": [
+      "Ướp sườn với gia vị gồm 1/4 nước mắm, bột ngọt, tiêu, chiên vàng, xếp ra đĩa",
+      "Ớt, tỏi băm nhuyễn, trông với bột thái, xào trên lửa rồi rưới lên thịt đã chiên."
+    ],
+    "enjoy": "Cá cuộn với lá cải xanh, chấm mắm đậu phụng hoặc môm "
+  },
+  {
+    "id": "82",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/082.jpg",
+    "name": "Vụn đà điểu nhúng lẩu",
+    "description": "Món ngon từ đà điểu",
+    "thits": [
+      {
+        "id": "13",
+        "amount": "0.5Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Sả",
+        "amount": "3 củ"
+      },
+      {
+        "name": "Rau má",
+        "amount": "300g"
+      },
+      {
+        "name": "Rau mùng tơi",
+        "amount": "300g"
+      },
+      {
+        "name": "Bún tàu",
+        "amount": "100g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Hành tây",
+        "amount": "1 củ"
+      },
+      {
+        "name": "Gừng thái chỉ",
+        "amount": "vừa đủ"
+      },
+      {
+        "name": "Thơm,cà băm nhuyễn",
+        "amount": "vừa đủ"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "hatnem",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "botngot",
+        "amount": "1 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "1 m.súp"
+      },
+      {
+        "id": "tieu",
+        "amount": "1 m.cafe"
+      }
+    ],
+    "steps": [
+      "Thịt thái mỏng bản lớn xếp ra dĩa cho hành tây sắt khoan và gừng sắt chỉ lên trên",
+      "Nước nhúng: phi dầu tỏi cho (thơm, cà băm), sả , tiếp đến cho nước dừa và nước dùng, nêm cho vừa ăn, múc ra nồi lẩu",
+      "Thịt, rau trình bày ra dĩa, ăn tới đâu nhúng tới đó."
+    ],
+    "enjoy": "Cách dùng: Nước chấm mắm ớt..."
+  },
+  {
+    "id": "81",
+    "createdAt": 1504952488,
+    "imageUrl": "./assets/img/monans/081.jpg",
+    "name": "Vụn đà điểu xào mướp đắng",
+    "description": "Món ăn ngon từ đà điểu",
+    "thits": [
+      {
+        "id": "13",
+        "amount": "0.5Kg"
+      }
+    ],
+    "nguyenlieus": [
+      {
+        "name": "Mướp đắng (ổ qua)",
+        "amount": "300g"
+      },
+      {
+        "name": "Dầu ăn",
+        "amount": "1 m.súp"
+      },
+      {
+        "name": "Bột năng",
+        "amount": "1/4m.súp"
+      },
+      {
+        "name": "Tỏi băm nhuyễn",
+        "amount": "1m.cafe"
+      },
+      {
+        "id": "Pho mát",
+        "amount": "1 viên"
+      }
+    ],
+    "giavis": [
+      {
+        "id": "tuongot",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "xidau",
+        "amount": "1/2 m.súp"
+      },
+      {
+        "id": "botngot",
+        "amount": "2 m.cafe"
+      },
+      {
+        "id": "duong",
+        "amount": "2m.cafe"
+      },
+      {
+        "id": "tieu",
+        "amount": "1/2 m.cafe"
+      }
+    ],
+    "steps": [
+      "Gân hầm mềm cắt miếng vừa ăn",
+      "Ướp gia vị hỗn hợp để cho thấm khoảng 5 phút",
+      "Nấm cắt bỏ gốc ngâm cho nở cắt đôi, cà rốt tỉa bông thái mỏng (luộc qua nước sôi)",
+      "Phi dầu tỏi cho vàng bỏ gân vào xào khoảng 3 phút cho ra đĩa",
+      "Cho pho mát và nấm, cà rốt với một ít nước dùng xào nhẹ tiếp đến cho bột năng pha loãng với nước vào đến lúc sền sệt là vừa, tới điều lên đĩa thịt."
+    ],
+    "enjoy": "Ăn kèm nước chấm xì dầu..."
+  }
 ]

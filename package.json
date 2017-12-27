@@ -34,7 +34,7 @@
     "@ionic-native/status-bar": "^4.4.2",
     "@ionic/storage": "2.0.1",
     "call-number": "^1.0.1",
-    "cordova-android": "^6.4.0",
+    "cordova-android": "6.4.0",
     "cordova-plugin-appavailability": "^0.4.2",
     "cordova-plugin-browsertab": "^0.2.0",
     "cordova-plugin-compat": "^1.2.0",
