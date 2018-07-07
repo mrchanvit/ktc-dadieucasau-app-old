@@ -30,6 +30,7 @@ import { CuahangDataProvider } from '../providers/cuahang-data';
 import { GiaviDataProvider } from '../providers/giavi-data';
 import { StatusProvider } from '../providers/status';
 import { LocationProvider } from '../providers/location';
+import { DailyProvider } from '../providers/daily/daily';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { LocationProvider } from '../providers/location';
     GiaviDataProvider,    
     StatusProvider,
     LocationProvider,
+    DailyProvider,
      
   ]
 })

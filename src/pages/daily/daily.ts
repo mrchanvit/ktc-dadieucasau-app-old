@@ -1,22 +1,24 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, Tabs } from 'ionic-angular';
 
+
 @IonicPage({
   priority: 'high', segment: 'tab'
 })
 @Component({
-  selector: 'page-cuahang-tabs',
-  templateUrl: 'cuahang-tabs.html'
+  selector: 'page-daily',
+  templateUrl: 'daily.html'
 })
-export class CuahangTabsPage {
+export class DailyPage {
+  @ViewChild('tabdaily') tabRef: Tabs;
+  
 
-  @ViewChild('tabcuahang') tabRef: Tabs;
+  thongtinRoot = 'ThongtinPage';
+  donhangRoot = 'DonhangPage';
+  thanhtoanRoot = 'ThanhtoanPage';
 
-  tab1Root = "CuahangListPage";
-  tab2Root = "CuahangMapPage";
   
   constructor(public navCtrl: NavController) {}
-  
   ionViewWillEnter() {
 		this.tabRef.select(0);
 	}
@@ -24,5 +26,7 @@ export class CuahangTabsPage {
 	ionViewDidEnter() {
 		this.tabRef.select(0); 
 	}
+   
+  
 
 }

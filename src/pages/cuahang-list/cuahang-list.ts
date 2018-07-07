@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content} from 'ionic-angular';
 import { Cuahang } from '../../interfaces/cuahang';
 import { CuahangDataProvider } from '../../providers/cuahang-data';
 import { CallNumber } from '@ionic-native/call-number';
@@ -17,7 +17,7 @@ import { LocationProvider } from '../../providers/location';
   templateUrl: 'cuahang-list.html',
 })
 export class CuahangListPage {
-
+  
   cuahangs: Cuahang[] = [];  
   province: Province;
   

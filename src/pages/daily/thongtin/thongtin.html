@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons class="locate" left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Thông tin</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col *ngIf="daily" text-center>
+        <ion-badge>ĐẠI LÝ</ion-badge>
+        <h2 text-center>
+          {{daily.name}}
+        </h2>
+        <p text-center >
+          Địa chỉ: {{daily.address}}<span *ngIf="province">,{{province.name}}</span> 
+        </p>
+        <p text-center>
+          Số điện thoại: {{daily.phone}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>    
+        <ion-col col padding>
+          
+        </ion-col>        
+    </ion-row>
+
+    <ion-row>    
+        <ion-col col-8 offset-2>
+          <button ion-button outline block color="primary">Đổi mật khẩu</button>
+        </ion-col>        
+    </ion-row>
+    <ion-row>
+        <ion-col col-8 offset-2>
+            <button ion-button block color="primary">Đăng xuất</button>
+          </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
+
