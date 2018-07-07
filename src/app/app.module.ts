@@ -16,7 +16,6 @@ import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Keyboard } from '@ionic-native/keyboard';
 import { Geolocation } from '@ionic-native/geolocation';
-import { BrowserTab } from '@ionic-native/browser-tab';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Device } from '@ionic-native/device';
 import { AppAvailability } from '@ionic-native/app-availability';
@@ -56,7 +55,6 @@ import { LocationProvider } from '../providers/location';
     GoogleMaps,
     Keyboard,
     Geolocation,
-    BrowserTab,
     InAppBrowser,
     Device,
     AppAvailability,

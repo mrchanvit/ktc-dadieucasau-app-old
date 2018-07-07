@@ -7,13 +7,6 @@ import { Monan } from '../../interfaces/monan';
 import { StatusProvider } from '../../providers/status';
 
 
-/**
- * Generated class for the MainPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-main',
